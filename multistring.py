@@ -391,8 +391,126 @@ b="python"
 c=[1,2,3]
 a=[1,2,3]
 print(id(a))
+a=[1,2,3]
+b=a
+print(id(a))
+print(id(b))
+print(a is b)
+a[1]=4
+print(a)
+print(b)
+a=[1,2,3]
+b=a[:]
+a[1]=4
+print(a)
+print(b)
+from copy import copy
+a=[1,2,3]
+b=copy(a)
+print(b is a)
+
+a,b=('python', 'life')
+(a,b)='python', 'Life'
+[a,b]='python', 'Life'
+a=b='python'
+a=3
+b=5
+a,b=b,a
+print(a)
+print(b)
 
 
+### 3-1. If문
+money = True
+if money:
+    print("택시를 타고 가라")
+else:
+    print("걸어가라")
+# money=True
+# if money:
+#     print("택시를 타고 가라")
+# print("타고")
+#     print("가라")
+# money=True
+# if money:
+#     print("택시를")
+#     print("타고")
+#        print("가라")
+    
+# money=True
+# if money:
+
+x=3
+y=2
+print(x>y)
+print(x<y)
+print(x==y)
+print(x!=y)
+money=2000
+if money >= 3000:
+    print("택시를 타고 가라")
+else:
+    print("걸어가라")
+money=2000
+card=True
+if money >= 3000 or card:
+    print("택시를 타고 가라")
+else:
+    print("걸어가라")
+print(1 in [1,2,3])
+print(1 not in [1,2,3])
+print('a' in ('a','b','c'))
+print('j' not in 'python')
+pocket=['paper', 'cellphone', 'money']
+if 'money' in pocket:
+    print("택시를 타고 가라")
+else:
+    print("걸어가라")
+
+pocket=['paper', 'cellphone', 'money']
+if 'card' not in pocket:
+    print("걸어가라")
+else:
+    print("버스를 타고 가라")
+
+pocket=['paper', 'money', 'cellphone']
+if 'money' in pocket:
+    pass
+else:
+    print("카드를 꺼내라")
+print("앙기모찌")
+pocket = ['paper', 'handphone']
+card = True
+if 'money' in pocket:
+    print("택시를 타고 가라")
+else:
+    if card:
+        print("택시를 타고 가라")
+    else:
+        print("걸어가라")
+pocket=['paper', 'cellphone']
+card=True
+if 'money' in pocket:
+    print("택시를 타고 가라")
+elif card:
+    print("택시를 타고 가라")
+else:
+    print("걸어가라")
+if 'money' in pocket:
+    pass
+else:
+    print("카드를 꺼내라")
+pocket=['paper', 'money', 'cellphone']
+if 'money' in pocket: pass
+else: print("카드를 꺼내라")
+
+if score >= 60:
+    message = "success"
+else:
+    message = "failure"
+message = "success" if score >= 60 else "failure"
+
+### 3-2 while 문
 
 
 #Python 3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)] on darwin
