@@ -630,17 +630,212 @@ dic={'name':'pey', 'phone':'010-9999-1234', 'birth':'1118'}
 #     result.append(num*3)
 # print(result)
 
-a=[1, 2, 3, 4]
-result=[num*3 for num in a]
-print(result)
+# a=[1, 2, 3, 4]
+# result=[num*3 for num in a]
+# print(result)
 
-a=[1, 2, 3, 4]
-result=[num*3 for num in a if num%2==0]
-print(result)
+# a=[1, 2, 3, 4]
+# result=[num*3 for num in a if num%2==0]
+# print(result)
 
-result=[x*y for x in range(2,10)
-            for y in range(1,10)]
-print(result)
+# result=[x*y for x in range(2,10)
+#             for y in range(1,10)]
+# print(result)
+
+# result=0
+# i=1
+# while i <=1000:
+#     if i%3==0:
+#         result += i
+#     i += 1
+# print(result)
+
+# i=0
+# while True:
+#     i += 1
+#     if i>5: break
+#     print('*'*i)
+
+# for i in range(1, 101):
+#     print(i)
+
+# A=[70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+# total=0
+# for score in A:
+#     total += score
+# # average = total/len(A)
+# # print(average)
+
+# numbers=[1,2,3,4,5]
+# result=[num*2 for num in numbers if num%2==1]
+# print(result)
+
+# ### 4-1. 함수
+
+# def 함수_이름(매개변수):
+#     수행할_문장1
+#     수행할_문장2
+
+# def add(a, b):
+#     return a+b
+# a=3
+# b=4
+# c=add(a,b)
+# print(c)
+
+# def add(a, b):
+#     result=a+b
+#     return result
+# a=add(3, 4,)
+# print(a)
+
+# def say():
+#     return 'Hi'
+# a=say()
+# print(a)
+
+# def add(a, b):
+#     print("%d, %d의 합은 %d입니다." % (a, b, a+b))
+# # print(add(3, 4))
+
+# def say():
+#     print('Hi')
+# print(say())
+
+# def sub(a, b):
+#     return a-b
+# result=sub(a=7, b=3)
+# print(result)
+
+# result=sub(b=5, a=3)
+# print(result)
+
+# def add_many(*args):
+#     result=0
+#     for i in args:
+#         result=result+i
+#     return result
+
+# result=add_many(1,2,3)
+# print(result)
+# result=add_many(1,2,3,4,5,6,7,8,9,10)
+# print(result)
+
+
+# def add_mul(choice, *args):
+#     if choice=="add":
+#         result=0
+#         for i in args:
+#             result=result+i
+#     elif choice=="mul":
+#         result=1
+#         for i in args:
+#             result=result*i
+#     return result
+
+# result=add_mul('add', 1,2,3,4,5)
+# print(result)
+
+# result=add_mul('mul', 1,2,3,4,5)
+# print(result)
+
+# def print_kwargs(**kwargs):
+#     print(kwargs)
+
+# print_kwargs(a=1)
+# print_kwargs(name='foo', age=3)
+
+# def add_and_mul(a, b):
+#     return a+b, a*b
+# result=add_and_mul(3, 4)
+# print(result)
+
+# result1, result2 = add_and_mul(3, 4)
+
+# def add_and_mul(a, b):
+#     return a+b
+#     return a*b
+
+# result=add_and_mul(2, 3)
+# print(result)
+
+# def add_and_mul(a, b):
+#     return a+b
+
+# def say_myself(name, age, man=True):
+#     print("나의 이름은 %s입니다." % name)
+#     print("나이는 %d살입니다." % age)
+#     if man:
+#         print("남자입니다.")
+#     else:
+#         print("여자입니다.")
+
+# print(say_myself("박응용", 27))
+# print(say_myself("박응용", 27, True))
+# print(say_myself("박응선", 27, False))
+
+# def say_myself(name, man=True, age):
+#     print("나의 이름은 %s입니다." % name)
+#     print("나이는 %d입니다." % age)
+#     if man:
+#         print("남자입니다.")
+#     else:
+#         print("여자입니다.")
+
+# print(say_myself("박응용", 27))
+
+# a=1
+# def vartest(a):
+#     a=a+1
+# # vartest(a)
+# # print(a)
+
+# def vartest(hello):
+#     hello = hello + 1
+
+# a=1
+# def vartest(a):
+#     a=a+1
+#     return a
+# a= vartest(a)
+# print(a)
+
+# a=1
+# def vartest():
+#     global a
+#     a=a+1
+# # vartest()
+# # print(a)
+
+# add= lambda a, b: a+b
+# result=add(3, 4)
+# print(result)
+
+# def add(a, b):
+#     return a+b
+# result=add(3, 4)
+# print(result)
+
+# ### 4-2 사용자 입출력
+
+# a= input()
+# Life is too short, you need Python
+# print(a)
+
+# ### 4-3 파일 읽고 쓰기
+
+# f=open("새파일.txt", "w")
+# f.close()
+
+# f=open("/Users/jonghyunlee/Documents/python-study/새파일.txt", 'w')
+# f=close()
+
+# f=open("/Users/jonghyunlee/Documents/python-study/새파일.txt", 'w')
+# for i in range(1, 11):
+#     data = "%d번째 줄입니다.\n" % i
+#     f.write(data)
+# f.close()
+
 
 
 
