@@ -40,6 +40,7 @@
 # City = input("What's the name of the city you grew up in?\n")
 # Pet = input("What's your pet's name?\n")
 # print("Your band name could be: " + City + " " + Pet)
+
 # Day 2 : Beginner - Understanding Data Types and How to Manipulate Strings
 # print(len(123456))
 # above code will give an error beause len() function only works with strings, lists, tuples, etc.
@@ -107,4 +108,44 @@
 # -
 # print(3 * 3 + 3 / 3 - 3)
 # print(3 * (3 + 3) / 3 - 3)
+
+# bmi = 84 / 1.65 ** 2
+# print(bmi)
+# print(int(bmi)) #Coverting float to int
+# print(round(bmi)) #Rounding the float to the nearest integer
+
+# print(round(bmi, 2)) #Rounding the float to 2 decimal places
+
+# score = 0
+# # User scores a point
+# #score = score + 1
+# score += 1 # This is a shorthand for score = score + 1
+# print(score)
+# # score -= 1 # This is a shorthand for score = score - 1
+
+# # # f-strings
+# # print("Your score is " + str(score))
+
+# score = 0
+# height = 1.8
+# is_winning  = True
+
+# print(f"Your score is = {score}, your height is {height}. You are winning is {is_winning}.")
+
+# # Day 2 final project
+# # print(150 * 1.12 / 5)
+# print("Welcome to the tip calculator!")
+# bill = float(input("What was the total bill? $"))
+# tip = int(input("What percentage tip would you like to give? 10, 12, or 15? "))
+# people = int(input("How many people to split the bill? "))
+# # bill_with_tip = tip / 100 * bill + bill
+# # or
+# # bill_with_tip = bill * (1 + tip / 100)
+# # or
+# tip_as_percent = tip / 100
+# total_tip_amount = bill * tip_as_percent
+# bill_with_tip = bill + total_tip_amount
+# bill_per_person = bill_with_tip / people
+# final_amount = round(bill_per_person, 2)
+# print(f"Each person should pay: ${final_amount}")
 
