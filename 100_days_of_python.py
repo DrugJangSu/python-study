@@ -149,3 +149,22 @@
 # final_amount = round(bill_per_person, 2)
 # print(f"Each person should pay: ${final_amount}")
 
+# # Day 3 : Beginner - Control Flow and Logical Operators
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? "))
+# # if height >= 120:
+#     print("You can ride the rollercoaster!")
+# else:
+#     print("Sorry, you have to grow taller before you can ride.")
+
+# if height == 120:
+#     print("You can ride the rollercoaster!")
+# else:
+# #     print("Sorry, you have to grow taller before you can ride.")
+
+# if height != 120:
+#     print("You can ride the rollercoaster!")
+# else:
+#     print("Sorry, you have to grow taller before you can ride.")
+
+
