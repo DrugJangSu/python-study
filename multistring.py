@@ -276,7 +276,7 @@
 
 ### 2-5. 딕셔너리 자료형
 # {Key1:Value1, Key2:Value2, Key3:Value3, ...}
-dic={'name':'pey', 'phone':'010-9999-1234', 'birth':'1118'}
+# dic={'name':'pey', 'phone':'010-9999-1234', 'birth':'1118'}
 # a={1:'hi'}
 # a={'a':[1,2,3]}
 # a={1:'a'}
@@ -846,3 +846,108 @@ dic={'name':'pey', 'phone':'010-9999-1234', 'birth':'1118'}
 #My Program
 #>>> print("="*50)
 #==================================================
+
+# print("Hello World")
+
+# ### 4-4 프로그램의 입출력
+
+# import sys
+# Args = sys.argv[1:]
+# for i in Args:
+#     print(i)
+
+
+# ### Review(unknown)
+# print(1 + 1)
+# a= "Python"
+# print(a)
+# a="Python"
+# print(a)
+# a=3
+# if a>1:
+#     print("a is greater than 1")
+# for a in [1,2,3]:
+#     print(a)
+# i=0
+# while i < 3:
+#     i = i + 1
+#     print(i)
+
+# def add(a, b):
+#     return a+b
+#     print(add(3, 4))
+
+# a=123
+# a=-178
+# a=0
+
+# a=1.2
+# a=-3.45
+# a=4.24E10
+# a=4.24e-10
+# a=0o177
+# print(a)
+# a=0x8ff
+# b=0xABC
+# print(b)
+# a=3
+# b=4
+# print(a+b)
+# print(a-b)
+# print(a*b)
+# print(a/b)
+# a=3
+# b=4
+# print(a**b)
+# print(7%3)
+# print(3%7)
+# print(7/4)
+# print(7//4)
+
+food="Python's favorite food is perl"
+print(food)
+say="\"Python is very easy.\" he says."
+print(say)
+multiline="""
+Life is too short
+You need python
+"""
+print(multiline)
+multiline="""
+Life is too short
+You need python"""
+print(multiline)
+head="Python"
+tail=" is fun!"
+print(head + tail)
+a="python"
+print(a*2)
+a="Life is too short"
+print(len(a))
+a="Life is too short, You need python"
+print(a[0])
+print(a[3])
+print(a[0])
+print(a[12])
+print(a[-1])
+a="Life is too short, You need python"
+b= a[0] + a[1] + a[2] + a[3]
+print(b)
+print(a[0:4])
+a="Pithon"
+print(a[:1])
+print(a[2:])
+print(a[:1] + 'y' + a[2:])
+print("I eat %d apples." % 3)
+print("I eat %s apples." % "five")
+number = 3
+print("I eat %d apples." % number)
+number = 10
+day = "three"
+print("I ate %d apples. so I was sick for %s days" % (number, day))
+print("I have %s apples" % 3)
+print("rate is %s " % 3.234)
+print("%10s" % "hi")
+print("%-10sjane" % 'hi')
+print("%0.4f" % 3.42134234)
+ 
