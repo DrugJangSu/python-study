@@ -36,7 +36,75 @@
 # pet = input("What's your pet's name?\n")
 # print(pet)
 # print("Your band name could be: " + city + " " +  pet)
-print("Welcome to the Band Name Generator.")
-City = input("What's the name of the city you grew up in?\n")
-Pet = input("What's your pet's name?\n")
-print("Your band name could be: " + City + " " + Pet)
+# print("Welcome to the Band Name Generator.")
+# City = input("What's the name of the city you grew up in?\n")
+# Pet = input("What's your pet's name?\n")
+# print("Your band name could be: " + City + " " + Pet)
+# Day 2 : Beginner - Understanding Data Types and How to Manipulate Strings
+# print(len(123456))
+# above code will give an error beause len() function only works with strings, lists, tuples, etc.
+# Subscripting
+# print("Hello"[0])
+# programming language always starts with 0 index
+# # print("Hello"[4])
+# print("Hello"[-1])
+# print("Hello"[-2])
+# # if one is a minus, the program counts going backwards from the end of the string
+# String
+# print("123" + "456")
+# # Integer = Whole number
+# print(123 + 345)
+# # Large Integers
+# print(123_456_789)
+# #Float = Decimal number (Floating point nunber)
+# print(3.14159)
+# #Boolkean = True or False
+# print(True)
+# print(False)
+# len(12345) -> which will be false because 12345 is an integer, not a string.
+# #The length function only works with strings, lists, tuples, etc.
+# print(len("Hello"))
+# print(type("Hello"))
+# print(type("abc"))
+# print(type(123))
+# print(type(3.14159))
+# print(type(True))
+# print("123" + "456")
+# int("123")
+# print(int("123") + int("456"))
+# print(int("abc")) # This will give a valueerror because "abc" cannot be converted into an integer.
+# int()
+# float()
+# str()
+# bool()
+# Above code will covert the value into the respective data type.
+
+# name_of_the_user = input("Enter your name\n")
+# length_of_name = len(name_of_the_user)
+# print(type("Number of letters in your name: ")) #Str
+# print(type(length_of_name)) #int
+# print("Number of letters in your name: " + str(length_of_name))
+
+# print("My age : " + str(12))
+# print(123 + 456)
+# print(7 + 3)
+# print(3 * 2)
+# print(6 / 3)
+# print(type(6 / 3))
+# print(type(5 / 3))
+# print(type(6 // 3))
+# print(6 / 3)
+# print(5 / 3)
+# print(5 // 3)
+# print(2 ** 3)
+
+#pendmas
+# ()
+# **
+# *
+# /
+# +
+# -
+# print(3 * 3 + 3 / 3 - 3)
+# print(3 * (3 + 3) / 3 - 3)
+
