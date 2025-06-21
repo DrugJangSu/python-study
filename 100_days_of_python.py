@@ -422,7 +422,119 @@
 # else:  
 #     print("Tails")
 
-states_of_america = ["Delaware", "Pennsylvania", "Ndw Jersey", "Georgia", "Connecticut", "Massachusetts"]
-print(states_of_america[0]) 
-print(states_of_america[1])
-print(states_of_america[2])
+# states_of_america = ["Delaware", "Pennsylvania", "Ndw Jersey", "Georgia", "Connecticut", "Massachusetts"]
+# print(states_of_america[0]) 
+# print(states_of_america[1])
+# print(states_of_america[2])
+# print(states_of_america[-1]) # This will give the last element of the list
+# print(states_of_america[-2]) # This will give the second last element of the list
+
+# states_of_america[1] = "Pencilvania" # This will change the value to the second element of the list
+
+# states_of_america.append("Angelaland") # This will add a new element to the end of the list
+
+# states_of_america.extend(["Hyunland", "Jack Bauer Land"]) # This will add multiple elements to the end of the list
+
+# print(states_of_america) # This will give the updated value of the list
+
+# import random
+# friends = ["Alice", "Bob", "Charlie", "David", "Emanuel"]
+
+# # option #1
+# print(random.choice(friends))
+
+# # option #2
+# random_index = random.randint(0, 4)
+# print(friends[random_index])
+
+
+# states_of_america = ["Delaware", "Pennsylvania", "Ndw Jersey", "Georgia", "Connecticut", "Massachusetts"]
+
+# print(len(states_of_america)) # This will give the length of the list
+
+# num_of_states = len(states_of_america)
+
+
+# dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
+
+# fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+# vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+# dirty_dozen = [fruits, vegetables] # This will create a list of lists
+# print(dirty_dozen)
+# print(dirty_dozen[1][1]) # This will give the second element of the second list in the list of lists
+# print(dirty_dozen[0][2]) # This will give the third element of the first list in the list of lists
+
+# ---------Day 4 Proejct : Rock Paper Scissors------------------
+
+# import random
+
+# rock = """
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# """
+
+# paper ="""
+#      _______
+# ---'    ____)____
+#            ______)
+#           _______)
+#          _______)
+# ---.__________)
+# """
+
+# scissors ="""
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# """
+
+# game_images = [rock, paper, scissors]
+
+# user_choice = int(input("What do you choose? Tyoe 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+# if user_choice >= 0 and user_choice <= 2:
+#     print(game_images[user_choice])
+
+# computer_choice = random.randint(0, 2)
+# print("Computer chose")
+# print(game_images[computer_choice])
+
+#option 1 (Angela's Solution)
+
+# if user_choice >= 3 or user_choice <0:
+#     print("You typed an invalid number. You lose!")
+# elif user_choice == 0 and computer_choice == 2:
+#     print("You win!")
+# elif user_choice > computer_choice:
+#     print("You win!")
+# elif user_choice == 2 and computer_choice == 0:
+#     print("You lose!")
+# elif computer_choice > user_choice:
+#     print("You lose!")
+# elif computer_choice == user_choice:
+#     print("It's a draw!")
+
+#option 2 (ChatGPT's solution)
+
+# if user_choice >= 3 or user_choice < 0:
+#     print("You typed an invalid number. You lose!")
+# elif user_choice == computer_choice:
+#     print("It's a draw!")
+# elif (user_choice == 0 and computer_choice == 2) or \
+#      (user_choice == 1 and computer_choice == 0) or \
+#      (user_choice == 2 and computer_choice == 1):
+#     print("You win!")
+# else:
+#     print("You lose!")
+
+# ----end of Day 4 Project---------------
+
+# Day 5 : Beginner - Python Loops----------------------------------------
+
