@@ -415,9 +415,14 @@
 # # random.uniform(a, b) : Return a random floating point number N such that a <= N <= b for a <= b or b <= N <= a for b < a.
 # print(random_float)
 
-import random
-random_heads_or_tails = random.randint(0, 1)
-if random_heads_or_tails == 0:
-    print("Heads") 
-else:  
-    print("Tails")
+# import random
+# random_heads_or_tails = random.randint(0, 1)
+# if random_heads_or_tails == 0:
+#     print("Heads") 
+# else:  
+#     print("Tails")
+
+states_of_america = ["Delaware", "Pennsylvania", "Ndw Jersey", "Georgia", "Connecticut", "Massachusetts"]
+print(states_of_america[0]) 
+print(states_of_america[1])
+print(states_of_america[2])
