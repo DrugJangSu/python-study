@@ -538,3 +538,7 @@
 
 # Day 5 : Beginner - Python Loops----------------------------------------
 
+fruits = ["Apple", "Peach", "Pear"]
+for fruit in fruits:
+    print(fruit)
+    
