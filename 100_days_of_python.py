@@ -384,3 +384,40 @@
 
 
 # Day 4 : Beginner - Randomisation and Python Lists------------------------------------------------
+
+# import random
+# # random_integer = random.randint(1, 10) # This will give a random integer between 1 and 10 (inclusive)
+# # random.randint(a, b) : Return a random integer N such that a <= N <= b. Alias for randrange(a, b+1).
+# random_integer = random.randint(1, 10)
+# print(random_integer)
+
+# my_favorite_number = 3.1415
+
+# ------------------------------------
+# import random
+# import my_module0621
+# random_integer = random.randint(1, 10)
+# print(random_integer)
+# print(my_module0621.my_favorite_number)
+
+# import random
+# random_number_0_to_1 = random.random() 
+# #random() returns a random float number between 0.0 to 1.0
+# print(random_number_0_to_1)
+# # This will give a random float number between 0 to 1
+
+# import random
+# random_number_0_to_1 = random.random() * 10
+# print(random_number_0_to_1)
+
+# import random
+# random_float = random.uniform(1, 10)
+# # random.uniform(a, b) : Return a random floating point number N such that a <= N <= b for a <= b or b <= N <= a for b < a.
+# print(random_float)
+
+import random
+random_heads_or_tails = random.randint(0, 1)
+if random_heads_or_tails == 0:
+    print("Heads") 
+else:  
+    print("Tails")
