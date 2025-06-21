@@ -653,3 +653,4 @@
 
 # ----end of Day 5 Project---------------
 
+# Day 6 : Beginner - Python Functions & Karel -------------------------------------------------
