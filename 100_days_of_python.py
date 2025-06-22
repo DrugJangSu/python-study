@@ -699,7 +699,7 @@
 
 # <no errors found>
 
-# <Angela's solution>
+# <Angela's solution in Reeborg's world>-----------------------------------
 # def turn_right():
 #     turn_left()
 #     turn_left()
@@ -715,9 +715,7 @@
 #     move()
 #     turn_left()
 
-# jump()
-# jump()
-# jump()
-# jump()
-# jump()
-# jump()
+# for step in range(6):
+#     jump()
+
+# ------------------------------
