@@ -654,3 +654,70 @@
 # ----end of Day 5 Project---------------
 
 # Day 6 : Beginner - Python Functions & Karel -------------------------------------------------
+
+# print("Hello")
+# num_char = len("Hello")
+# print(num_char)
+
+# def my_function():
+#     print("Hello")
+#     print("Bye")
+
+# my_function()
+
+# <Example of how it works>
+# def my_function()
+#     #Do this
+#     #Then do this
+#     #Finally do this
+
+# my_function()
+    # -> This is called as the "calling function"
+
+# My solution on Reeborg's world-----------------------------
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+# def one_cycle():
+#     move()
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
+
+# one_cycle()
+# one_cycle()
+# one_cycle()
+# one_cycle()
+# one_cycle()
+# one_cycle()
+
+# <no errors found>
+
+# <Angela's solution>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+# def jump():
+#     move()
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
+
+# jump()
+# jump()
+# jump()
+# jump()
+# jump()
+# jump()
