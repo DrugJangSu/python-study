@@ -653,7 +653,7 @@
 
 # ----end of Day 5 Project---------------
 
-# Day 6 : Beginner - Python Functions & Karel -------------------------------------------------
+# Day 6 : Beginner - Python Functions & Karel ---------------------------------------------------------------------
 
 # print("Hello")
 # num_char = len("Hello")
@@ -719,3 +719,151 @@
 #     jump()
 
 # ------------------------------
+# While loop
+# while something_is_true
+    #Do this
+    #Then do this
+    #Then do this
+    #until it becomes false
+
+# <Example in reeborg's world>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+# def jump():
+#     move()
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
+
+    
+# number_of_hurdles = 6
+# while number_of_hurdles > 0:
+#     jump()
+#     number_of_hurdles -= 1
+#     print(number_of_hurdles)
+
+# <Hurdle 2 problem solution>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+# def jump():
+#     move()
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
+
+    
+# while at_goal() != True:
+#     jump()
+
+# or
+
+# while not at_goal():
+#     jump()
+
+# <Hurdle 3 problem solution>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+# def jump():
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
+
+# while not at_goal():
+#     if wall_in_front():
+#         jump()
+#     else:
+#         move()
+
+# <Hurdle 3 problem>
+# <My own solution>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+# def jump():
+#     turn_left()
+#     move()
+#     while wall_on_right():
+#         move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     while front_is_clear():
+#         move()
+#     turn_left()
+
+# while not at_goal():
+#     if wall_in_front():
+#         jump()
+#     else:
+#         move()
+    
+## OMG NAILED IT ON ONE GO GET WRECKED ##
+# Angela's solution is absolutely the same #
+
+# --------day 6 project : Reeborg's world - Escaping the MAZE ----------------
+
+# <My solution>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+
+# while not at_goal():
+#     if front_is_clear():
+#         move()
+#     elif front_is_clear and right_is_clear():
+#         turn_right()
+#         move()
+#     elif wall_in_front and right_is_clear():
+#         turn_right()
+#         move()
+#     else:
+#         turn_left()
+
+#.. it has a 50/50 chance of succeeding to its destination. lol
+
+# <Angela's solution>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+
+# while not at_goal():
+#     if right_is_clear():
+#         turn_right()
+#         move()
+#     elif front_is_clear():
+#         move()
+#     else:
+#         turn_left()
+
+## The above solution is not perfect though, make sure to return after completing day 15.(Debugging purposes)
+
+# ----end of Day 6 Project---------------
+
+# Day 7 : Beginner - Hangman ---------------------------------------------------------------------
