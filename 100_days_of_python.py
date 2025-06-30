@@ -1195,113 +1195,74 @@
 #     print(stages[lives])
 
 
-# <retry step 5>
+# <step 5 finale>
 
 
 
-word_list = ["aardvark", "babboon", "camel"]
-import random
+# import random
 
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+# from hangman_words import word_list
+# from hangman_art import stages, logo
+
+# lives = 6
+
+# print(logo)
+
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# placeholder = ""
+# word_length = len(chosen_word)
+# for position in range(word_length):
+#     placeholder += "_"
+# print("word to guess: " + placeholder)
+
+# game_over = False
+# correct_letters = []
 
 
-lives = 6
+# while not game_over:
+#     print(f"*************************************{lives}/6 LIVES LEFT********************************************")
+#     guess = input("Guess a letter: ").lower()
 
-chosen_word = random.choice(word_list)
-print(chosen_word)
+#     if guess in correct_letters:
+#         print(f"You have already guessed the letter '{guess}'. Try again.")
 
-placeholder = ""
-word_length = len(chosen_word)
-for position in range(word_length):
-    placeholder += "_"
-print(placeholder)
+#     display = ""
 
-game_over = False
-correct_letters = []
-
-
-while not game_over:
-    guess = input("Guess a letter: ").lower()
-
-
-    display = ""
-
-    for letter in chosen_word:
-        if letter == guess:
-            display += letter
-            correct_letters.append(guess)
-        elif letter in correct_letters:
-            display += letter
-        else:
-            display += "_"
+#     for letter in chosen_word:
+#         if letter == guess:
+#             display += letter
+#             correct_letters.append(guess)
+#         elif letter in correct_letters:
+#             display += letter
+#         else:
+#             display += "_"
     
 
-    print(display)
+#     print("Word to guess: " + display)
 
-    if guess not in chosen_word:
-        lives -= 1
-        if lives == 0:
-            game_over = True
-            print("You lose.")
 
-    if "_" not in display:
-        game_over = True
-        print("You win.")
+#     if guess not in chosen_word:
+#         lives -= 1
+#         print(f"You guessed{guess}, that's not in the word. You lose a life.")
+
+
+#         if lives == 0:
+#             game_over = True
+
+
+#             print(f"************************IT WAS {chosen_word}!YOU LOSE*****************************")
+
+#     if "_" not in display:
+#         game_over = True
+#         print("***********************************YOU WIN**********************************")
+
     
-    print(stages[lives])
+#     print(stages[lives])
+
+
+# ----end of Day 7 Project--------------
+
+# Day 8 : Beginner - Functions with Outputs -----------------------------------------------------
+    
