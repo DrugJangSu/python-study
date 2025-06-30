@@ -959,13 +959,312 @@
 
 
 
-# <Step 4>
+# # <Step 4>
+# import random
+# word_list = ["aardvark", "baboon", "camel"]
+
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+
+# placeholder = ""
+# word_length = len(chosen_word)
+# for position in range(word_length):
+#     placeholder += "_"
+# print(placeholder)
+
+# game_over = False
+# correct_letters = []
+
+# while not game_over:
+#     guess = input("Guess a letter : ").lower()
+
+#     display = ""
+
+#     for letter in chosen_word:
+#         if letter == guess:
+#             display += letter
+#             correct_letters.append(guess)
+#         elif letter in correct_letters:
+#             display += letter
+#         else:
+#             display += "_"
+
+#     print(display)
+
+#     if "_" not in display:
+#         game_over = True
+#         print("You win.")
+
+# <Due to my own lack of understanding, I need to try it again this time later on this problem.>
+
+# <retry step 1>
+
+# word_list = ["aardvark", "babboon", "camel"]
+
+# import random
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# guess = input("Guess a letter: ").lower()
+# print(guess)
+
+# for letter in chosen_word:
+#     if letter == guess:
+#         print("Right")
+#     else:
+#         print("Wrong")
+
+# <retry step 2>
+
+# word_list = ["aardvark", "babboon", "camel"]
+
+# import random
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# placeholder = ""
+# word_length = len(chosen_word)
+# for position in range(word_length):
+#     placeholder += "_"
+# print(placeholder)
+
+# guess = input("Guess a letter: ").lower()
+
+
+# display = ""
+
+# for letter in chosen_word:
+#     if letter == guess:
+#         display += letter
+#     else:
+#         display += "_"
+    
+
+# print(display)
+
+# <retry step 3>
+
+# word_list = ["aardvark", "babboon", "camel"]
+
+# import random
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# placeholder = ""
+# word_length = len(chosen_word)
+# for position in range(word_length):
+#     placeholder += "_"
+# print(placeholder)
+
+# game_over = False
+# correct_letters = []
+
+
+# while not game_over:
+#     guess = input("Guess a letter: ").lower()
+
+
+#     display = ""
+
+#     for letter in chosen_word:
+#         if letter == guess:
+#             display += letter
+#             correct_letters.append(guess)
+#         elif letter in correct_letters:
+#             display += letter
+#         else:
+#             display += "_"
+    
+
+#     print(display)
+
+#     if "_" not in display:
+#         game_over = True
+#         print("You win.")
+    
+# <retry step 4>
+
+
+
+# word_list = ["aardvark", "babboon", "camel"]
+# import random
+
+# stages = ['''
+#   +---+
+#   |   |
+#   O   |
+#  /|\  |
+#  / \  |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#  /|\  |
+#  /    |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#  /|\  |
+#       |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#  /|   |
+#       |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#   |   |
+#       |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#       |
+#       |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#       |
+#       |
+#       |
+#       |
+# =========
+# ''']
+
+
+# lives = 6
+
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# placeholder = ""
+# word_length = len(chosen_word)
+# for position in range(word_length):
+#     placeholder += "_"
+# print(placeholder)
+
+# game_over = False
+# correct_letters = []
+
+
+# while not game_over:
+#     guess = input("Guess a letter: ").lower()
+
+
+#     display = ""
+
+#     for letter in chosen_word:
+#         if letter == guess:
+#             display += letter
+#             correct_letters.append(guess)
+#         elif letter in correct_letters:
+#             display += letter
+#         else:
+#             display += "_"
+    
+
+#     print(display)
+
+#     if guess not in chosen_word:
+#         lives -= 1
+#         if lives == 0:
+#             game_over = True
+#             print("You lose.")
+
+#     if "_" not in display:
+#         game_over = True
+#         print("You win.")
+    
+#     print(stages[lives])
+
+
+# <retry step 5>
+
+
+
+word_list = ["aardvark", "babboon", "camel"]
 import random
-word_list = ["aardvark", "baboon", "camel"]
+
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
+
+lives = 6
 
 chosen_word = random.choice(word_list)
 print(chosen_word)
-
 
 placeholder = ""
 word_length = len(chosen_word)
@@ -976,8 +1275,10 @@ print(placeholder)
 game_over = False
 correct_letters = []
 
+
 while not game_over:
-    guess = input("Guess a letter : ").lower()
+    guess = input("Guess a letter: ").lower()
+
 
     display = ""
 
@@ -989,11 +1290,18 @@ while not game_over:
             display += letter
         else:
             display += "_"
+    
 
     print(display)
+
+    if guess not in chosen_word:
+        lives -= 1
+        if lives == 0:
+            game_over = True
+            print("You lose.")
 
     if "_" not in display:
         game_over = True
         print("You win.")
-
-# <Due to my own lack of understanding, I need to try it again this time tomorrow on this problem.>
+    
+    print(stages[lives])
