@@ -1265,4 +1265,40 @@
 # ----end of Day 7 Project--------------
 
 # Day 8 : Beginner - Functions with Outputs -----------------------------------------------------
-    
+
+# def my_function():
+#     #Do this
+#     #Then do this
+#     #Finally do this
+
+# def greet():
+#     print("Hello")
+#     print("How do you do?")
+#     print("Isn't the weather nice?")
+
+# greet()
+
+
+# Functions that allows for inputs
+
+# def greet_with_name(name):
+#     print(f"Hello {name}")
+#     print(f"How do you do {name}?")
+
+# greet_with_name("Angela")
+
+# Functions with more than 1 input
+def greet_with(name, location):
+    print(f"Hello {name}")
+    print(f"What is it like in {location}?")
+
+greet_with("Angela", "London")
+greet_with("Hyun", "Seoul")
+
+greet_with("Nowhere", "Jack Bauer")
+# The first argument is always the first parameter, and the second argument is always the second parameter.
+# You can also use keyword arguments to sepcify which argument goes to which parameter.
+greet_with(location="Nowhere", name="Jack Bauer")
+# This way you can change the order of the arguments without changing the order of the parameters.
+
+
