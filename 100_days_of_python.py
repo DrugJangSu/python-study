@@ -1572,3 +1572,32 @@
 
 # Day 9 : Beginner - Dictionaries, Nesting and the Secret Auction -----------------------------------------------------
 
+# programming_dictionary = {
+#     "Bug": "An error in a program that prevents the program from running as expected.", 
+#     "Function": "A piece of code that you can easily call over and over again.",
+# }
+
+# print(programming_dictionary["Bug"])
+# print(programming_dictionary["Function"])
+
+# programming_dictionary["Loop"] = "The action of doing something repeatedly."
+
+# # print(programming_dictionary)
+
+# empty_dictionary = {}
+
+# # Wipe and existing dictionary
+# programming_dictionary = {}
+# print(programming_dictionary)
+
+# #Edit an item in a dictionary
+# programming_dictionary["Bug"] = "A moth in your computer."
+
+# print(programming_dictionary)
+
+# # Loop through a dictionary
+# for key in programming_dictionary:
+#     print(key)
+#     print(programming_dictionary[key])
+
+
