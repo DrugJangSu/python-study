@@ -1600,4 +1600,18 @@
 #     print(key)
 #     print(programming_dictionary[key])
 
+capitals = {
+    "France": "Paris",
+    "Germany": "Berlin",
+}
 
+
+# Nested List in Dictionary
+
+travel_log = {
+    "France": ["Paris", "Lille", "Dijon"],
+    "Germany": ["Berlin", "Hamburg", "Stuttgart"],
+}
+
+#print lille out of the travel_log
+print(travel_log["France"][1])  # Output : Lille
