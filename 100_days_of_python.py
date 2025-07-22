@@ -1746,4 +1746,7 @@
 # ----end of Day 9 Project--------------
 
 # Day 10 : Beginner - Functions with Outputs  -----------------------------------------------------
-
+print("Hello world")
+print(1+2)
+print("Hello world")
+print(1+2)
