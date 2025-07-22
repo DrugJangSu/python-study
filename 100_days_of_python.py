@@ -1600,18 +1600,149 @@
 #     print(key)
 #     print(programming_dictionary[key])
 
-capitals = {
-    "France": "Paris",
-    "Germany": "Berlin",
-}
+# capitals = {
+#     "France": "Paris",
+#     "Germany": "Berlin",
+# }
 
 
 # Nested List in Dictionary
 
-travel_log = {
-    "France": ["Paris", "Lille", "Dijon"],
-    "Germany": ["Berlin", "Hamburg", "Stuttgart"],
-}
+# travel_log = {
+#     "France": ["Paris", "Lille", "Dijon"],
+#     "Germany": ["Berlin", "Hamburg", "Stuttgart"],
+# }
 
-#print lille out of the travel_log
-print(travel_log["France"][1])  # Output : Lille
+# #print lille out of the travel_log
+# print(travel_log["France"][1])  # Output : Lille
+
+# nested_list = ["A", "B", ["C", "D"]]
+# print(nested_list[2][1])  # Output : D
+
+
+# travel_log = {
+#     "France": {
+#         "cities_visited" : ["Paris", "Lille", "Dijon"],
+#         "total_visits": 12
+#     },
+#     "Germany": {
+#         "cities_visited" : ["Berlin", "Hamburg", "Stuttgart"],
+#         "total_visits": 5
+#     },
+# }
+# print(travel_log["Germany"]["cities_visited"][2]) # Output : Stuttgart
+
+# Day 9 Project : Secret Auction Program------------------------------------
+
+# print("\n" * 100) # Purpose is to clear the console(screen)
+
+# logo ='''
+#    ___________
+#    \         /
+#     )_______(
+#     |"""""""|_.-._,.---------.,_.-._
+#     |       | | |               | | ''-.
+#     |       |_| |_             _| |_..-'
+#     |_______| '-' `'---------'` '-'
+#     )"""""""(
+#    /_________\
+#   /`'-------'`\
+#  .-------------.
+# /_______________\
+# '''
+# print(logo)
+
+
+# # TODO-1 : Ask the user for input
+
+# name = input("What is your name?: ").lower()
+# price = int(input("What is your bid?: $"))
+# bids = {} # Dictionary to hold bids
+
+# # TODO-2 : Save data into dictionary {name: price}
+# bids[name] = price
+
+# # TODO-3 : Whether if new bids need to be added
+# should_continue = input("Are there any other bidders Type 'yes' or 'no'. \n").lower()
+
+# continue_bidding = True
+# while continue_bidding:
+#     name = input("What is your name?: ").lower()
+#     price = int(input("What is your bid?: $"))
+#     bids[name] = price
+#     should_continue = input("Are there any other bidders Type 'yes' or 'no'. \n").lower()
+
+# As a result the current code goes like this;
+# bids = {}
+# continue_bidding = True
+# while continue_bidding:
+#     name = input("What is your name?: ").lower()
+#     price = int(input("What is your bid?: $"))
+#     bids[name] = price
+#     should_continue = input("Are there any other bidders Type 'yes' or 'no'. \n").lower()
+#     if should_continue == "no":
+#         continue_bidding = False
+
+# # TODO-4 : Compare bids in dictionary
+# def find_highest_bidder(bidding_dictionary):
+#     highest_bid = 0
+#     for bidder in bidding_dictionary:
+#         bid_amount = bidding_dictionary[bidder]
+#         if bid_amount > highest_bid:
+#             highest_bid = bid_amount
+#             winner = bidder
+
+#     print(f"The winner is {winner} with a bid of ${highest_bid}.")
+
+# # There's a different solution - using the Python max function.
+# # <example>
+# fruits = {"apple" : 2, "pear" : 4, "orange" : 9}
+# max(fruits, key=fruits.get)
+# ## max(stats, key=stats.get) <- this will return the key of the highest value.
+
+# As a result the current code goes like this;
+# We need to declare the function first before we use it, so it goes like this as the final code;
+
+# logo ='''
+#    ___________
+#    \         /
+#     )_______(
+#     |"""""""|_.-._,.---------.,_.-._
+#     |       | | |               | | ''-.
+#     |       |_| |_             _| |_..-'
+#     |_______| '-' `'---------'` '-'
+#     )"""""""(
+#    /_________\
+#   /`'-------'`\
+#  .-------------.
+# /_______________\
+# '''
+# print(logo)
+
+# def find_highest_bidder(bidding_dictionary):
+#     highest_bid = 0
+#     for bidder in bidding_dictionary:
+#         bid_amount = bidding_dictionary[bidder]
+#         if bid_amount > highest_bid:
+#             highest_bid = bid_amount
+#             winner = bidder
+
+#     print(f"The winner is {winner} with a bid of ${highest_bid}.")
+
+# bids = {}
+# continue_bidding = True
+# while continue_bidding:
+#     name = input("What is your name?: ").lower()
+#     price = int(input("What is your bid?: $"))
+#     bids[name] = price
+#     should_continue = input("Are there any other bidders Type 'yes' or 'no'. \n").lower()
+#     if should_continue == "no":
+#         continue_bidding = False
+#         find_highest_bidder(bids)
+#     elif should_continue == "yes":
+#         print("\n" * 20)
+
+
+# ----end of Day 9 Project--------------
+
+# Day 10 : Beginner - Functions with Outputs  -----------------------------------------------------
