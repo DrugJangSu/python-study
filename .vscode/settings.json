@@ -1,0 +1,9 @@
+{
+  "code-runner.executorMap": {
+    "python": "python3",
+    "javascript": "node"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.clearPreviousOutput": true
+}
+
