@@ -1,3 +1,6 @@
+# This file is part of the Python study exercises of a Udemy Course
+# 100 Days of Code : The Complete Python Pro Bootcamp
+
 # Day 1 : Beginner - Working with Variables in Python to Manage Data
 # print("Hello world!")
 # print("Hello world!")
