@@ -1778,4 +1778,10 @@
 # pet = input("What is the name of your pet?\n")
 # print("Your band name could be " + city + " " + pet)
 
-# #
+# Coding exercise #4 - Data Types
+height = 1.65 
+weight = 84
+
+bmi = weight / height ** 2 # **는 몇 제곱 또는 몇 승
+
+print(bmi)
