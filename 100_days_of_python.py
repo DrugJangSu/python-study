@@ -1758,10 +1758,24 @@
 # print("4. Leave to rise for 2 hours.")
 # print("5. Bake at 200 degrees C for 30 minutes.")
 
-
 # # Coding exercise #2 - Debugging practice
 # print("Notes from Day 1")
 # print("The print statement is used to output strings")
 # print("Strings are strings of characters")
 # print("String Concatenation is done with the + sign")
 # print(("New lines can be created with a \ and the letter n"))
+
+# # Coding exercise #3 - Variables practice
+# glass1 = "milk"
+# glass2 = "juice"
+# temp = glass1
+# glass1 = glass2
+# glass2 = temp
+
+# # Day 1 Project - Band Name Generator
+# print("Welcome to the Band Name Generator.")
+# city = input("Which city did you grow up in?\n")
+# pet = input("What is the name of your pet?\n")
+# print("Your band name could be " + city + " " + pet)
+
+# #
