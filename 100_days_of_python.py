@@ -1747,6 +1747,8 @@
 
 
 # ----end of Day 9 Project--------------
+
+
 ### Review purposes
 # print("Hello_world")
 # print("Hello" + " " + "Angela")
@@ -1778,10 +1780,63 @@
 # pet = input("What is the name of your pet?\n")
 # print("Your band name could be " + city + " " + pet)
 
-# Coding exercise #4 - Data Types
-height = 1.65 
-weight = 84
+# # Coding exercise #4 - Data Types
+# height = 1.65 
+# weight = 84
 
-bmi = weight / height ** 2 # **는 몇 제곱 또는 몇 승
+# bmi = weight / height ** 2 # **는 몇 제곱 또는 몇 승
 
-print(bmi)
+# print(bmi)
+
+# Day 2 Project - Tip Calculator
+print("Welcome to the tip calculator.")
+bill = float(input("What was the total bill? \n$"))
+tip = int(input("What percentage tip would you like to give? 10, 12, or 15? \n"))
+people = int(input("How many people to split the bill? \n"))
+# bill_with_tip = bill * (1 + tip / 100)
+# print(bill_with_tip)
+## 또는
+tip_as_percent = tip / 100
+total_tip_amount = bill * tip_as_percent
+total_bill = bill + total_tip_amount
+bill_per_person = total_bill / people
+final_amount = round(bill_per_person, 2)
+print(f"Each person should pay ${(final_amount)}")
+
+# 파이썬 f-string은 문자열 앞에 'f'나 'F'를 붙이고, 변수나 표현식을 `{} ` 안에 넣어 문자열에 삽입할 수 있는 방법입니다. 변수뿐만 아니라 간단한 연산, 자릿수 지정, 정렬 기능까지 중괄호 안에서 사용할 수 있어 매우 직관적이고 편리하며, 파이썬 3.6 버전부터 지원하는 주요 문자열 포맷팅 방식입니다. 
+# 기본 사용법 
+# 문자열 리터럴 앞에 f 또는 F를 붙입니다.
+# 삽입하려는 변수나 표현식을 중괄호 {} 안에 넣습니다.
+# 예시 변수 삽입.
+# Python
+
+#     name = "홍길동"
+#     age = 30
+#     print(f"안녕하세요, 제 이름은 {name}이고 나이는 {age}세입니다.")
+#     # 출력: 안녕하세요, 제 이름은 홍길동이고 나이는 30세입니다.
+# 표현식 삽입 (연산).
+# Python
+
+#     a = 5
+#     b = 10
+#     print(f"{a} + {b}는 {a + b}입니다.")
+#     # 출력: 5 + 10는 15입니다.
+# 추가 기능 소수점 자릿수 지정.
+# Python
+
+#     pi = 3.14159265
+#     print(f"파이값은 소수점 둘째 자리까지 표현하면 {pi:.2f}입니다.")
+#     # 출력: 파이값은 소수점 둘째 자리까지 표현하면 3.14입니다.
+# 정렬 기능:
+# >: 오른쪽 정렬, <: 왼쪽 정렬, ^: 가운데 정렬 
+# Python
+
+#     text = "Hello"
+#     print(f"|{text:^10}|") # 가운데 정렬, 총 10자리
+#     # 출력: |  Hello   |
+# f-string을 사용하는 이유
+# 가독성 및 편리성: 다른 포맷팅 방식보다 문법이 직관적이고 코드를 읽기 쉽습니다. 
+# 성능: 기존 문자열 포매팅(str.format() 등)보다 속도가 더 빠릅니다. 
+# 오류 감소: 변수나 표현식을 문자열 안에 직접 삽입하므로, 타입 오류 등 발생할 수 있는 오류가 줄어듭니다. 
+
+
