@@ -1928,10 +1928,10 @@
 
 # # Review
 # # Pizza Order Practice
-print("Welcome to Python Pizza Deliveries!")
-size = input("What size pizza do you want/ S, M, or L? \n")
-pepperoni = input("Do you want pepperoni? Y or N \n")
-extra_cheese = input("Do you want extra cheese? Y or N \n")
+# print("Welcome to Python Pizza Deliveries!")
+# size = input("What size pizza do you want? S, M, or L \n")
+# pepperoni = input("Do you want pepperoni? Y or N \n")
+# extra_cheese = input("Do you want extra cheese? Y or N \n")
 
 # Small pizza : $15
 # Medium pizza : $20
