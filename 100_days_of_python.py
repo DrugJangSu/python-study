@@ -1986,3 +1986,4 @@ elif choice1 == "right": # choice1 fail
 else: # choice1 YEET
     print("You don't read English. You YEETED yourself over the cliff. Game Over.")
 # ----end of Day 3 Project--------------
+# Day 4 Project - Rock Paper Scissors
