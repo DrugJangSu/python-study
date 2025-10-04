@@ -1962,28 +1962,61 @@
 # print(f"Your final bill is: ${bill}.")
 
 # # Day 3 Project - Treasure Island
-print("Welcome to Treasure Island.")
-print("Your mission is to find the treasure.")
-choice1 = input('You\'re at a cross road. Where do you want to go? Type "left" or "right" \n').lower()
-if choice1 == "left":
-    choice2 = input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. \n').lower()
-    if choice2 == "wait":
-        choice3 = input('You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? \n').lower()
-        if choice3 == "red": # choice3 cozy
-            print("It's a room full of fire. 불타오르네. Game Over.")
-        elif choice3 == "yellow":
-            print("You found the treasure! You Win, but at what cost?")
-        elif choice3 == "Blue": # choice3 fail
-            print("You enter a room of normies. You die out from awkwardness amongst them. Game Over.")
-        else: # choice3 skill issue
-            print("You're colorblind, you don't read colors. You just open them all up for them to swallow you whole. Game Over.")
-    elif choice2 == "Swim": # choice2 drown?
-        print("You swim with the fishies. Game Over.")
-    else:
-        print("You start to question your life choices, thus further decreasing your sanity. You wait long enough for jesus to take your life. Game Over.")
-elif choice1 == "right": # choice1 fail
-    print("You fell into a hole. Game Over.")
-else: # choice1 YEET
-    print("You don't read English. You YEETED yourself over the cliff. Game Over.")
+# print("Welcome to Treasure Island.")
+# print("Your mission is to find the treasure.")
+# choice1 = input('You\'re at a cross road. Where do you want to go? Type "left" or "right" \n').lower()
+# if choice1 == "left":
+#     choice2 = input('You\'ve come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. \n').lower()
+#     if choice2 == "wait":
+#         choice3 = input('You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? \n').lower()
+#         if choice3 == "red": # choice3 cozy
+#             print("It's a room full of fire. 불타오르네. Game Over.")
+#         elif choice3 == "yellow":
+#             print("You found the treasure! You Win, but at what cost?")
+#         elif choice3 == "Blue": # choice3 fail
+#             print("You enter a room of normies. You die out from awkwardness amongst them. Game Over.")
+#         else: # choice3 skill issue
+#             print("You're colorblind, you don't read colors. You just open them all up for them to swallow you whole. Game Over.")
+#     elif choice2 == "Swim": # choice2 drown?
+#         print("You swim with the fishies. Game Over.")
+#     else:
+#         print("You start to question your life choices, thus further decreasing your sanity. You wait long enough for jesus to take your life. Game Over.")
+# elif choice1 == "right": # choice1 fail
+#     print("You fell into a hole. Game Over.")
+# else: # choice1 YEET
+#     print("You don't read English. You YEETED yourself over the cliff. Game Over.")
 # ----end of Day 3 Project--------------
-# Day 4 Project - Rock Paper Scissors
+# Review on the pizza problem
+
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L: \n")
+pepperoni = input("Do you want pepperoni? Y or N \n")
+extra_cheese = input("Do you want extra cheese? Y or N \n")
+
+
+# Small pizza : $15
+# Medium pizza : $20
+# Large pizza : $25
+# Pepperoni for Small pizza : +$2
+# Pepperoni for Medium or Large pizza : +$3
+# Extra cheese for any size pizza : + $1
+
+bill = 0
+if size == "S":
+    bill += 15
+elif size == "M":
+    bill += 20
+elif size == "L":
+    bill += 25
+else:
+    print("You typed the wrong inputs. Please enter the right size.")
+
+if pepperoni == "Y":
+    if size == "S":
+        bill += 2
+    else:
+        bill += 3
+if extra_cheese == "Y":
+    bill += 1
+
+print(f"Your final bill is: ${bill}.")
