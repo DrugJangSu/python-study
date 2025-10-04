@@ -1986,6 +1986,8 @@
 # else: # choice1 YEET
 #     print("You don't read English. You YEETED yourself over the cliff. Game Over.")
 # ----end of Day 3 Project--------------
+
+## RANDOM REVIEW SECTION
 # Review on the pizza problem
 
 # print("Welcome to Python Pizza Deliveries!")
@@ -2051,4 +2053,51 @@
 # else:
 #     print("Too high for ya, skill issue.")
 
+# states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut", "Massachusetts", "Maryland", "South Carolina", "New Hampshire", "Virginia", "New York", "North Carolina", "Rhode Island", "Vermont", "Kentucky", "Tennessee", "Ohio", "Louisiana", "Indiana", "Mississippi", "Illinois", "Alabama", "Maine", "Missouri", "Arkansas", "Michigan", "Florida", "Texas", "Iowa", "Wisconsin", "California", "Minnesota", "Oregon", "Kansas", "West Virginia", "Nevada", "Nebraska", "Colorado", "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"]
+# print(states_of_america[1])
+# print(states_of_america[-1])
+# # states_of_america[1] = "Pencilvania"
+# # print(states_of_america[1])
+# print(len(states_of_america))
+# print(states_of_america)
+# # # append is used to add items to the end of the list
+# # states_of_america.append("Seoul")
+# # print(states_of_america)
+# # print(len(states_of_america))
+
+# # extend is used to add multiple items to the end of the list
+# states_of_america.extend(["Busan", "Incheon", "Daegu"])
+# print(states_of_america)
+# print(len(states_of_america))
+
+# import random
+# friends = ["Alice", "Bob", "Charlie", "David", "Emanuel"]
+
+
+# # option 1
+# print(random.choice(friends))
+
+# # option 2
+# random_index = random.randint(0, 4)
+# print(friends[random_index])
+
+
+# states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut", "Massachusetts", "Maryland", "South Carolina", "New Hampshire", "Virginia", "New York", "North Carolina", "Rhode Island", "Vermont", "Kentucky", "Tennessee", "Ohio", "Louisiana", "Indiana", "Mississippi", "Illinois", "Alabama", "Maine", "Missouri", "Arkansas", "Michigan", "Florida", "Texas", "Iowa", "Wisconsin", "California", "Minnesota", "Oregon", "Kansas", "West Virginia", "Nevada", "Nebraska", "Colorado", "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"]
+
+# # print(states_of_america[49])
+# # print(states_of_america[50]) # IndexError: list index out of range(since it doesn't exist)
+
+# num_of_states = len(states_of_america) #50
+# print(states_of_america[num_of_states - 1]) #49
+
+
+# dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
+
+# fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+# vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+# dirty_dozen = [fruits, vegetables]
+# print(dirty_dozen)
+# print(dirty_dozen[1][2]) # list in list -> second list, third item
+# print(dirty_dozen[1][1]) # list in list -> second list, second item
 
