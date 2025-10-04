@@ -1988,10 +1988,10 @@
 # ----end of Day 3 Project--------------
 # Review on the pizza problem
 
-print("Welcome to Python Pizza Deliveries!")
-size = input("What size pizza do you want? S, M, or L: \n")
-pepperoni = input("Do you want pepperoni? Y or N \n")
-extra_cheese = input("Do you want extra cheese? Y or N \n")
+# print("Welcome to Python Pizza Deliveries!")
+# size = input("What size pizza do you want? S, M, or L: \n")
+# pepperoni = input("Do you want pepperoni? Y or N \n")
+# extra_cheese = input("Do you want extra cheese? Y or N \n")
 
 
 # Small pizza : $15
@@ -2020,3 +2020,7 @@ extra_cheese = input("Do you want extra cheese? Y or N \n")
 #     bill += 1
 
 # print(f"Your final bill is: ${bill}.")
+# -------review complete-------
+
+a = 12
+a > 10 and a < 20
