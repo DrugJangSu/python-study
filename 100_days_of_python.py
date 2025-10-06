@@ -2186,7 +2186,20 @@
 # for score in student_scores:
 #     if score > max_score:
 #         max_score = score
-# print(f"The highest score in the class is: {max_score}")
+# print(max_score)
 
+# <end of highest score review>
 
+# Range Fuction with For loop
 
+# for number in range(1, 10): # 1 to 9, not including 10
+#     print(number)
+# for number in range(1, 11): # 1 to 10
+#     print(number)
+for number in range(1, 11, 3): # 1 to 10, increasing by 3
+    print(number)
+
+total = 0
+for number in range(1, 101):
+    total += number # total = total+number
+print(total)
