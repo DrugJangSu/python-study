@@ -2336,4 +2336,22 @@ def my_function():
 
 my_function() #this is how to execute the defined function, without any print statement
 
+# <Reeborg's world review>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+# def jump():
+#     move()
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
+
+
+# for step in range(0, 6):
+#     jump()
 
