@@ -2323,4 +2323,17 @@
 #     password += char
 # print(f"Your password is: {password}")
 
+# <end of Pypassword Generator review>
+
+# print("Hello")
+# num_char = len("Hello")
+# print(num_char)
+
+def my_function():
+    print("Hello")
+    print("Bye")
+    print("See you later")
+
+my_function() #this is how to execute the defined function, without any print statement
+
 
