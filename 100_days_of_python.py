@@ -2161,7 +2161,7 @@
 #     print(fruits)
 
 # <Quick review - highest score problem>
-student_scores= [150, 142, 185, 120, 171, 184, 149, 24, 59, 68, 91, 111, 178, 169, 173, 158, 172, 132, 144, 141, 106, 121, 170, 163, 132, 112, 154, 100, 138, 127, 129, 165, 175, 166, 187, 110, 146, 112, 174, 94, 197, 184, 171, 104, 122, 177, 109, 96, 167]
+# student_scores= [150, 142, 185, 120, 171, 184, 149, 24, 59, 68, 91, 111, 178, 169, 173, 158, 172, 132, 144, 141, 106, 121, 170, 163, 132, 112, 154, 100, 138, 127, 129, 165, 175, 166, 187, 110, 146, 112, 174, 94, 197, 184, 171, 104, 122, 177, 109, 96, 167]
 
 # total_exam_score = sum(student_scores)
 # print(total_exam_score)
@@ -2182,11 +2182,11 @@ student_scores= [150, 142, 185, 120, 171, 184, 149, 24, 59, 68, 91, 111, 178, 16
 
 # Angela's solution
 
-max_score = 0
-for score in student_scores:
-    if score > max_score:
-        max_score = score
-print(f"The highest score in the class is: {max_score}")
+# max_score = 0
+# for score in student_scores:
+#     if score > max_score:
+#         max_score = score
+# print(f"The highest score in the class is: {max_score}")
 
 
 
