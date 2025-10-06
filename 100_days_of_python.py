@@ -2153,5 +2153,3 @@
 #     print("It's a draw")
 
 # <end of rock paper scissors review>
-
-print("Hello World!")
