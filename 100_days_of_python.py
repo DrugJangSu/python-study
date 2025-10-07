@@ -2395,3 +2395,25 @@ my_function() #this is how to execute the defined function, without any print st
 # while not at_goal():
 #     jump()
 
+# #<hurdle3> # Position of the hurdle and the numbers are random
+# # <My solution>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+    
+# def jump():    # I got rid of the "move" in the first line due to not knowing where the hurdle is
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
+
+# while not at_goal():
+#     if front_is_clear():
+#         move()
+#     elif wall_in_front():
+#         jump()
+
