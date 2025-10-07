@@ -2329,12 +2329,12 @@
 # num_char = len("Hello")
 # print(num_char)
 
-def my_function():
-    print("Hello")
-    print("Bye")
-    print("See you later")
+# def my_function():
+#     print("Hello")
+#     print("Bye")
+#     print("See you later")
 
-my_function() #this is how to execute the defined function, without any print statement
+# my_function() #this is how to execute the defined function, without any print statement
 
 # <Reeborg's world review>
 # def turn_right():
@@ -2461,4 +2461,43 @@ my_function() #this is how to execute the defined function, without any print st
 #         turn_right()
 #         move()
 
-## Success without any errors!
+## Success without any errors! Happy Hyun noises----------------
+# No debugging required for my solution
+
+# <Angela's solution>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+# while not at_goal():
+#     if right_is_clear():
+#         turn_right()
+#         move()
+#     elif front_is_clear():
+#         move()
+#     else:
+#         turn_left()
+
+# However, this solution doesn't work in some cases, for example, when there's a long straight path with no turns. In such cases, the robot may not reach the goal because it only turns right when the right side is clear. If the robot encounters a situation where it needs to turn left to reach the goal, it won't do so because of the current logic.
+# To address this, we can modify the logic to include a left turn when both the front and right sides are blocked. Here's an updated version of the code;
+
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+# while front_is_clear():
+#     move() 
+# turn_left()
+
+# while not at_goal():
+#     if right_is_clear():
+#         turn_right()
+#         move()
+#     elif front_is_clear():
+#         move()
+#     else:
+#         turn_left()
+
+# ---------------------------------------------------
+
