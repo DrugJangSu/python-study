@@ -2549,7 +2549,39 @@
 # TODO-2 : Create a "display" that puts the guess letter in the correct position(s). For example, if the user guessed "a" and the chosen_word was "apple", then display should be ["a", "_", "_", "a", "_"].
 # TODO-3 : Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
 # Hint - Don't worry about getting the user to guess the next letter. We'll tackle that in step 3. You don't need to worry about the case where the user enters a letter they've already guessed. We'll deal with that in step 3.
-# <My solution>
+
+# word_list = ["aardvark", "baboon", "camel"]
+
+
+# import random
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# # TODO-1
+# placeholder = ""
+# word_length = len(chosen_word)
+# for position in range(word_length):
+#     placeholder += "_"
+# print(placeholder)
+
+# guess = input("Guess a letter: ").lower()
+# # TODO-2
+
+# display = ""
+
+# for letter in chosen_word:
+#     if letter == guess:
+#         display += letter
+#     else:
+#         display += "_"
+
+# print(display)
+# ---------------------------------------------------
+# <part 3>
+
+# TODO-1 : Yse a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more "_" characters.
+# TODO-2 : Change the for loop so that you keep the previous correct guesses in 'display'. For example, if the chosen_word was "apple" and the user guessed "p", then display should be ["_", "p", "p", "_", "_"].
+
 
 word_list = ["aardvark", "baboon", "camel"]
 
@@ -2558,17 +2590,20 @@ import random
 chosen_word = random.choice(word_list)
 print(chosen_word)
 
-# TODO-1
 placeholder = ""
 word_length = len(chosen_word)
 for position in range(word_length):
     placeholder += "_"
 print(placeholder)
 
+# TODO-1
+
 guess = input("Guess a letter: ").lower()
-# TODO-2
+
 
 display = ""
+
+# TODO-2
 
 for letter in chosen_word:
     if letter == guess:
@@ -2577,3 +2612,4 @@ for letter in chosen_word:
         display += "_"
 
 print(display)
+
