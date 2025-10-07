@@ -2582,9 +2582,229 @@
 # TODO-1 : Yse a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and 'display' has no more "_" characters.
 # TODO-2 : Change the for loop so that you keep the previous correct guesses in 'display'. For example, if the chosen_word was "apple" and the user guessed "p", then display should be ["_", "p", "p", "_", "_"].
 
+# word_list = ["aardvark", "baboon", "camel"]
+
+
+# import random
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# placeholder = ""
+# word_length = len(chosen_word)
+# for position in range(word_length):
+#     placeholder += "_"
+# print(placeholder)
+
+# # TODO-1
+
+# game_over = False
+# correct_letters = []
+
+
+# while not game_over:
+#     guess = input("Guess a letter: ").lower()
+
+
+#     display = ""
+
+#     # TODO-2
+
+#     for letter in chosen_word:
+#         if letter == guess:
+#             display += letter
+#             correct_letters.append(letter)
+#         elif letter in correct_letters:
+#             display += letter
+#         else:
+#             display += "_"
+
+#     print(display)
+
+#     if "_" not in display:
+#         game_over = True
+#         print("You win!")
+
+# ----------------------------------------------------
+# <part 4>
+
+# TODO-1 : Create a variable called 'lives' to keep track of the number of lives left. Set it to 6.
+# TODO-2 : If the letter is not in the chosen_word, then reduce 'lives' by 1. If lives goes down to 0 then the game should stop and it should print "You lose."
+# TODO-3 : Print the ASCII art from 'stages' at the end of each round, so the user knows how many lives they have left.
+
+# stages = ['''
+#   +---+
+#   |   |
+#   O   |
+#  /|\  |
+#  / \  |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#  /|\  |
+#  /    |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#  /|\  |
+#       |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#  /|   |
+#       |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#   |   |
+#       |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#   O   |
+#       |
+#       |
+#       |
+# =========
+# ''', '''
+#   +---+
+#   |   |
+#       |
+#       |
+#       |
+#       |
+# =========
+# ''']
+
+# word_list = ["aardvark", "baboon", "camel"]
+
+# # TODO-1
+# lives = 6
+
+# import random
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# placeholder = ""
+# word_length = len(chosen_word)
+# for position in range(word_length):
+#     placeholder += "_"
+# print(placeholder)
+
+
+# game_over = False
+# correct_letters = []
+
+
+# while not game_over:
+#     guess = input("Guess a letter: ").lower()
+
+
+#     display = ""
+
+#     for letter in chosen_word:
+#         if letter == guess:
+#             display += letter
+#             correct_letters.append(letter)
+#         elif letter in correct_letters:
+#             display += letter
+#         else:
+#             display += "_"
+#         # rather tampering with the elif and else statement, just write a completely separate statement so that we can keep our logic separate and under different banners, and easier to read and debug
+#     print(display)
+
+#     # TODO-2
+#     if guess not in chosen_word:
+#         lives -= 1
+#         if lives == 0:
+#             game_over = True
+#             print("You lose.")
+
+#     if "_" not in display:
+#         game_over = True
+#         print("You win!")
+    
+#     # TODO-3
+
+#     print(stages[lives])
+
+# ----------------------------------------------------
+# <part 5>
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
 
 word_list = ["aardvark", "baboon", "camel"]
 
+# TODO-1
+lives = 6
 
 import random
 chosen_word = random.choice(word_list)
@@ -2596,7 +2816,6 @@ for position in range(word_length):
     placeholder += "_"
 print(placeholder)
 
-# TODO-1
 
 game_over = False
 correct_letters = []
@@ -2607,8 +2826,6 @@ while not game_over:
 
 
     display = ""
-
-    # TODO-2
 
     for letter in chosen_word:
         if letter == guess:
@@ -2621,7 +2838,18 @@ while not game_over:
 
     print(display)
 
+    # TODO-2
+    if guess not in chosen_word:
+        lives -= 1
+        if lives == 0:
+            game_over = True
+            print("You lose.")
+
     if "_" not in display:
         game_over = True
         print("You win!")
+    
+    # TODO-3
+
+    print(stages[lives])
 
