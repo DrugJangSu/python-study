@@ -2501,3 +2501,79 @@
 
 # ---------------------------------------------------
 
+# <Hangman exercise review>
+# <part 1>
+# word_list = ["aardvark", "baboon", "camel"]
+
+# TODO-1 : Randomly choose a word from the word_list and assign it to a variable called chosen_word. Then print it.
+# TODO-2 : Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+# TODO-3 : Check if the letter the user guessed (guess) is one of the letters in the chosen_word. Print "Right" if the letter is in the chosen_word. Otherwise, print "Wrong".
+
+# <My solution>
+# # TODO-1 
+# import random
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# # TODO-2
+# guess = input("Guess a letter: ").lower()
+
+# # TODO-3
+# for letter in chosen_word:
+#     if letter == guess:
+#         print("Right")
+#     else:
+#         print("Wrong")
+
+# <Angela's solution>
+# # # TODO-1 
+# import random
+# chosen_word = random.choice(word_list)
+# print(chosen_word)
+
+# # # TODO-2
+# guess = input("Guess a letter: ").lower()
+# print(guess)
+
+# # # TODO-3
+# for letter in chosen_word:
+#     if letter == guess:
+#         print("Right")
+#     else:
+#         print("Wrong")
+# ---------------------------------------------------
+# <part 2>
+
+
+# TODO-1 : Create a "placeholder" with the same number of letters as the chosen_word and assign it to a variable called display. For example, if the chosen_word has 6 letters, display should be ["_", "_", "_", "_", "_", "_"].
+# TODO-2 : Create a "display" that puts the guess letter in the correct position(s). For example, if the user guessed "a" and the chosen_word was "apple", then display should be ["a", "_", "_", "a", "_"].
+# TODO-3 : Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
+# Hint - Don't worry about getting the user to guess the next letter. We'll tackle that in step 3. You don't need to worry about the case where the user enters a letter they've already guessed. We'll deal with that in step 3.
+# <My solution>
+
+word_list = ["aardvark", "baboon", "camel"]
+
+
+import random
+chosen_word = random.choice(word_list)
+print(chosen_word)
+
+# TODO-1
+placeholder = ""
+word_length = len(chosen_word)
+for position in range(word_length):
+    placeholder += "_"
+print(placeholder)
+
+guess = input("Guess a letter: ").lower()
+# TODO-2
+
+display = ""
+
+for letter in chosen_word:
+    if letter == guess:
+        display += letter
+    else:
+        display += "_"
+
+print(display)
