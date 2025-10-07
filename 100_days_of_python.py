@@ -2417,3 +2417,26 @@ my_function() #this is how to execute the defined function, without any print st
 #     elif wall_in_front():
 #         jump()
 
+# <hurdle4> # Position of the hurdle and the numbers are random, and the height of the hurdle is also random
+# <my solution>
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+    
+# def jump():
+#     turn_left()
+#     while wall_on_right():
+#         move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     while not wall_in_front():
+#         move()
+#     turn_left()
+
+# while not at_goal():
+#     if wall_in_front():
+#         jump()
+#     else:
+#         move()
