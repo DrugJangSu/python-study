@@ -2598,18 +2598,30 @@ print(placeholder)
 
 # TODO-1
 
-guess = input("Guess a letter: ").lower()
+game_over = False
+correct_letters = []
 
 
-display = ""
+while not game_over:
+    guess = input("Guess a letter: ").lower()
 
-# TODO-2
 
-for letter in chosen_word:
-    if letter == guess:
-        display += letter
-    else:
-        display += "_"
+    display = ""
 
-print(display)
+    # TODO-2
+
+    for letter in chosen_word:
+        if letter == guess:
+            display += letter
+            correct_letters.append(letter)
+        elif letter in correct_letters:
+            display += letter
+        else:
+            display += "_"
+
+    print(display)
+
+    if "_" not in display:
+        game_over = True
+        print("You win!")
 
