@@ -2912,7 +2912,7 @@ def greet_with(name, location):
     print(f"Hello {name}")
     print(f"What is it like in {location}?")
 
-greet with("Hyun", "Seoul") # Positional arguments
+greet_with("Hyun", "Seoul") # Positional arguments
 greet_with(location="Seoul", name="Hyun") # Keyword arguments
 # Keyword arguments are more flexible than positional arguments
 # You can also mix positional and keyword arguments, but positional arguments must come first
