@@ -2858,9 +2858,39 @@
 
 # Functions with inputs
 
-def greet():
-    print("Hello")
-    print("How do you do?")
-    print("Isn't the weather nice today?")
+# def greet():
+#     print("Hello")
+#     print("How do you do?")
+#     print("Isn't the weather nice today?")
 
-greet()
+# greet()
+
+# # example
+# def my_function(something):
+#     # Do this with something
+#     # Then do this
+#     # Finally do this
+
+# Functions that allows for inputs
+# def greet_with_name(name):
+#     print(f"Hello {name}")
+#     print(f"How do you do {name}?")
+#     print(f"Isn't the weather nice today, {name}?")
+
+# greet_with_name("Hyun")
+
+# In this case, name is parameter, and "Hyun" is argument
+# The Paramenter is the name of the data that's being passed into the function
+# The Argument is the actual value of the data
+# You can have multiple parameters
+
+## Coding exercise - Life in weeks
+
+# def life_in_weeks(age):
+#     weeks = int((90 - age) * 52)
+#     print(f"You have {weeks} weeks left.")
+
+
+# life_in_weeks(12)
+
+# ------------------------------
