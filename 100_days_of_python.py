@@ -2894,3 +2894,15 @@
 # life_in_weeks(12)
 
 # ------------------------------
+# Another solution
+# def life_in_weeks(age):
+#     if age < 0 or age > 90:
+#         print("Please enter a valid age between 0 and 90.")
+#         return
+    
+#     weeks = (90 - age) * 52  # 할당 연산자 '=' 사용
+#     print(f"You have {weeks} weeks left.")
+#     return weeks  # 필요하면 반환값 제공
+
+# life_in_weeks(12)
+# ------------------------------
