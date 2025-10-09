@@ -2908,11 +2908,61 @@
 # ------------------------------
 # Positional arguments vs Keyword arguments
 
-def greet_with(name, location):
-    print(f"Hello {name}")
-    print(f"What is it like in {location}?")
+# def greet_with(name, location):
+#     print(f"Hello {name}")
+#     print(f"What is it like in {location}?")
 
-greet_with("Hyun", "Seoul") # Positional arguments
-greet_with(location="Seoul", name="Hyun") # Keyword arguments
-# Keyword arguments are more flexible than positional arguments
-# You can also mix positional and keyword arguments, but positional arguments must come first
+# greet_with("Hyun", "Seoul") # Positional arguments
+# greet_with(location="Seoul", name="Hyun") # Keyword arguments
+# # Keyword arguments are more flexible than positional arguments
+# # You can also mix positional and keyword arguments, but positional arguments must come first
+
+# ------------------------------
+# Coding exercise - Love calculator
+# -----my solution-----
+def calculate_love_score(name1, name2):
+    combined_names = (name1 + name2).lower()
+
+    t = combined_names.count("t")
+    r = combined_names.count("r")
+    u = combined_names.count("u")
+    e = combined_names.count("e")
+
+    true = t + r + u + e
+
+    l = combined_names.count("l")
+    o = combined_names.count("o")
+    v = combined_names.count("v")
+    e = combined_names.count("e")
+
+    love = l + o + v + e
+
+    love_score = int(str(true) + str(love))
+
+    print(love_score)
+
+calculate_love_score("Kayne West", "Kim Kardashian")
+calculate_love_score("Jong Hyun Lee", "Thea Lucie Bailey")
+
+# ----Solution---
+def calculate_love_score(name1, name2):
+    combined_names = name1 + name2
+    lower_names = combined_names.lower()
+    
+    t = lower_names.count("t")
+    r = lower_names.count("r")
+    u = lower_names.count("u")
+    e = lower_names.count("e")
+    first_digit = t + r + u + e
+    
+    l = lower_names.count("l")
+    o = lower_names.count("o")
+    v = lower_names.count("v")
+    e = lower_names.count("e")
+    second_digit = l + o + v + e
+    
+    
+    score = int(str(first_digit) + str(second_digit))
+    print(score)
+    
+calculate_love_score("Kanye West", "Kim Kardashian")
