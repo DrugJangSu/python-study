@@ -2970,18 +2970,240 @@
 # ----------------------------------------------------------
 # Day 8 project - Caesar Cipher
 # <PART 1>
-# TODO-1: Create a function called 'encrypt' that takes the 'original_text' and 'shift' as inputs.
+# """
+#  ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
+# a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
+# 8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88          
+# "8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88          
+#  `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88 
+#            88             88                                 
+#            ""             88                                 
+#                           88                                 
+#  ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  
+# a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  
+# 8b         88 88       d8 88       88 8PP""""""" 88          
+# "8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          
+#  `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          
+#               88                                             
+#               88                                            
+# """
+# TODO-1: Create a function called 'encrypt()' that takes the 'original_text' and 'shift_amount' as inputs.
 
 # TODO-2: Inside the 'encrypt' function, shift each letter of 'original_text' forwards in the alphabet by the shift amount and print the encrypted text.
 
-# TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message.
+# TODO-3: Call the 'encrypt()' function and pass in the user inputs. You should be able to test the code and encrypt a message.
 
-# TODO-4: What happens if you try to shift the letter 'z' forwards by 9? Is the code still working?
+# TODO-4: What happens if you try to shift the letter 'z' forwards by 9? Can you fix the code?
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
 
-# TODO-1
+# # TODO-1, TODO-2
 
+
+# def encrypt(original_text, shift_amount):
+#     cipher_text = ""
+
+#     for letter in original_text:
+#         shifted_position = alphabet.index(letter) + shift_amount
+
+#         shifted_position %= len(alphabet) #0 to 25
+#         cipher_text += alphabet[shifted_position]
+
+#     print(f'Here is the encoded result: {cipher_text}')
+
+# # TODO-3
+
+# encrypt(original_text = text, shift_amount = shift) # Keyword arguments
+
+# <PART 2>-----------------------
+
+
+# TODO-1: Create a function called 'decrypt()' that takes the 'originai_text' and 'shift_amount' as inputs.
+
+# TODO-2: Inside the 'decrypt' function, shift each letter of 'original_text' backwards in the alphabet by the shift amount and print the decrypted text.
+
+# TODO-3: Combine the 'encrypt()' and 'decrypt()' functions into one function called 'caesar()'. This function should take the 'original_text', 'shift_amount', and 'cipher_direction' as inputs.
+# Use the value of the user chosen 'direction' variable to determine whether to encrypt or decrypt the message.
+
+
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+# def encrypt(original_text, shift_amount):
+#     cipher_text = ""
+#     for letter in original_text:
+#         shifted_position = alphabet.index(letter) + shift_amount
+#         shifted_position %= len(alphabet) #0 to 25
+#         cipher_text += alphabet[shifted_position]
+#     print(f'Here is the encoded result: {cipher_text}')
+
+
+# # TODO-1, TODO-2
+# def decrypt(original_text, shift_amount):
+#     output_text = ""
+#     for letter in original_text:
+#         shifted_position = alphabet.index(letter) - shift_amount
+#         shifted_position %= len(alphabet) #0 to 25
+#         output_text += alphabet[shifted_position]
+#     print(f'Here is the decoded result: {output_text}')
+
+# TODO-3 <Combining encrypt and decrypt function into one function called caesar()>
+# def caesar(original_text, shift_amount, encode_or_decode):
+#     output_text = ""
+#     for letter in original_text:
+
+#         if encode_or_decode =="decode":
+#             shift_amount *= -1
+
+#         shifted_position = alphabet.index(letter) + shift_amount
+#         shifted_position %= len(alphabet) #0 to 25
+#         output_text += alphabet[shifted_position]
+#     print(f'Here is the {encode_or_decode}d result: {output_text}')
+
+
+# caesar(original_text = text, shift_amount = shift, encode_or_decode = direction)
+
+
+## So this is the result of part 2----------------------------
+
+# def caesar(original_text, shift_amount, encode_or_decode):
+#     output_text = ""
+#     for letter in original_text:
+
+#         if encode_or_decode =="decode":
+#             shift_amount *= -1
+
+#         shifted_position = alphabet.index(letter) + shift_amount
+#         shifted_position %= len(alphabet) #0 to 25
+#         output_text += alphabet[shifted_position]
+#     print(f'Here is the {encode_or_decode}d result: {output_text}')
+
+
+# caesar(original_text = text, shift_amount = shift, encode_or_decode = direction)
+
+
+# <PART 3>-----------------------
+# # TODO-1
+# logo = """
+#  ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
+# a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
+# 8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88          
+# "8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88          
+#  `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88 
+#            88             88                                 
+#            ""             88                                 
+#                           88                                 
+#  ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  
+# a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  
+# 8b         88 88       d8 88       88 8PP""""""" 88          
+# "8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          
+#  `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          
+#               88                                             
+#               88                                            
+# """
+# print(logo)
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# # direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+# # text = input("Type your message:\n").lower()
+# # shift = int(input("Type the shift number:\n"))
+
+# # TODO-1: Import and print the logo
+# # TODO-2: What happens if the user enters a number/symbol/space?
+# # TODO-3: Can you figure out a way to restart the cipher program?
+
+# # TODO-2
+
+# def caesar(original_text, shift_amount, encode_or_decode):
+#     output_text = ""
+#     for letter in original_text:
+#         if letter not in alphabet:
+#             output_text += letter # It means that if it's not an alphabet, it'll just add it into the result without encode/decoding
+#         else:
+#             if encode_or_decode =="decode":
+#                 shift_amount *= -1
+
+#             shifted_position = alphabet.index(letter) + shift_amount
+#             shifted_position %= len(alphabet) #0 to 25
+#             output_text += alphabet[shifted_position]
+#     print(f'Here is the {encode_or_decode}d result: {output_text}')
+
+# # TODO-3
+
+# should_continue = True
+
+# while should_continue:
+#     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
+
+#     caesar(original_text = text, shift_amount = shift, encode_or_decode = direction)
+
+#     restart = input("Type 'yes' if you want to go again. Otherwise, type 'no'.\n").lower()
+#     if restart == "no":
+#         should_continue = False
+#         print("Goodbye")
+
+
+#### Hmm. is there a bug in this current bug?
+# encode - ab - 2 it would be cd.
+# But if we decode - cd - 2 it would be af instead of ab.
+# if encode_or_decode =="decode":
+# shift_amount *= -1
+# -> This is the problem. So we need to take it out of the for loop
+# So below is the actual fixed code <FINAL RESULT>
+
+# logo = """
+#  ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
+# a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
+# 8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88          
+# "8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88          
+#  `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88 
+#            88             88                                 
+#            ""             88                                 
+#                           88                                 
+#  ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  
+# a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  
+# 8b         88 88       d8 88       88 8PP""""""" 88          
+# "8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          
+#  `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          
+#               88                                             
+#               88                                            
+# """
+# print(logo)
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+# def caesar(original_text, shift_amount, encode_or_decode):
+#     output_text = ""
+#     if encode_or_decode =="decode":
+#         shift_amount *= -1
+#     for letter in original_text:
+#         if letter not in alphabet:
+#             output_text += letter 
+#         else:
+#             shifted_position = alphabet.index(letter) + shift_amount
+#             shifted_position %= len(alphabet) #0 to 25
+#             output_text += alphabet[shifted_position]
+#     print(f'Here is the {encode_or_decode}d result: {output_text}')
+
+# should_continue = True
+# while should_continue:
+#     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
+#     caesar(original_text = text, shift_amount = shift, encode_or_decode = direction)
+#     restart = input("Type 'yes' if you want to go again. Otherwise, type 'no'.\n").lower()
+#     if restart == "no":
+#         should_continue = False
+#         print("Goodbye")
+
+
+# FIRST SUCCESS # However review is required in the future.
+# End of caesar cipher project
+# -------end of day 8--------
+
+# < DAY 9 - Dictionaries, Nesting and the Secret Auction>
