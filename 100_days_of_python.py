@@ -2919,50 +2919,69 @@
 
 # ------------------------------
 # Coding exercise - Love calculator
-# -----my solution-----
-def calculate_love_score(name1, name2):
-    combined_names = (name1 + name2).lower()
+# # -----my solution-----
+# def calculate_love_score(name1, name2):
+#     combined_names = (name1 + name2).lower()
 
-    t = combined_names.count("t")
-    r = combined_names.count("r")
-    u = combined_names.count("u")
-    e = combined_names.count("e")
+#     t = combined_names.count("t")
+#     r = combined_names.count("r")
+#     u = combined_names.count("u")
+#     e = combined_names.count("e")
 
-    true = t + r + u + e
+#     true = t + r + u + e
 
-    l = combined_names.count("l")
-    o = combined_names.count("o")
-    v = combined_names.count("v")
-    e = combined_names.count("e")
+#     l = combined_names.count("l")
+#     o = combined_names.count("o")
+#     v = combined_names.count("v")
+#     e = combined_names.count("e")
 
-    love = l + o + v + e
+#     love = l + o + v + e
 
-    love_score = int(str(true) + str(love))
+#     love_score = int(str(true) + str(love))
 
-    print(love_score)
+#     print(love_score)
 
-calculate_love_score("Kayne West", "Kim Kardashian")
-calculate_love_score("Jong Hyun Lee", "Thea Lucie Bailey")
+# calculate_love_score("Kayne West", "Kim Kardashian")
+# calculate_love_score("Jong Hyun Lee", "Thea Lucie Bailey")
 
-# ----Angela's Solution---
-def calculate_love_score(name1, name2):
-    combined_names = name1 + name2
-    lower_names = combined_names.lower()
+# # ----Angela's Solution---
+# def calculate_love_score(name1, name2):
+#     combined_names = name1 + name2
+#     lower_names = combined_names.lower()
     
-    t = lower_names.count("t")
-    r = lower_names.count("r")
-    u = lower_names.count("u")
-    e = lower_names.count("e")
-    first_digit = t + r + u + e
+#     t = lower_names.count("t")
+#     r = lower_names.count("r")
+#     u = lower_names.count("u")
+#     e = lower_names.count("e")
+#     first_digit = t + r + u + e
     
-    l = lower_names.count("l")
-    o = lower_names.count("o")
-    v = lower_names.count("v")
-    e = lower_names.count("e")
-    second_digit = l + o + v + e
+#     l = lower_names.count("l")
+#     o = lower_names.count("o")
+#     v = lower_names.count("v")
+#     e = lower_names.count("e")
+#     second_digit = l + o + v + e
     
     
-    score = int(str(first_digit) + str(second_digit))
-    print(score)
+#     score = int(str(first_digit) + str(second_digit))
+#     print(score)
     
-calculate_love_score("Kanye West", "Kim Kardashian")
+# calculate_love_score("Kanye West", "Kim Kardashian")
+
+# ----------------------------------------------------------
+# Day 8 project - Caesar Cipher
+# <PART 1>
+# TODO-1: Create a function called 'encrypt' that takes the 'original_text' and 'shift' as inputs.
+
+# TODO-2: Inside the 'encrypt' function, shift each letter of 'original_text' forwards in the alphabet by the shift amount and print the encrypted text.
+
+# TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message.
+
+# TODO-4: What happens if you try to shift the letter 'z' forwards by 9? Is the code still working?
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+# TODO-1
+
