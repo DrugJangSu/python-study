@@ -2944,7 +2944,7 @@ def calculate_love_score(name1, name2):
 calculate_love_score("Kayne West", "Kim Kardashian")
 calculate_love_score("Jong Hyun Lee", "Thea Lucie Bailey")
 
-# ----Solution---
+# ----Angela's Solution---
 def calculate_love_score(name1, name2):
     combined_names = name1 + name2
     lower_names = combined_names.lower()
