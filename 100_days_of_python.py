@@ -3207,3 +3207,6 @@
 # -------end of day 8--------
 
 # < DAY 9 - Dictionaries, Nesting and the Secret Auction>
+
+# Silent auction
+# - Where everybody bids silently, and no one knows the other person's bid until at the very end of the auction, where the highest bid is revealed.
