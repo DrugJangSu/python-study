@@ -3327,7 +3327,59 @@
 # # If I want to print out Stuttgart from this travel_log
 # print(travel_log["Germany"]["cities_visited"][2])
 
-# The Secret Auction Program Instructions and Flow Chart
+## The Secret Auction Program Instructions and Flow Chart<SECTION 9 PROJECT>
+
+# logo ='''
+#    ___________
+#    \         /
+#     )_______(
+#     |"""""""|_.-._,.---------.,_.-._
+#     |       | | |               | | ''-.
+#     |       |_| |_             _| |_..-'
+#     |_______| '-' `'---------'` '-'
+#     )"""""""(
+#    /_________\
+#   /`'-------'`\
+#  .-------------.
+# /_______________\
+# '''
+# ## TODO-1 Ask the user for input & print the logo
+
+# ## TODO-2 Save data into dictionary {name: price}
+
+# ## TODO-3 Ask if whether new bids need to be added(any new bidders)
+
+# ## TODO-4 Compare bids in dictionary and find the highest bidder
+
+# print(logo)
+# def find_highest_bidder(bidding_dictionary):
+#     winner = ""
+#     highest_bid = 0
+#     for bidder in bidding_dictionary:
+#         bid_amount = bidding_dictionary[bidder]
+#         if bid_amount > highest_bid:
+#             highest_bid = bid_amount
+#             winner = bidder
+#     print(f"The winner is {winner} with a bid of ${highest_bid}.")
 
 
+# bids = {} # This is an empty dictionary to store the bids
+# continue_bidding = True
+# while continue_bidding:
+#     name = input("What is your name?: ")
+#     price = int(input("What is your bid?: $"))
+#     bids[name] = price # Storing the name and price into the dictionary
+#     should_continue = input("Are there any other bidders? Type 'yes' or 'no'.\n").lower()
+#     if should_continue == "no":
+#         continue_bidding = False
+#         find_highest_bidder(bids)
+#     elif should_continue == "yes":
+#         print("\n" * 50) # This is to clear the screen for the next bidder
+#         print("Cleared the screen for the next bidder.")
+
+## TODO-4 Compare bids in dictionary and find the highest bidder
+
+## Deffo need to review this for later.
+# -------------------------------------------------------------------
+# End of day 9
 
