@@ -3210,3 +3210,8 @@
 
 # Silent auction
 # - Where everybody bids silently, and no one knows the other person's bid until at the very end of the auction, where the highest bid is revealed.
+
+programming_dictionary = {
+    "Bug": "An error in a program that prevents the program from running as expected.",
+    "Function": "A piece of code that you can easily call over and over again.",
+}
