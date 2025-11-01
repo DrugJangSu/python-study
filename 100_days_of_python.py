@@ -3293,3 +3293,19 @@
 
 # ----------------------------------------------
 
+## Nesting and dictionaries
+capitals = {
+    "France": "Paris",
+    "Germany": "Berlin",
+}
+
+# Nested List in a Dictionary;
+travel_log = {
+    "France": ["Paris", "Lille", "Dijon"],
+    "Germany": ["Berlin", "Hamburg", "Stuttgart"],
+}
+
+#print Lille
+print(travel_log["France"])
+print(travel_log["France"][1])
+
