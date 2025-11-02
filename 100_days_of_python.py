@@ -3384,5 +3384,19 @@
 # End of day 9-------------------------------------------------------
 
 # Day 10 - Functions with Outputs------------------------------------
+## Building a calculator app(text based calculator)
+## More Functions
+
+# # This is a normal function
+# def my_function():
+#     result = 3 * 2
+#     return result
+
+# # and if I put this function again
+# def my_function():
+#     return 3 * 2
+
+# # and this is how you call the function
+# output = my_function()
 
 
