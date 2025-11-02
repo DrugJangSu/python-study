@@ -3412,8 +3412,23 @@ def format_name(f_name, l_name):
     formated_f_name = f_name.title()
     formated_l_name = l_name.title()
 
-    # Capturing the formatted first name and last name into new variables as "formated_f_name" and "formated_l_name"
-    
+    ## Capturing the formatted first name and last name into new variables as "formated_f_name" and "formated_l_name"
+
     print(f"{formated_f_name} {formated_l_name}")
     
+
 format_name(f_name = "anGeLa", l_name = "yU")
+
+
+## Instead of printing the result out, return the formated name as a single string
+
+def format_name(f_name, l_name):
+    formated_f_name = f_name.title()
+    formated_l_name = l_name.title()
+
+    return f"{formated_f_name} {formated_l_name}"
+#This formated string becomes the output of the function, as the output replacest the part where the function was called.
+    
+
+formated_string = format_name(f_name = "anGeLa", l_name = "yU")
+print(formated_string)
