@@ -3408,27 +3408,47 @@
 ## .title() <- This method capitalizes the first letter of each word in a string and makes all other letters lowercase.(첫 문자 대문자)
 
 
-def format_name(f_name, l_name):
-    formated_f_name = f_name.title()
-    formated_l_name = l_name.title()
+# def format_name(f_name, l_name):
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
 
-    ## Capturing the formatted first name and last name into new variables as "formated_f_name" and "formated_l_name"
+#     ## Capturing the formatted first name and last name into new variables as "formated_f_name" and "formated_l_name"
 
-    print(f"{formated_f_name} {formated_l_name}")
+#     print(f"{formated_f_name} {formated_l_name}")
     
 
-format_name(f_name = "anGeLa", l_name = "yU")
+# format_name(f_name = "anGeLa", l_name = "yU")
 
 
 ## Instead of printing the result out, return the formated name as a single string
 
-def format_name(f_name, l_name):
-    formated_f_name = f_name.title()
-    formated_l_name = l_name.title()
+# def format_name(f_name, l_name):
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
 
-    return f"{formated_f_name} {formated_l_name}"
-#This formated string becomes the output of the function, as the output replacest the part where the function was called.
-    
+#     return f"{formated_f_name} {formated_l_name}"
+# #This formated string becomes the output of the function, as the output replacest the part where the function was called.
 
-formated_string = format_name(f_name = "anGeLa", l_name = "yU")
-print(formated_string)
+# formated_string = format_name(f_name = "anGeLa", l_name = "yU")
+# print(formated_string)
+
+# # Can also d this alternatively y taking the function call directly inside the print statement
+# print(format_name(f_name = "anGeLa", l_name = "yU"))
+
+
+def function_1(text):
+    return text + text
+
+def function_2(text):
+    return text.title()
+
+output =function_1("hello")
+print(output)
+
+# what if we take the output of function_1 and pass it into function_2?
+
+output = function_2(function_1("hello"))
+print(output)
+
+# This is how the return function works. -> this is the reason why we use return instead of print inside the function.
+
