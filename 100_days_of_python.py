@@ -3436,19 +3436,19 @@
 # print(format_name(f_name = "anGeLa", l_name = "yU"))
 
 
-def function_1(text):
-    return text + text
+# def function_1(text):
+#     return text + text
 
-def function_2(text):
-    return text.title()
+# def function_2(text):
+#     return text.title()
 
-output =function_1("hello")
-print(output)
+# output =function_1("hello")
+# print(output)
 
-# what if we take the output of function_1 and pass it into function_2?
+# # what if we take the output of function_1 and pass it into function_2?
 
-output = function_2(function_1("hello"))
-print(output)
+# output = function_2(function_1("hello"))
+# print(output)
 
-# This is how the return function works. -> this is the reason why we use return instead of print inside the function.
+# # This is how the return function works. -> this is the reason why we use return instead of print inside the function.
 
