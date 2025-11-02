@@ -3452,3 +3452,5 @@
 
 # # This is how the return function works. -> this is the reason why we use return instead of print inside the function.
 
+# 1234567890-=1234567890!@#$%^&*()_+
+# qewrtyuiopasdfghjklzxcvbnm,./<>?QWERTYUIOPASDFGGGHJKLZXCVBNM
