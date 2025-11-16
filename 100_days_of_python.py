@@ -3509,3 +3509,76 @@
 # output = function_2(function_1("hello"))
 # print(output)
 
+
+## Multiple Return Values ##
+
+# def format_name(f_name, l_name):
+#     if f_name == "" or l_name == "":
+#         return "You did not provide valid inputs."
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     return f"Result: {formated_f_name} {formated_l_name}"
+
+# print(format_name(input("What is your first name?"), input("What is your last name?")))
+
+## Coding Exercise 10: Leap Year (윤년)
+
+# 윤년(Leap Year) 판단 규칙
+# 어떤 연도가 윤년인지 판단하려면;
+# 4로 나누어 떨어지면 윤년이다.
+# → 예: 2004, 2024
+# 단! 100으로 나누어 떨어지면 윤년이 아니다.
+# → 예: 1900, 2100은 윤년 아님
+# 하지만!! 400으로 나누어 떨어지면 다시 윤년이다.
+# → 예: 1600, 2000은 윤년
+
+# <My Solution>
+# def is_leap_year(year):
+#     if year % 400 == 0:
+#         return True
+#     elif year % 100 == 0:
+#         return False
+#     elif year % 4 == 0:
+#         return True
+#     else:
+#         return False
+# print(is_leap_year(2400))
+# print(is_leap_year(1989))
+# print(is_leap_year(2024))
+
+## --------------------------------------
+
+## Docstrings ##
+# Docstrings are basically a way to explain what your function does.
+
+# def format_name(f_name, l_name):
+#     """Takes first and last names and format it to return the title case version of the name."""
+#     ## This is a docstring that explains what the function does.(three quotation marks)
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     return f"{formated_f_name} {formated_l_name}"
+
+# formatted_name = format_name("jong hyun", "lee")
+
+# length = len(formatted_name)
+
+# """sdsdsf
+# dfdfdfdf
+# dfdfdf
+# dfdf
+# lol
+# """
+# # sdsddssdf
+# # sdfdsfds
+# # dsfdsfds
+
+# """ -> this is a doc"""
+
+## Day 10 project - The Calculator Project
+
+def add(n1, n2):
+    return n1 + n2
+
+my_favorite_operation = add
+
+my_favorite_operation()
