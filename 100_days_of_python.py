@@ -3493,3 +3493,19 @@
 
 # print(format_name(f_name = "lEe", l_name = "JONG HYUN"))
 
+## the return keyword allows you to capture the output of a function and use it later in your code.
+
+## The difference between the return function and the print function is that the return function gives back a value that can be used later, while the print function simply displays the value on the screen.
+
+# def function_1(text):
+#     return text + text
+
+# def function_2(text):
+#     return text.title()
+
+# output = function_1("hello")
+# print(output)
+
+# output = function_2(function_1("hello"))
+# print(output)
+
