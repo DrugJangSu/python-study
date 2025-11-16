@@ -3454,3 +3454,42 @@
 
 # 1234567890-=1234567890!@#$%^&*()_+
 
+## Fuctions with Outputs<review>
+
+# def my_function():
+#     result = 3 * 2
+#     return result
+## * In this case the output is he result
+
+
+## .title() <- This method capitalizes the first letter of each word in a string and makes all other letters lowercase.    formated_f_name = f_name.title()
+
+# def format_name(f_name, l_name):
+#     print(f_name.title())
+#     print(l_name.title())
+
+# format_name(f_name = "lee", l_name = "JONG HYUN")
+
+
+# def format_name(f_name, l_name):
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     print(f"{formated_f_name} {formated_l_name}")
+
+# format_name(f_name = "lEe", l_name = "JONG HYUN")
+
+# def format_name(f_name, l_name):
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     return f"{formated_f_name} {formated_l_name}"
+
+# formated_string = format_name(f_name = "lEe", l_name = "JONG HYUN")
+# print(formated_string)
+
+# def format_name(f_name, l_name):
+#     formated_f_name = f_name.title()
+#     formated_l_name = l_name.title()
+#     return f"{formated_f_name} {formated_l_name}"
+
+# print(format_name(f_name = "lEe", l_name = "JONG HYUN"))
+
