@@ -3659,3 +3659,17 @@
 
 # --------------<end of Day 10>------------------------
 
+# Day 11 - The Blackjack Capstone Project------------------------------------
+
+# ## Project Instructions
+# In this project, you will be creating a text-based version of the card game Blackjack.
+# The rules of the game are as follows:
+# Try to get as close to 21 as possible without going over (busting).
+# 2 to 9 is face value
+# 10, J, Q, K is worth 10
+# Ace is worth 11 or 1
+# The deck is unlimited in size. There are no jokers. The cards in the deck have equal probability of being drawn.
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+# four 10s represent 10, J, Q, K
+# 11 represents Ace, until the number goes above 21 which it becomes 1.
