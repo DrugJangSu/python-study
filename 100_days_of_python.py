@@ -4260,6 +4260,7 @@
 ## Does Python has a block scope like other programming languages?
 
 # No, Python does not have block scope. Variables defined inside blocks such as if statements or for loops are still accessible outside of those blocks within the same function or global scope.
+# 블록 스코프(block scope)'란 코드의 블록(\(\{\}\)) 안에서 선언된 변수가 해당 블록 안에서만 유효하고, 블록 밖에서는 접근할 수 없는 범위를 의미함.
 
 # if 3 > 2:
 #     a_variable = 10
@@ -4346,11 +4347,148 @@
 
 # Way that you want to have this functionality like a function that changes the number of enemies without modifying the global variable directly.
 
-enemies = 1
+# enemies = 1
 
-def increase_enemies(enemy):
-    print(f"enemies inside function: {enemies}")
-    return enemy + 1
+# def increase_enemies(enemy):
+#     print(f"enemies inside function: {enemies}")
+#     return enemy + 1
 
-enemies = increase_enemies(enemies)
-print(f"enemies outside function: {enemies}")
+# enemies = increase_enemies(enemies)
+# print(f"enemies outside function: {enemies}")
+
+## Python Constants and Global Scope
+
+# Global constants are variables which you define and you're never planning to change it ever again.(상수, 즉 변하지 않는 값)
+
+# PI = 3.14159
+# GOOGLE_URL = "https://www.google.com"
+# Uppercase variable names are used to indicate that these variables should be treated as constants and not modified.(관례적으로 대문자 사용)
+
+# def my_func():
+#     print(PI)
+#     print(GOOGLE_URL)
+
+## DAY 12 Final project : The Number Guessing Game ## --------
+
+## Choosing a random number between 1 and 100.
+## Function to set difficulty(Easy is 10 attempts, Hard is 5 attempts)
+## Let the user guess a number
+## Function to check users' guess against actual answer.
+## Track the number of turns and reduce by 1 if they get it wrong
+## Repeat the guessing functionality if they get it wrong.
+# ------------------------------------------------
+# from random import randint
+# logo = """                                                                                                                                        
+
+#   _  _            _                ___                _              ___                
+#  | \| |_  _ _ __ | |__  ___ _ _   / __|_  _ ___ _____(_)_ _  __ _   / __|__ _ _ __  ___ 
+#  | .` | || | '  \| '_ \/ -_) '_| | (_ | || / -_|_-<_-< | ' \/ _` | | (_ / _` | '  \/ -_)
+#  |_|\_|\_,_|_|_|_|_.__/\___|_|    \___|\_,_\___/__/__/_|_||_\__, |  \___\__,_|_|_|_\___|
+#                                                             |___/                       
+# """
+
+# EASY_LEVEL_TURNS = 10
+# HARD_LEVEL_TURNS = 5
+
+
+# ## Function to check users' guess against actual answer.
+# def check_answer(user_guess, actual_answer, turns):
+#     """Checks answer against guess, returns the number of turns remaining."""
+#     if user_guess > actual_answer:
+#         print("Too high.")
+#         return turns - 1
+#     elif user_guess < actual_answer:
+#         print("Too low.")
+#         return turns -1
+#     else:
+#         print(f"You got it! The answer was {actual_answer}")
+
+# # Function to set difficulty
+# def set_difficulty():
+#     level = input("Choose a difficulty. Type 'easy' or 'hard': ")
+#     if level == "easy":
+#         return EASY_LEVEL_TURNS
+#     else:
+#         return HARD_LEVEL_TURNS
+
+# def game():
+#     print(logo)
+#     ## Choosing a random number between 1 and 100.
+#     print("Welcome to the Number Guessing Game!")
+#     print("I'm thinking of a number between 1 and 100.")
+#     answer = randint(a= 1, b= 100)
+#     print(f"Pssst. the correct answer is {answer}")
+
+
+#     turns = set_difficulty()
+
+#     ## Let the user guess a number
+#     ## Repeat the guessing functionality if they get it wrong.
+#     guess = 0
+#     while guess != answer:
+#         print(f"You have {turns} attempts remaining to guess the number.")
+#         guess= int(input("Make a guess: "))
+#         turns = check_answer(guess, answer, turns)
+#         if turns == 0:
+#             print("You've run out of guesses. You lose")
+#             return
+#         elif guess != answer:
+#             print("Guess again.")
+#     ## Track the number of turns and reduce by 1 if they get it wrong.
+
+# game()
+
+
+## <Final code>---------------------------------------------------------------------
+from random import randint
+logo = """                                                                                                                                        
+
+  _  _            _                ___                _              ___                
+ | \| |_  _ _ __ | |__  ___ _ _   / __|_  _ ___ _____(_)_ _  __ _   / __|__ _ _ __  ___ 
+ | .` | || | '  \| '_ \/ -_) '_| | (_ | || / -_|_-<_-< | ' \/ _` | | (_ / _` | '  \/ -_)
+ |_|\_|\_,_|_|_|_|_.__/\___|_|    \___|\_,_\___/__/__/_|_||_\__, |  \___\__,_|_|_|_\___|
+                                                            |___/                       
+"""
+
+EASY_LEVEL_TURNS = 10
+HARD_LEVEL_TURNS = 5
+
+def check_answer(user_guess, actual_answer, turns):
+    """Checks answer against guess, returns the number of turns remaining."""
+    if user_guess > actual_answer:
+        print("Too high.")
+        return turns - 1
+    elif user_guess < actual_answer:
+        print("Too low.")
+        return turns -1
+    else:
+        print(f"You got it! The answer was {actual_answer}")
+
+def set_difficulty():
+    level = input("Choose a difficulty. Type 'easy' or 'hard': ")
+    if level == "easy":
+        return EASY_LEVEL_TURNS
+    else:
+        return HARD_LEVEL_TURNS
+
+def game():
+    print(logo)
+    print("Welcome to the Number Guessing Game!")
+    print("I'm thinking of a number between 1 and 100.")
+    answer = randint(a= 1, b= 100)
+    print(f"Pssst. the correct answer is {answer}")
+    turns = set_difficulty()
+    guess = 0
+    while guess != answer:
+        print(f"You have {turns} attempts remaining to guess the number.")
+        guess= int(input("Make a guess: "))
+        turns = check_answer(guess, answer, turns)
+        if turns == 0:
+            print("You've run out of guesses. You lose")
+            return
+        elif guess != answer:
+            print("Guess again.")
+
+game()
+
+# --------------------------End of day 12---------------------------
