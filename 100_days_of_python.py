@@ -4209,3 +4209,148 @@
 # -------------------<end of Day 11>------------------------
 
 ## Day 12 : Scope & Number Guessing Game------------------------------------
+
+## Namespaces : Local vs Global Scope
+# Scope : The region that a variable is recognized.(범위)
+
+
+# <Introduction of scope>
+# enemies = 1
+
+# def increase_enemies():
+#     enemies = 2
+#     print(f"enemies inside function: {enemies}")    
+
+# increase_enemies()
+# print(f"enemies outside function: {enemies}")
+
+# ## In this case, the enemies variable inside the function is a local variable, while the enemies variable outside the function is a global variable.
+
+## Local Scope : When you create a new variable inside a function, that variable is only available inside that function.
+
+# def drink_potion():
+#     potion_strength = 2 
+#     print(potion_strength) # This will print 2 because potion_strength is defined within the function.
+
+# drink_potion()
+# print(potion_strength) # This will give an error because potion_strength is a local variable and cannot be accessed outside the function.
+
+
+
+## Global Scope : A variable created in the main body of the code is a global variable and can be used by any function.
+
+# player_health = 10 # This is a global variable
+
+# def drink_potion():
+#     potion_strength = 2 # This is a local variable
+#     print(player_health) # This will print 10 because player_health is a global variable.
+
+# drink_potion()
+# print(player_health) # This will print 10 because player_health is a global variable.
+
+# def game():
+#     def drink_potion():
+#         potion_strength = 2
+#         print(player_health)
+
+#     drink_potion()
+
+# print(player_health) 
+
+## Does Python has a block scope like other programming languages?
+
+# No, Python does not have block scope. Variables defined inside blocks such as if statements or for loops are still accessible outside of those blocks within the same function or global scope.
+
+# if 3 > 2:
+#     a_variable = 10
+
+# game_level = 3
+# enemies = ["Skeletion", "Zombie", "Alien"]
+
+# if game_level < 5:
+#     new_enemy = enemies[0]
+
+# print(new_enemy) # This will print "Skeletion" because new_enemy is defined in the global scope.
+
+
+# game_level = 3
+# enemies = ["Skeletion", "Zombie", "Alien"]
+
+# def create_enemy():
+#     if game_level < 5:
+#         new_enemy = enemies[0]
+
+#     print(new_enemy)
+
+## If you create a variable inside the function, it's only available inside that function.(local scope)
+## If you create a variable outside the function, it's available anywhere in the code.(global scope)
+
+
+# game_level = 10
+# enemies = ["Skeletion", "Zombie", "Alien"]
+
+# def create_enemy():
+#     new_enemy = ""
+#     if game_level < 5:
+#         new_enemy = enemies[0]
+
+#     print(new_enemy)
+
+
+## Coding exercise 11 : Prime Number Checker
+
+# def is_prime(num):
+#     if num == 1:
+#         return False
+#     if num == 2:
+#         return True
+    
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+    
+#     return True
+
+# print(is_prime(73))
+# print(is_prime(75))
+
+## --------------------------------------
+
+## How to modify a global variable
+
+
+# enemies = "Skeletion"
+
+# def increase_enemies():
+#     enemies = "Zombie"
+#     print(f"enemies inside function: {enemies}")
+
+# increase_enemies()
+# print(f"enemies outside function: {enemies}")
+
+
+# enemies = 1
+
+
+# def increase_enemies():
+#     global enemies # This line tells Python that we want to use the global variable enemies
+#     enemies += 1
+#     print(f"enemies inside function: {enemies}")
+
+# increase_enemies()
+# print(f"enemies outside function: {enemies}")
+
+##  Modifying the global variable isn't much recommended as it can lead to code that is difficult to debug and maintain. It's generally better to return a value from a function and assign it to a variable outside the function. (especially in a function that has a local variable with the same name as the global variable)
+
+
+
+# Way that you want to have this functionality like a function that changes the number of enemies without modifying the global variable directly.
+
+enemies = 1
+
+def increase_enemies(enemy):
+    print(f"enemies inside function: {enemies}")
+    return enemy + 1
+
+enemies = increase_enemies(enemies)
+print(f"enemies outside function: {enemies}")
