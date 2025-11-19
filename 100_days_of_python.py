@@ -4574,10 +4574,27 @@
 # If you use some words like "twelve" instead of actual numbers it'll create an error.
 
 
-try:
-    age = int(input("How old are you?"))
-except ValueError:
-    print("You have typed in an invalid number. Please try again with a numerical response such as 12.")
-    age = int(input("How old are you?"))
-if age > 18:
-    print("You can drive at age {age}.")
+# try:
+#     age = int(input("How old are you?"))
+# except ValueError:
+#     print("You have typed in an invalid number. Please try again with a numerical response such as 12.")
+#     age = int(input("How old are you?"))
+
+# if age > 18:
+#     print("You can drive at age {age}.")
+
+
+# Fix the code so that you can get the actual value of the variable.
+
+# try:
+#     age = int(input("How old are you?\n"))
+# except ValueError:
+#     print("You have typed in an invalid number. Please try again with a numerical response such as 12.")
+#     age = int(input("How old are you?\n"))
+    
+# if age > 18:
+#     print(f"You can drive at age {age}.")
+
+
+## Print Is Your Friend
+
