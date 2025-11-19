@@ -4598,3 +4598,148 @@
 
 ## Print Is Your Friend
 
+# word_per_page = 0
+# pages = int(input("Number of pages: "))
+# word_per_page == int(input("Number of words per page: "))
+# total_words = pages * word_per_page
+# print(total_words)
+
+## The results only show 0
+## If we try debugging this using print to find out the reason
+
+# word_per_page = 0
+# pages = int(input("Number of pages: "))
+# word_per_page == int(input("Number of words per page: "))
+# total_words = pages * word_per_page
+
+# print(f"pages = {pages}")
+# print(f"words_per_page = {word_per_page}")
+# print(total_words)
+
+## So the final code would be;
+
+
+# word_per_page = 0
+# pages = int(input("Number of pages: "))
+# word_per_page = int(input("Number of words per page: "))
+# total_words = pages * word_per_page
+
+# print(f"pages = {pages}")
+# print(f"words_per_page = {word_per_page}")
+# print(total_words)
+
+
+## Using a Debugger
+
+
+# import random
+
+# def add(n1, n2):
+#     return n1 + n2
+
+# def mutate(a_list): 
+#     b_list = []
+#     for item in a_list:
+#         new_item = item * 2
+#         new_item += random.randint(1, 3) 
+#         new_item = add(new_item, item) 
+#         b_list.append(new_item)
+        
+#     print(b_list)
+
+# mutate([1, 2, 3, 5, 8, 13])
+
+## Using debug--
+
+# import random
+
+# def add(n1, n2):
+#     return n1 + n2
+
+# def mutate(a_list): # a_list : [1, 2, 3, 5, 8, 13] 
+#     b_list = [] # b_list : []
+#     new_item = 0 #new_item : 5
+#     for item in a_list:
+#         new_item = item * 2 
+#         new_item += random.randint(1, 3) 
+#         new_item = add(new_item, item) 
+#     b_list.append(new_item)
+#     print(b_list)
+
+# mutate([1, 2, 3, 5, 8, 13])
+
+## Coding exercise 12 : Debugging Odd or Even
+
+# def odd_or_even(number):
+#     if number % 2 = 0:
+#         return "This is an even number."
+#     else:
+#         return "This is an odd number."
+    
+# --->
+
+# def odd_or_even(number):
+#     if number % 2 == 0:
+#         return "This is an even number."
+#     else:
+#         return "This is an odd number."
+
+
+## Coding exercise 13 : Debugging Leap Year
+# def is_leap(year):
+#     if year % 4 == 0:
+#         if year % 100 == 0:
+#             if year % 4000 == 0:
+#                 return True
+#             else:
+#                 return False
+#         else:
+#             return True
+#     else:
+#         return False
+    
+# ------>
+    
+# def is_leap(year):
+#     if year % 4 == 0:
+#         if year % 100 == 0:
+#             if year % 400 == 0:
+#                 return True
+#             else:
+#                 return False
+#         else:
+#             return True
+#     else:
+#         return False
+
+
+## Coding Exercise 14 : Debugging FizzBuzz
+
+# def fizz_buzz(target):
+#     for number in range(1, target + 1):
+#         if number % 3 == 0 or number % 5 == 0:
+#             print("FizzBuzz")
+#         if number % 3 == 0:
+#             print("Fizz")
+#         if number % 5 == 0:
+#             print("Buzz")
+#         else:
+#             print([number])
+
+# ---->
+
+# def fizz_buzz(target):
+#     for number in range(1, target + 1):
+#         if number % 3 == 0 and number % 5 == 0:
+#             print("FizzBuzz")
+#         elif number % 3 == 0:
+#             print("Fizz")
+#         elif number % 5 == 0:
+#             print("Buzz")
+#         else:
+#             print(number)
+
+# ---------------End of Day 13 ------------------
+
+
+## Day 14 : Higher Lower Game Project
