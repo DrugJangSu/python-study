@@ -4494,4 +4494,90 @@
 # --------------------------End of day 12---------------------------
 
 ## Day 13 : Debugging --------------------------------------------------
+# example)
+# def my_function():
+#     for i in range(1, 20):
+#         if i == 20:
+#             print("You got it")
 
+
+# my_function()
+
+## Describe the Problem - Write your answers as comments:
+## 1. What is the for loop doing?
+## 2. When is the function meant to print "You got it"?
+## 3. What are your assumptions about the value of i?
+
+# def my_function():
+#     for i in range(1, 21):
+#         if i == 20:
+#             print("You got it")
+
+
+# my_function()
+
+## Reproducing the Bug
+
+# from random import randint
+# dice_images = ["1", "2", "3", "4", "5", "6"]
+# dice_num = randint(a = 1, b = 6)
+# print(dice_images[dice_num])
+
+# The code above occasionally gets an error.
+# Changing the code so that it always reproduce an error.
+
+
+# from random import randint
+# dice_images = ["1", "2", "3", "4", "5", "6"]
+# dice_num = randint(a = 0, b = 5)
+# print(dice_images[dice_num])
+
+# The list counts from zero. 0, 1, 2, 3, 4, 5..
+
+
+## Play computer
+
+# year = int(input("What's your year of birth?"))
+
+# if year > 1980 and year < 1994:
+#     print("You are a millennial.")
+# elif year > 1994:
+#     print("You are a Gen Z.")
+
+# If you input 1994 on this code it will get a bug.
+## 해당하는 조건이 없을 시 계속 넘어가고... 바가지같은 받아낼 것이 없으면 아무것도 출력하지 않음.
+
+# year = int(input("What's your year of birth?"))
+
+# if year > 1980 and year <= 1994:
+#     print("You are a millennial.")
+# elif year > 1994:
+#     print("You are a Gen Z.")
+
+# 구글 쳐보니 94년생은 밀레니얼이라고...
+
+# year = int(input("What's your year of birth?"))
+
+# if year > 1980 and year < 1994:
+#     print("You are a millennial.")
+# elif year >= 1994:
+#     print("You are a Gen Z.")
+
+# Angela says that 1994 is a Gen Z. lol
+
+## Fix the Errors
+
+# age = int(input("How old are you?"))
+# if age > 18:
+#     print("You can drive at age {age}.")
+
+# If you use some words like "twelve" instead of actual numbers it'll create an error.
+
+
+try:
+    age = int(input("How old are you?"))
+except ValueError:
+    print("You have typed in an invalid number. Please try again with a numerical response such as 12.")
+    age = int(input("How old are you?"))
+if age > 18:
+    print("You can drive at age {age}.")
