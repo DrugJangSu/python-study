@@ -5858,3 +5858,24 @@
 
 # Day 16 : Intermediate - Object Oriented Programming (OOP)
 
+# As the code gets more complex and having more functions and variables, it gets really hard to track on what's happening on our code.(Most code that I tried coding is Procedural Programming)
+# Procedural Programming is mostly from earlier stages of programming.
+
+# Object Oriented Programming is to put a big project into smaller pieces, the best way to explain it is to think of it as a restaurant - and def each waiter / receptionist / chef / cleaner etc, and have a manager that takes care all of these staff. It's basically about making it scalable for a more large and complex project.
+
+## Waiter
+    # <attributes> : Basically a variable - that's associated with a module object.(attached)
+    # has : is_holding_plate = True 
+            # tables_resonsible = [4, 5, 6]
+
+    # <methods> : Because it's a function that a particular object can do.
+    # does : def take_order(table, order):
+            ## takes order to chef
+            # def take_payment(amount):
+            ## add money to restaurant
+
+## We'll gonna see them again and again, so keep them in mind.(In OOP, we're trying to model real likfe objects and these objects have things that they can do things)
+## Have things - variable, as attributes
+## Do things - function, as methods
+
+ 
