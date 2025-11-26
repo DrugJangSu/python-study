@@ -5878,4 +5878,32 @@
 ## Have things - variable, as attributes
 ## Do things - function, as methods
 
- 
+## Constructing Objects and Accessomg their Attributes and Methods
+
+# car = CarBlueprint()
+# In this case car is the object, CarBlueprint is the class.
+
+# import another_module
+# print(another_module.another_variable)
+
+
+# import turtle
+# timmy = turtle.Turtle()
+
+## or
+
+from turtle import Turtle
+timmy = Turtle()
+print(timmy)
+timmy.shape("turtle")
+timmy.color("coral")
+timmy.forward(100)
+
+from turtle import Screen
+my_screen = Screen()
+print(my_screen.canvheight)
+my_screen.exitonclick()
+
+# car.stop() # car is the object, stop() is the method
+
+
