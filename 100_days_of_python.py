@@ -5892,18 +5892,21 @@
 
 ## or
 
-from turtle import Turtle
-timmy = Turtle()
-print(timmy)
-timmy.shape("turtle")
-timmy.color("coral")
-timmy.forward(100)
+# from turtle import Turtle
+# timmy = Turtle()
+# print(timmy)
+# timmy.shape("turtle")
+# timmy.color("coral")
+# timmy.forward(100)
 
-from turtle import Screen
-my_screen = Screen()
-print(my_screen.canvheight)
-my_screen.exitonclick()
+# from turtle import Screen
+# my_screen = Screen()
+# print(my_screen.canvheight)
+# my_screen.exitonclick()
 
-# car.stop() # car is the object, stop() is the method
+## car.stop() # car is the object, stop() is the method
 
+## Python Packages
+
+import prettytable
 
