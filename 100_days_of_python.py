@@ -5957,4 +5957,39 @@
 
 
 # --------End of day 16--------------
-# Day 17 : Intermediate - The Quiz Project & The Benefits of OOP
+# Day 17 : Intermediate - The Quiz Project & The Benefits of OOP--------------
+
+# Class is a Blueprint for creating objects.
+# In this lession we'll be building our own class
+
+
+# Different types of class namings;
+# PascalCase : every Word Starts with Capital Letter
+# camelCase : first word starts with lowercase letter, then every word starts with Capital Letter
+# snake_case : every word is lowercase, and words are separated by underscores(_)
+# In python most classes are named in PascalCase or snake_case
+
+## Constructor
+# -> It's the part of the blueprint that allows us to specifiy what should happen when we create the object from the class.
+# -> In python, the constructor is always named __init__ (double underscores before and after init)
+# -> The __init__ method is called automatically every time the class is being used to create a new object.
+
+# class car:
+#     def __init__(self, seats):
+#         self.seats = seats
+
+# my_car.seats = 5
+
+## Method
+
+# class Car:
+#     def enter_race_mode():
+#         self.seats = 2
+    
+# my_car.enter_race_mode()
+
+## Quiz Project
+
+# Attributes - text, answer
+# new_q = Question('2+3=5", "True")
+
