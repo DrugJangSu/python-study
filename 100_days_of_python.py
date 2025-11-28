@@ -6064,3 +6064,6 @@
 
 
 ## -------End of day 17--------------
+
+## Day 18: Intermediate - Turtle & the Graphical User Interface (GUI) -----------
+# Turtle Graphics, Tuples and Inporting Modules
