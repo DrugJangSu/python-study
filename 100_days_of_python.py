@@ -6065,5 +6065,126 @@
 
 ## -------End of day 17--------------
 
-## Day 18: Intermediate - Turtle & the Graphical User Interface (GUI) -----------
+## Day 18: Intermediate - Turtle & the Graphical User Interface (GUI) --------------------------------
 # Turtle Graphics, Tuples and Inporting Modules
+
+# from turtle import Turtle, Screen
+
+# timmy_the_turtle = Turtle()
+# timmy_the_turtle.shape("turtle")
+# timmy_the_turtle.color("deepskyblue")
+# timmy_the_turtle.forward(100)
+# timmy_the_turtle.right(90)
+
+# screen = Screen()
+# screen.exitonclick()
+
+
+## Turtle Challenge 1 : Draw a Square
+# <my solution>
+# from turtle import Turtle, Screen
+
+# timmy_the_turtle = Turtle()
+# timmy_the_turtle.shape("turtle")
+# timmy_the_turtle.color("deepskyblue")
+# timmy_the_turtle.forward(100)
+# timmy_the_turtle.right(90)
+# timmy_the_turtle.forward(100)
+# timmy_the_turtle.right(90)
+# timmy_the_turtle.forward(100)
+# timmy_the_turtle.right(90)
+# timmy_the_turtle.forward(100)
+# timmy_the_turtle.right(90)
+# timmy_the_turtle.forward(100)
+
+# screen = Screen()
+# screen.exitonclick()
+
+# <angela's solution>
+# from turtle import Turtle, Screen
+
+# tim = Turtle()
+
+# for _ in range(4):
+#     tim.forward(100)
+#     tim.left(90)
+
+# screen = Screen()
+# screen.exitonclick()
+
+## Importing Modules
+
+# import turtle
+
+# tim = turtle.Turtle()
+
+# VERSUS
+
+# from turtle import Turtle
+# # Keyword / Module Name / Keyword / Thing in Module
+
+# tim = Turtle()
+# tom = Turtle()
+# terry = Turtle()
+# # It's easier to code and import multiple things from the same module this way.
+
+# A way to import everything
+# from turtle import * (the asterisk means everything)
+
+# from turtle import *
+# disadvantage : it's hard to know which module a function came from, especially when there are many modules being imported.
+# So it's advised to import only the things that are needed, not everything.
+
+## Aliasing Modules
+# import turtle as t
+# Keyword / Module name / Keyword / Alias name
+# tim = t.Turtle()
+# It a way to shorten the module name for easier typing.
+## Installing modules
+# import heroes
+# -> this will cause an error as the module is not installed yet.
+# (in VS, type pip install heroes to the terminal to install the module)
+
+# import heroes
+# print(heroes.gen())
+
+
+## Turtle Challenge 2 - Draw a Dashed Line
+
+# import turtle as t
+# tim = t.Turtle()
+
+
+
+# for _ in range(10):
+#     tim.forward(10)
+#     tim.penup()
+#     tim.forward(10)
+#     tim.pendown()
+
+## Turtle Challenge 3 - Drawing Different Shapes
+
+import turtle as t
+import random
+
+tim = t.Turtle()
+
+colors = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+
+# num_sides = 5 
+# for _ in range(num_sides):
+#     angle = 360 / num_sides
+#     tim.forward(100)
+#     tim.right(angle)
+
+
+def draw_shape(num_sides):
+    angle = 360 / num_sides
+    for _ in range(num_sides):
+        tim.forward(100)
+        tim.right(angle)
+
+for shape_side_n in range(3, 11):
+    tim.color(random.choice(colors))
+    draw_shape(shape_side_n)
+
