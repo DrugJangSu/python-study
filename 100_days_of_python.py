@@ -6324,14 +6324,165 @@
 
 ## Day 19 : Intermediate - Instances, State and Higher Order Functions
 
-from turtle import Turtle, Screen
+# from turtle import Turtle, Screen
 
-tim = Turtle()
-screen = Screen()
+# tim = Turtle()
+# screen = Screen()
 
-def move_forwards():
-    tim.forward(10)
+# def move_forwards():
+#     tim.forward(10)
 
-screen.listen()
-screen.onkey(key="space", fun=move_forwards)
-screen.exitonclick()
+# screen.listen()
+# screen.onkey(key="space", fun=move_forwards)
+# screen.exitonclick()
+
+## Functions as Inputs
+
+# def function_a(something):
+#     #Do this with something
+#     #Then do this
+#     #Finally do this
+
+# def function_b():
+#     #Do this
+
+# function_a(function_b)
+# -> function_b is being passed into function_a as an input.
+# -> function_a can now use function_b inside its own function body.
+
+# ex)
+
+# def add(n1, n2):
+#     return n1 + n2
+
+# def subtract(n1, n2):
+#     return n1 - n2
+
+# def multiply(n1, n2):
+#     return n1 * n2
+
+# def divide(n1, n2):
+#     return n1 / n2
+
+# def calculator(n1, n2, func):
+#     return func(n1, n2)
+
+# result = calculator(2, 3, add)
+# print(result)
+
+# result = calculator(2, 3, subtract)
+# print(result)
+
+# result = calculator(2, 3, multiply)
+# print(result)
+
+# result = calculator(2, 3, divide)
+# print(result)
+
+# In this case, the calculator is the higher order function
+# This is commonly used in Python unlike other programming languages.
+
+# from turtle import Turtle, Screen
+
+# tim = Turtle()
+# screen = Screen()
+
+# def move_forwards():
+#     tim.forward(10)
+
+# def move_backwards():
+#     tim.backward(10)
+
+# def turn_left():
+#     new_heading = tim.heading() + 10
+#     tim.setheading(new_heading)
+
+# def turn_right():
+#     new_heading = tim.heading() - 10
+#     tim.setheading(new_heading)
+
+# def clear_screen():
+#     tim.clear()
+#     tim.penup()
+#     tim.home()
+#     tim.pendown()
+
+# screen.listen()
+# screen.onkey(move_forwards, "w")
+# screen.onkey(move_backwards, "s")
+# screen.onkey(turn_left, "a")
+# screen.onkey(turn_right, "d")
+# screen.onkey(clear_screen, "c")
+# screen.exitonclick()
+
+## Object State and Instances
+
+## OBJECT ## CLASS
+# timmy = Turtle() ## INSTANCE (example of the object)
+# tommy = Turtle() ## INSTANCE (example of the object)
+
+# timmy.color = green
+# tommy.color = purple
+# (each objects can have different attributes and can be performing different methods independently)
+
+## Understanding the Turtle Coordinate System
+
+# from turtle import Turtle, Screen
+
+# screen = Screen()
+# screen.setup(width = 500, height = 400)
+# user_bet = screen.textinput(title = "Make your bet", prompt = "Which turtle will win the race? Enter a color: ")
+# colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+# y_positions = [-70, -40, -10, 20, 50, 80]
+
+
+# for turtle_index in range(0, 6):
+#     tim = Turtle(shape="turtle")
+#     tim.color(colors[turtle_index])
+#     tim.penup()
+#     tim.goto(x = -230, y = y_positions[turtle_index])
+
+
+# screen.exitonclick()
+
+## Day 19 Project : Turtle Race
+
+# import random
+# from turtle import Turtle, Screen
+
+# is_race_on = False
+# screen = Screen()
+# screen.setup(width = 500, height = 400)
+# user_bet = screen.textinput(title = "Make your bet", prompt = "Which turtle will win the race? Enter a color: ")
+# colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+# y_positions = [-70, -40, -10, 20, 50, 80]
+# all_turtles =[]
+
+# for turtle_index in range(0, 6):
+#     new_turtle = Turtle(shape="turtle")
+#     new_turtle.penup()
+#     new_turtle.color(colors[turtle_index])
+#     new_turtle.goto(x = -230, y = y_positions[turtle_index])
+#     all_turtles.append(new_turtle)
+
+# if user_bet:
+#     is_race_on = True
+
+# while is_race_on:
+#     for turtle in all_turtles:
+#         if turtle.xcor() > 230:
+#             is_race_on = False
+#             winning_color = turtle.pencolor()
+#             if winning_color == user_bet:
+#                 print(f"You've won! The {winning_color} turtle is the winner!")
+#             else:
+#                 print(f"You've lost! The {winning_color} turtle is the winner!")
+#         rand_distance = random.randint(0, 10)
+#         turtle.forward(rand_distance)
+
+
+# screen.exitonclick()
+
+## ---------------- End of Day 19 --------------------------------
+## Day 20 : Intermediate - Build the Snake Game Part 1 : Animation & Coordinates
+
