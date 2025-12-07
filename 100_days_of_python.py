@@ -7354,6 +7354,8 @@
 
 ## Create the screen
 # main.py
+
+
 # from turtle import Screen
 
 # screen = Screen()
@@ -7397,5 +7399,9 @@
 #     screen.update()
  
 # screen.exitonclick()
+
+## Create another paddle
+
+
 
 
