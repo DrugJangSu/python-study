@@ -6722,4 +6722,262 @@
 #             self.head.setheading(RIGHT)
 
 
-## 
+## End of Day 20 (The Snake Game Project continues...) ----
+## DAY 21 : Build the Snake Game Part 2 : Inheritance and List Slicing
+
+
+## Class Inheritance
+
+# class Animal:
+#     def __init__(self):
+#       self.num_eyes = 2
+
+#     def breathe(self):
+#        print("Inhale, exhale.")
+
+
+# class Fish(Animal):  # This is inheritance
+#     def __init__(self):
+#        super().__init__()
+   
+#     def swim(self):
+#        print("moving in water.")
+
+# nemo = Fish()
+# nemo.swim()
+# nemo.breathe()
+# print(nemo.num_eyes)
+
+# So now the object that's created from the Fish class now has access to all the attributes and methods from the superclass that inherited from the animal class.
+
+# class Animal:
+#     def __init__(self):
+#       self.num_eyes = 2
+
+#     def breathe(self):
+#        print("Inhale, exhale.")
+
+
+# class Fish(Animal):  # This is inheritance
+#     def __init__(self):
+#        super().__init__()
+
+#     def breathe(self):
+#        super().breathe()
+#        print("doing this underwater.")
+   
+#     def swim(self):
+#        print("moving in water.")
+
+# nemo = Fish()
+# nemo.breathe()
+
+## This is an example to use the existing class and build more on top of it without editing anything.
+
+
+## Detect Collisions with Food
+
+## Make a new py file called "Food.py"
+
+# from turtle import Turtle
+# import random
+
+# class Food(Turtle):
+
+#     def __init__(self):
+#         super().__init__()
+#         self.shape("circle")
+#         self.penup()
+#         self.shapesize(stretch_len = 0.5, stretch_wid = 0.5)
+#         self.color("blue")
+#         self.speed("fastest")
+#         random_x = random.randint(-280, 280)
+#         random_y = random.randint(-280, 280)
+#         self.goto(random_x, random_y)
+
+## "main.py"
+
+# from turtle import Screen
+# from snake import Snake
+# from food import Food
+# import time
+
+# screen = Screen()
+# screen.setup(width = 600, height = 600)
+# screen.bgcolor("black")
+# screen.title("My Snake Game")
+# screen.tracer(0)
+
+
+# snake = Snake()
+# food = Food()
+
+
+# screen.listen()
+# screen.onkey(snake.up, "Up")
+# screen.onkey(snake.down, "Down")
+# screen.onkey(snake.left, "Left")
+# screen.onkey(snake.right, "Right")
+
+
+
+# screen.update()
+
+# game_is_on = True
+# while game_is_on:
+#     screen.update()
+#     time.sleep(0.1)
+
+#     snake.move()
+
+
+# screen.exitonclick()
+
+## So now at this point the food is randomly generated.
+
+## Food.py(Refreshing the food when it's touched)
+# from turtle import Turtle
+# import random
+
+# class Food(Turtle):
+
+#     def __init__(self):
+#         super().__init__()
+#         self.shape("circle")
+#         self.penup()
+#         self.shapesize(stretch_len = 0.5, stretch_wid = 0.5)
+#         self.color("blue")
+#         self.speed("fastest")
+#         random_x = random.randint(-280, 280)
+#         random_y = random.randint(-280, 280)
+#         self.goto(random_x, random_y)
+#         self.refresh()
+
+#     def refresh(self):
+#         random_x = random.randint(-280, 280)
+#         random_y = random.randint(-280, 280)
+#         self.goto(random_x, random_y)
+
+## Main.py
+# from turtle import Screen
+# from snake import Snake
+# from food import Food
+# import time
+
+# screen = Screen()
+# screen.setup(width = 600, height = 600)
+# screen.bgcolor("black")
+# screen.title("My Snake Game")
+# screen.tracer(0)
+
+
+# snake = Snake()
+# food = Food()
+
+
+# screen.listen()
+# screen.onkey(snake.up, "Up")
+# screen.onkey(snake.down, "Down")
+# screen.onkey(snake.left, "Left")
+# screen.onkey(snake.right, "Right")
+
+
+
+# screen.update()
+
+# game_is_on = True
+# while game_is_on:
+#     screen.update()
+#     time.sleep(0.1)
+
+#     snake.move()
+
+#     # Detect collision with food.
+#     if snake.head.distance(food) < 15:
+#         food.refresh()
+
+
+# screen.exitonclick()
+
+## Create a Scoreboard and Keep Score
+
+# Create a new class called Scoreboard.py
+
+# from turtle import Turtle
+# class Scoreboard(Turtle):
+
+#     def __init__(self):
+#         super().__init__()
+#         self.score = 0
+#         self.color("white")
+#         self.penup()
+#         self.goto(0, 270)
+#         self.write(f"Score: {self.score}", align = "center", font = ("Arial", 24, "normal"))
+#         self.hideturtle()
+
+# 
+
+# main.py
+# from turtle import Screen
+# from snake import Snake
+# from food import Food
+# from scoreboard import Scoreboard
+# import time
+
+# screen = Screen()
+# screen.setup(width = 600, height = 600)
+# screen.bgcolor("black")
+# screen.title("My Snake Game")
+# screen.tracer(0)
+
+
+# snake = Snake()
+# food = Food()
+# scoreboard = Scoreboard()
+
+# screen.listen()
+# screen.onkey(snake.up, "Up")
+# screen.onkey(snake.down, "Down")
+# screen.onkey(snake.left, "Left")
+# screen.onkey(snake.right, "Right")
+# screen.update()
+
+# game_is_on = True
+# while game_is_on:
+#     screen.update()
+#     time.sleep(0.1)
+
+#     snake.move()
+
+#     if snake.head.distance(food) < 15:
+#         food.refresh()
+
+
+# screen.exitonclick()
+
+## Scoreboard.py
+
+# from turtle import Turtle
+# ALIGNMENT = "center"
+# FONT = ("Arial", 24, "normal")
+
+# class Scoreboard(Turtle):
+
+#     def __init__(self):
+#         super().__init__()
+#         self.score = 0
+#         self.color("white")
+#         self.penup()
+#         self.goto(0, 270)
+#         self.hideturtle()
+#         self.update_scoreboard()
+
+#     def update_scoreboard(self):
+#             self.write(f"Score: {self.score}", align = ALIGNMENT, font = FONT)
+
+#     def increase_score(self):
+#         self.score += 1
+#         self.clear()
+#         self.update_scoreboard()
+
+
