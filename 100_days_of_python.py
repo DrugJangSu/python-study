@@ -7934,7 +7934,8 @@
 
 
 # screen.exitonclick()
-## End of Day 22 ------------------------
-## Day 23 - Intermediate - The Turtle Crossing Capstone Project
 
+## End of Day 22 -----------------------------
+
+## Day 23 - Intermediate - The Turtle Crossing Capstone Project
 
