@@ -7939,3 +7939,7 @@
 
 ## Day 23 - Intermediate - The Turtle Crossing Capstone Project
 
+## The Turtle Crossing Game
+
+# You'll need to know how to create classes, inherit classes, and using the objects, and the turtle coordinate system and the turtle game engine.
+
