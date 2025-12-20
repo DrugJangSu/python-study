@@ -8159,3 +8159,31 @@
 #     file.write("\nNew text.")
 
 
+## Relative and Absolute file paths
+
+## Absolute file path(starting with the root/, known as a c drive in WINDOWS)
+# /Users/jonghyunlee/Documents/coding-exercises/python-study/100_days_of_python.py
+
+## Relative file path
+# ex) if I'm currently in python-study folder
+# ./100_days_of_python.py
+
+# ex) if I'm currently in coding-exercises folder
+# ./coding-exercises/100_days_of_python.py
+
+## if we want to go out of the folder, you use two dots at the front
+
+# with open("/Users/jonghyunlee/Downloads/my_file.txt") as file:
+#     contents = file.read()
+#     print(contents)
+
+
+# with open("../../Downloads/my_file.txt") as file:
+#     contents = file.read()
+#     print(contents)
+
+# from pathlib import Path
+# path = Path.home() / "Downloads" / "my_file.txt"
+# print(path.read_text())
+
+
