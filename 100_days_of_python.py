@@ -8182,8 +8182,43 @@
 #     contents = file.read()
 #     print(contents)
 
+
+## 주로 쓰는 방식은 아래와 같음(실무)
 # from pathlib import Path
 # path = Path.home() / "Downloads" / "my_file.txt"
 # print(path.read_text())
 
+# 코드 기준 상대경로 + 절대경로화
+# 이유 : 절대경로 문자열은 협업 시 실행 위치(CMD), 배포 환경에 따라 오류 가능성 O
+
+## Introducing the Mail Merge Challenge ## ---------------------------
+
+#TODO: Create a letter using starting_letter.txt 
+#for each name in invited_names.txt
+#Replace the [name] placeholder with the actual name.
+#Save the letters in the folder "ReadyToSend".
+    
+#Hint1: This method will help you: https://www.w3schools.com/python/ref_file_readlines.asp
+    #Hint2: This method will also help you: https://www.w3schools.com/python/ref_string_replace.asp
+        #Hint3: THis method will help you: https://www.w3schools.com/python/ref_string_strip.asp
+
+
+# PLACEHOLDER = "[name]"
+
+# with open("./Input/Names/invited_names.txt") as names_file:
+#     names = names_file.readlines()
+
+# with open("./Input/Letters/starting_letter.txt") as letter_file:
+#     letter_contents = letter_file.read()
+
+#     for name in names:
+#         stripped_name = name.strip()
+#         new_letter = letter_contents.replace(PLACEHOLDER, stripped_name)
+
+#         with open(f"./Output/ReadyToSend/letter_for_{stripped_name}.txt", "w") as completed_letter:
+#             completed_letter.write(new_letter)
+
+## End of Day 24 ---------------------------------------------------------
+
+## Day 25 - Intermediate - Working with CSV Data and the Pandas Library
 
