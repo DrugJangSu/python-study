@@ -8393,52 +8393,218 @@
 
 ## Day 25 Project : U.S. States Game
 
-import turtle
-import pandas
+# import turtle
+# import pandas
 
-screen = turtle.Screen()
-screen.title("U.S. States Game")
-image = "blank_states_img.gif"
-screen.addshape(image)
-turtle.shape(image)
-
-
-# def get_mouse_click_coor(x, y):
-#     print(x, y)
-# turtle.onscreenclick(get_mouse_click_coor)
-# turtle.mainloop()
-
-data =pandas.read_csv("50_states.csv")
-all_states = data.state.to_list()
-guessed_states = []
+# screen = turtle.Screen()
+# screen.title("U.S. States Game")
+# image = "blank_states_img.gif"
+# screen.addshape(image)
+# turtle.shape(image)
 
 
-while len(guessed_states) <50:
-    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct", prompt="What's another state's name?").title()
-    print(answer_state)
+# # def get_mouse_click_coor(x, y):
+# #     print(x, y)
+# # turtle.onscreenclick(get_mouse_click_coor)
+# # turtle.mainloop()
 
-    # Checking if answer_state is one of the states in all the states in the 50_states.csv
-    if answer_state == "Exit":
-        missing_states = []
-        for state in all_states:
-            if state not in guessed_states:
-                missing_states.append(state)
-        new_data = pandas.DataFrame(missing_states)
-        new_data.to_csv("states_to_learn.csv") #Making a new CSV file that contains all the states that the user didn't guess
-        break
-    if answer_state in all_states:
-        guessed_states.append(answer_state)
-        # If they got it right:
-            # Create a turtle to write the name of the state at the states'x and y coordinates
-        t = turtle.Turtle()
-        t.hideturtle()
-        t.penup()
-        state_data = data[data.state == answer_state]
-        t.goto(state_data.x.item(), state_data.y.item())
-        # t.write(state_data.state.item()) # Another way to get the state name
-        t.write(answer_state)
+# data =pandas.read_csv("50_states.csv")
+# all_states = data.state.to_list()
+# guessed_states = []
+
+
+# while len(guessed_states) <50:
+#     answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct", prompt="What's another state's name?").title()
+#     print(answer_state)
+
+#     # Checking if answer_state is one of the states in all the states in the 50_states.csv
+#     if answer_state == "Exit":
+#         missing_states = []
+#         for state in all_states:
+#             if state not in guessed_states:
+#                 missing_states.append(state)
+#         new_data = pandas.DataFrame(missing_states)
+#         new_data.to_csv("states_to_learn.csv") #Making a new CSV file that contains all the states that the user didn't guess
+#         break
+#     if answer_state in all_states:
+#         guessed_states.append(answer_state)
+#         # If they got it right:
+#             # Create a turtle to write the name of the state at the states'x and y coordinates
+#         t = turtle.Turtle()
+#         t.hideturtle()
+#         t.penup()
+#         state_data = data[data.state == answer_state]
+#         t.goto(state_data.x.item(), state_data.y.item())
+#         # t.write(state_data.state.item()) # Another way to get the state name
+#         t.write(answer_state)
 
 
 # ----- END OF DAY 25 -----------------------------
 
 ## Day 26 - Intermediate - List Comprehension and the NATO Alphabet
+# print("Day 26 - Intermediate - List Comprehension and the NATO Alphabet")
+
+## List Comprehension
+# This function is mostly only for Python, other languages have their own versions of it.
+
+# It's a case where you create a new list based on another list in a single line of code.
+# numbers = [1, 2, 3]
+# new_list = []
+# for n in numbers:
+#     add_1 = n + 1
+#     new_list.append(add_1)
+
+# List comprehension
+# new_list = [new_item for item in list]
+# new_list = [n + 1 for n in numbers]
+
+# numbers = [1, 2, 3]
+# # new_numbers = [new_item for item in list]
+# new_numbers = [n + 1 for n in numbers]
+# print(new_numbers)
+
+# name = "Hyun"
+# letters_list = [letter for letter in name]
+# print(letters_list)
+
+# range_list = [num * 2 for num in range(1, 5)]
+# print(range_list)
+
+# # Conditional List Comprehension
+# names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+
+# # short_names = [new_item for item in list if test]
+# short_names = [name for name in names if len(name) < 5]
+# print(short_names)
+
+# long_names = [name.upper() for name in names if len(name) > 5]
+# print(long_names)
+
+## Applying List Comprehension to US States Game
+# import turtle
+# import pandas
+
+# screen = turtle.Screen()
+# screen.title("U.S. States Game")
+# image = "blank_states_img.gif"
+# screen.addshape(image)
+# turtle.shape(image)
+
+
+# # def get_mouse_click_coor(x, y):
+# #     print(x, y)
+# # turtle.onscreenclick(get_mouse_click_coor)
+# # turtle.mainloop()
+
+# data =pandas.read_csv("50_states.csv")
+# all_states = data.state.to_list()
+# guessed_states = []
+# while len(guessed_states) <50:
+#     answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Correct", prompt="What's another state's name?").title()
+#     print(answer_state)
+#     if answer_state == "Exit":
+#         missing_states = [state for state in all_states if state not in guessed_states]
+#         new_data = pandas.DataFrame(missing_states)
+#         new_data.to_csv("states_to_learn.csv") #Making a new CSV file that contains all the states that the user didn't guess
+#         break
+
+#     if answer_state in all_states:
+#         guessed_states.append(answer_state)
+#         # If they got it right:
+#             # Create a turtle to write the name of the state at the states'x and y coordinates
+#         t = turtle.Turtle()
+#         t.hideturtle()
+#         t.penup()
+#         state_data = data[data.state == answer_state]
+#         t.goto(state_data.x.item(), state_data.y.item())
+#         # t.write(state_data.state.item()) # Another way to get the state name
+#         t.write(answer_state)
+
+## Dictionary Comprehension
+
+# new_dict = {new_key:new_value for item in list}
+# new_dict = {new_key:new_value for (key, value) in dict.items()}
+# new_dict = {new_key:new_value for (key, value) in dict.items() if test}
+
+# names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
+# import random
+# student_score = {student:random.randint(1, 100) for student in names}
+# print(student_score)
+# passed_students = {student:score for (student, score) in student_score.items() if score >= 60}
+# print(passed_students)
+
+
+# student_dict = {
+#     "student": ["Angela", "James", "Lily"],
+#     "score": [56, 76, 98]
+# }
+
+# # Looping through dictionaries
+# # for (key, value) in student_dict.items():
+# #     print(key)
+# #     print(value)
+
+# import pandas
+
+# student_data_frame = pandas.DataFrame(student_dict)
+# print(student_data_frame)
+
+# # Loop through a data frame
+# # for (key, value) in student_data_frame.items():
+# #     print(key)
+# #     print(value)
+
+# for (index, row) in student_data_frame.iterrows():
+#     # print(row)
+#     # print(row.student)
+#     # print(row.score)
+#     if row.student == "Angela":
+#         print(row.score)
+
+## NATO Alphabet Project ---------------------------------
+
+# student_dict = {
+#     "student": ["Angela", "James", "Lily"], 
+#     "score": [56, 76, 98]
+# }
+
+# #Looping through dictionaries:
+# for (key, value) in student_dict.items():
+#     #Access key and value
+#     pass
+
+# import pandas
+# student_data_frame = pandas.DataFrame(student_dict)
+
+# #Loop through rows of a data frame
+# for (index, row) in student_data_frame.iterrows():
+#     if row.student == "Angela":
+#         print(row.score)
+#     #Access index and row
+#     #Access row.student or row.score
+#     pass
+
+# # Keyword Method with iterrows()
+# # {new_key:new_value for (index, row) in df.iterrows()}
+
+# #TODO 1. Create a dictionary in this format:
+# {"A": "Alfa", "B": "Bravo"}
+
+# #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
+# <The final solution>
+# import pandas
+
+# data = pandas.read_csv("nato_phonetic_alphabet.csv")
+# # print(data.to_dict())
+# #TODO 1. Create a dictionary in this format:
+# phonetic_dict = {row.letter: row.code for (index, row) in data.iterrows()}
+# # print(phonetic_dict)
+
+# #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
+# word = input("Enter a word: ").upper()
+# output_list = [phonetic_dict[letter] for letter in word]
+# print(output_list)
+
+## End of Day 26 -----------------------------------------
+## Day 27 - Intermediate - Tkinter, *args, **kwargs and Creating GUI Programs
+print("Day 27 - Intermediate - Tkinter, *args, **kwargs and Creating GUI Programs")
