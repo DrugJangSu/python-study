@@ -8593,18 +8593,147 @@
 # #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 # <The final solution>
 # import pandas
-
 # data = pandas.read_csv("nato_phonetic_alphabet.csv")
 # # print(data.to_dict())
-# #TODO 1. Create a dictionary in this format:
 # phonetic_dict = {row.letter: row.code for (index, row) in data.iterrows()}
 # # print(phonetic_dict)
-
-# #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 # word = input("Enter a word: ").upper()
 # output_list = [phonetic_dict[letter] for letter in word]
 # print(output_list)
 
 ## End of Day 26 -----------------------------------------
+
 ## Day 27 - Intermediate - Tkinter, *args, **kwargs and Creating GUI Programs
-print("Day 27 - Intermediate - Tkinter, *args, **kwargs and Creating GUI Programs")
+
+# import tkinter
+
+# window = tkinter.Tk()
+# window.title("My First GUI Program")
+# window.minsize(width=500, height=300)
+
+# # Label
+# my_label = tkinter.Label(text="I Am a Label", font=("Arial", 24, "bold"))
+# my_label.pack() # This will place(pack) the label onto the screen.
+
+
+# import turtle
+
+# tim = turtle.Turtle()
+# tim.write()
+
+# window.mainloop() # This will keep the window on screen, and should be at the very end of the program.
+
+## Setting Default Values for Optional Arguments inside a Function Header
+
+# Keyword Arguments
+# def my_function(a, b, c):
+#     Do this with a
+#     Then do this with b
+#     Finally do this with c
+
+# import tkinter
+
+# window = tkinter.Tk()
+# window.title("My First GUI Program")
+# window.minsize(width=500, height=300)
+
+
+# my_label = tkinter.Label(text="I Am a Label", font=("Arial", 24, "bold"))
+# my_label.pack(side="left") 
+
+# import turtle
+# tim = turtle.Turtle()
+# tim.write("Some text")
+
+
+# window.mainloop() 
+
+## *args : Many Positional Arguments
+
+# def add(*args):
+#     for n in args:
+#         print(n)
+
+# def add(*args):
+#     print(args[1])
+#     sum = 0
+#     for n in args:
+#         sum += n
+#     return sum
+    
+# print(add(3, 5, 6, 2, 1, 7, 4, 3))
+
+
+## *kwargs : Many Keyword Arguments
+
+# def calculate(**kwargs):
+#     print(kwargs)
+#     # for key, value in kwargs.items():
+#     #     print(key)
+#     #     print(value)
+#     print(kwargs["add"])
+
+# calculate(add=3, multiply=5)
+
+
+# def calculate(n, **kwargs):
+#     print(kwargs)
+#     # for key, value in kwargs.items():
+#     #     print(key)
+#     #     print(value)
+#     n += kwargs["add"]
+#     n *= kwargs["multiply"]
+#     print(n)
+
+# calculate(2, add=3, multiply=5)
+
+# class Car:
+
+#     def __init__(self, **kw):
+#         # self.make = kw["make"] # if the key doesn't exist, it will throw an error
+#         # self.model = kw["model"]
+#         self.make = kw.get("make") # benefit of get is that if the key doesn't exist, it returns None instead of error
+#         self.model = kw.get("model")
+#         self.color = kw.get("color")
+#         self.seats = kw.get("seats")
+
+# my_car = Car(make="Nissan", model="GT-R")
+# print(my_car.model)
+# print(my_car.make)
+
+
+## Buttons, Entry, and Setting Component Options in Tkinter
+
+from tkinter import * # Importing everything from tkinter module
+
+window = Tk()
+window.title("My First GUI Program")
+window.minsize(width=500, height=300)
+
+
+my_label = Label(text="I Am a Label", font=("Arial", 24, "bold"))
+my_label.pack() 
+
+my_label["text"] = "New Text" # A way to change the label text
+my_label.config(text="New Text") # Another way to change the label text
+
+def button_clicked():
+    print("I got clicked")
+    new_text = input.get()
+    my_label.config(text=new_text)
+
+button = Button(text="Click Me", command=button_clicked)
+button.pack()
+
+
+# Entry
+
+input = Entry(width=10)
+input.pack()
+print(input.get())
+
+
+window.mainloop()
+
+## Other Tkinter Widgets: Radiobuttons, Scales, Checkbuttons and more
+
