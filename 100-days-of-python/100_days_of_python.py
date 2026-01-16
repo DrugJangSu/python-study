@@ -10387,5 +10387,87 @@ from tkinter import messagebox
 #             msg=f"Subject:Happy Birthday!\n\n{contents}"
 #         )
 
-## -----------END OF DAY 32-----------------------------
-## Day 33 - Intermediate+ API Endpoints & API Parameters - ISS Overhead Notifier
+## -----------END OF DAY 32--------------------------------------------------------
+## Day 33 - Intermediate+ API Endpoints & API Parameters - ISS Overhead Notifier -----------------
+
+## API(Application Programming Interface)
+# An Application Programming Interface is a set of commands, functions, protocols, and objects that programmers can use to create software or interact with an external system.
+# If you don't make a proper API, the request will be denied and won't be able to interact with an external system etc
+
+## API Endpoints and API Calls
+## You -> Bank Teller -> Bank Vault -> Bank Teller -> You
+
+
+## Using Json
+# import requests
+
+# response = requests.get(url="http://api.open-notify.org/iss-now.json")
+# print(response)
+
+
+## Working with Responses : HTTP Codes, Exceptions & JSON Data
+
+## HTTP status codes;
+# 1XX : Hold On(something's happening, this isn't final)
+# 2XX: Here You Go(Success!)
+# 3XX: Go Away(lol, you don't have permission)
+# 4XX: You Screwed Up(problem at your end)
+# 5XX: I Screwed Up(problem at my end, the server or the website is down etc)
+
+# import requests
+
+# response = requests.get(url="http://api.open-notify.org/iss-now.json")
+# if response.status_code == 404:
+#     raise Exception("That resource does not exist.")
+# elif response.status_code == 401:
+#     raise Exception("You are not authorised to access this data.")
+## -> This would've been very impractical, since there are loads of HTTP status codes.
+
+## In this case you can use the request module.
+# import requests
+
+# response = requests.get(url="http://api.open-notify.org/iss-now.json")
+# response.raise_for_status()
+
+# data = response.json()["iss_position"]["longitude"]
+# print(data)
+
+# data = response.json()
+
+# longitude = data["iss_position"]["longitude"]
+# latitude = data["iss_position"]["latitude"]
+
+# iss_position = (longitude, latitude)
+# print(iss_position)
+
+## Challenge - Build a Kanye Quotes App using the Kanye Rest API
+# from tkinter import *
+# import requests
+
+# def get_quote():
+#     response = requests.get("http://api.kanye.rest")
+#     response.raise_for_status()
+#     data = response.json()
+#     quote = data["quote"]
+#     canvas.itemconfig(quote_text, text=quote)
+
+
+# window = Tk()
+# window.title("Kanye Says...")
+# window.config(padx=50, pady=50)
+
+# canvas = Canvas(width=300, height=414)
+# background_img = PhotoImage(file="background.png")
+# canvas.create_image(150, 207, image=background_img)
+# quote_text = canvas.create_text(150, 207, text="Kanye Quote Goes HERE", width=250, font=("Arial", 30, "bold"), fill="white")
+# canvas.grid(row=0, column=0)
+
+# kanye_img = PhotoImage(file="kanye.png")
+# kanye_button = Button(image=kanye_img, highlightthickness=0, command=get_quote)
+# kanye_button.grid(row=1, column=0)
+
+
+# window.mainloop()
+
+## Understand API Parameters: Match Sunset Times with the Current Time---------
+
