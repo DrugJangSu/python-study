@@ -10475,66 +10475,66 @@ from tkinter import messagebox
 
 # lat(float) : Latitude in decimal degrees
 # lng(float) : Longitude in decimal degrees
-import requests
-from datetime import datetime
+# import requests
+# from datetime import datetime
 
-MY_LAT = 37.566536
-MY_LONG = 126.977966
-# (It's the coordinates for Seoul, lol)
+# MY_LAT = 37.566536
+# MY_LONG = 126.977966
+# # (It's the coordinates for Seoul, lol)
 
-parameters = {
-    "lat": MY_LAT,
-    "lng": MY_LONG,
-    "formatted" : 0
-}
+# parameters = {
+#     "lat": MY_LAT,
+#     "lng": MY_LONG,
+#     "formatted" : 0
+# }
 
-response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
-response.raise_for_status()
-data = response.json()
-# print(data)
+# response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
+# response.raise_for_status()
+# data = response.json()
+# # print(data)
 
-# https://api.sunrise-sunset.org/json?lat=37.566536&lng=126.977966 -> This will also work.
-sunrise = data["results"]["sunrise"].split("T")[1].split(":")[0]
-sunset = data["results"]["sunset"].split("T")[1].split(":")[0]
+# # https://api.sunrise-sunset.org/json?lat=37.566536&lng=126.977966 -> This will also work.
+# sunrise = data["results"]["sunrise"].split("T")[1].split(":")[0]
+# sunset = data["results"]["sunset"].split("T")[1].split(":")[0]
 
-print(sunrise)
-print(sunset)
+# print(sunrise)
+# print(sunset)
 
-time_now = datetime.now()
+# time_now = datetime.now()
 
-print(time_now.hour)
+# print(time_now.hour)
 
 
 ## ISS OVERHEAD NOTIFIER PROJECT CHALLENGE
 
-import requests
-from datetime import datetime
+# import requests
+# from datetime import datetime
 
-MY_LAT = 37.566536 # Your latitude
-MY_LONG = 126.977966 # Your longitude
+# MY_LAT = 37.566536 # Your latitude
+# MY_LONG = 126.977966 # Your longitude
 
-response = requests.get(url="http://api.open-notify.org/iss-now.json")
-response.raise_for_status()
-data = response.json()
+# response = requests.get(url="http://api.open-notify.org/iss-now.json")
+# response.raise_for_status()
+# data = response.json()
 
-iss_latitude = float(data["iss_position"]["latitude"])
-iss_longitude = float(data["iss_position"]["longitude"])
+# iss_latitude = float(data["iss_position"]["latitude"])
+# iss_longitude = float(data["iss_position"]["longitude"])
 
-#Your position is within +5 or -5 degrees of the ISS position.
+# #Your position is within +5 or -5 degrees of the ISS position.
 
-parameters = {
-    "lat": MY_LAT,
-    "lng": MY_LONG,
-    "formatted": 0,
-}
+# parameters = {
+#     "lat": MY_LAT,
+#     "lng": MY_LONG,
+#     "formatted": 0,
+# }
 
-response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
-response.raise_for_status()
-data = response.json()
-sunrise = int(data["results"]["sunrise"].split("T")[1].split(":")[0])
-sunset = int(data["results"]["sunset"].split("T")[1].split(":")[0])
+# response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
+# response.raise_for_status()
+# data = response.json()
+# sunrise = int(data["results"]["sunrise"].split("T")[1].split(":")[0])
+# sunset = int(data["results"]["sunset"].split("T")[1].split(":")[0])
 
-time_now = datetime.now()
+# time_now = datetime.now()
 
 #If the ISS is close to my current position
 # and it is currently dark
@@ -10597,4 +10597,381 @@ time_now = datetime.now()
 
 
 ## End of Day 33 Project ------------------------------------------
-## Day 34 - Intermediate+ API Practice - Creating a GUI Quiz App
+## Day 34 - Intermediate+ API Practice - Creating a GUI Quiz App----------------
+
+# The Trivia API and The Quizzler App
+
+## Based on the day 17 project, we want the questions and answers to be based on the Trivia API.(data.py)
+## Comment out all the question data in data.py, but instead fetch the data from the API so that it will run with only using main.py)
+
+
+# https://opentdb.com/api.php?amount=10&type=booleans
+# parameter called amount(set to 10), type is sent to boolean
+# <data.py>
+# import requests
+
+# parameters = {
+#     "amount" : 10,
+#     "type" : "boolean"
+# }
+
+# response = requests.get("https://opentdb.com/api.php", params=parameters)
+# response.raise_for_status()
+# data = response.json()
+# question_data =data["results"]
+
+# -> This will work, but there are certain symbols that have been encoded(apostrophe etc) so we need to turn the encoding into actual characters.
+
+# &quot;Number 16 Bus Shelter&quot; was a child&#039;s name that was approved by the New Zealand government.
+# ->(decode)
+# "Number 16 Bus Shelter" was a child's name that was approved by the New Zealand government.
+
+# <quiz_brain.py>
+# import html
+# class QuizBrain:
+
+#     def __init__(self, q_list):
+#         self.question_number = 0
+#         self.score = 0
+#         self.question_list = q_list
+#         self.current_question = None
+
+#     def still_has_questions(self):
+#         return self.question_number < len(self.question_list)
+
+#     def next_question(self):
+#         self.current_question = self.question_list[self.question_number]
+#         self.question_number += 1
+#         q_text = html.unescape(self.current_question.text)
+#         user_answer = input(f"Q.{self.question_number}: {q_text} (True/False): ")
+#         self.check_answer(user_answer)
+
+#     def check_answer(self, user_answer):
+#         correct_answer = self.current_question.answer
+#         if user_answer.lower() == correct_answer.lower():
+#             self.score += 1
+#             print("You got it right!")
+#         else:
+#             print("That's wrong.")
+
+#         print(f"Your current score is: {self.score}/{self.question_number}")
+#         print("\n")
+
+## Now the code will run without any html errors.
+
+# <ui.py> -> making the GUI
+# from tkinter import *
+
+
+# THEME_COLOR = "#375362"
+
+# class QuizInterface:
+#     def __init__(self):
+#         self.window = Tk()
+#         self.window.title("Quizzler")
+#         self.window.config(padx=20, pady=20, bg=THEME_COLOR)
+
+#         self.score_label = Label(text="Score : 0", fg="white", bg=THEME_COLOR)
+#         self.score_label.grid(row=0, column=1)
+
+#         self.canvas = Canvas(width=300, height=250, bg="white")
+#         self.question_text = self.canvas.create_text(
+#             150, 
+#             125, 
+#             text="Some Question Text", 
+#             fill=THEME_COLOR,
+#             font=("Arial", 20, "italic")
+#         )
+#         self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
+
+#         true_image = PhotoImage(file="images/true.png")
+#         self.true_button = Button(image=true_image, highlightthickness=0)
+#         self.true_button.grid(row=2, column=0)
+
+#         false_image = PhotoImage(file="images/false.png")
+#         self.false_button = Button(image=false_image, highlightthickness=0)
+#         self.false_button.grid(row=2, column=1)
+
+#         self.window.mainloop()
+
+## Python Typing & Showing the Next Question in the GUI--------------
+## <main.py>
+# from question_model import Question
+# from data import question_data
+# from quiz_brain import QuizBrain
+# from ui import QuizInterface
+
+# question_bank = []
+# for question in question_data:
+#     question_text = question["question"]
+#     question_answer = question["correct_answer"]
+#     new_question = Question(question_text, question_answer)
+#     question_bank.append(new_question)
+
+
+# quiz = QuizBrain(question_bank)
+# quiz_ui = QuizInterface(quiz)
+
+# print("You've completed the quiz")
+# print(f"Your final score was: {quiz.score}/{quiz.question_number}")
+
+## <quiz_brain.py>
+# import html
+
+# class QuizBrain:
+
+#     def __init__(self, q_list):
+#         self.question_number = 0
+#         self.score = 0
+#         self.question_list = q_list
+#         self.current_question = None
+
+#     def still_has_questions(self):
+#         return self.question_number < len(self.question_list)
+
+#     def next_question(self):
+#         self.current_question = self.question_list[self.question_number]
+#         self.question_number += 1
+#         q_text = html.unescape(self.current_question.text)
+#         return f"Q.{self.question_number}: {q_text}"
+
+
+#     def check_answer(self, user_answer):
+#         correct_answer = self.current_question.answer
+#         if user_answer.lower() == correct_answer.lower():
+#             self.score += 1
+#             print("You got it right!")
+#         else:
+#             print("That's wrong.")
+
+#         print(f"Your current score is: {self.score}/{self.question_number}")
+#         print("\n")
+
+
+## <ui.py>
+# from tkinter import *
+# from quiz_brain import QuizBrain
+
+
+# THEME_COLOR = "#375362"
+
+# class QuizInterface:
+#     def __init__(self, quiz_brain: QuizBrain):
+#         self.quiz = quiz_brain
+#         self.window = Tk()
+#         self.window.title("Quizzler")
+#         self.window.config(padx=20, pady=20, bg=THEME_COLOR)
+
+#         self.score_label = Label(text="Score : 0", fg="white", bg=THEME_COLOR)
+#         self.score_label.grid(row=0, column=1)
+
+#         self.canvas = Canvas(width=300, height=250, bg="white")
+#         self.question_text = self.canvas.create_text(
+#             150, 
+#             125, 
+#             width=280,
+#             text="Some Question Text", 
+#             fill=THEME_COLOR,
+#             font=("Arial", 20, "italic")
+#         )
+#         self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
+
+#         true_image = PhotoImage(file="images/true.png")
+#         self.true_button = Button(image=true_image, highlightthickness=0)
+#         self.true_button.grid(row=2, column=0)
+
+#         false_image = PhotoImage(file="images/false.png")
+#         self.false_button = Button(image=false_image, highlightthickness=0)
+#         self.false_button.grid(row=2, column=1)
+
+#         self.get_next_question()
+
+#         self.window.mainloop()
+    
+#     def get_next_question(self):
+#         q_text = self.quiz.next_question()
+#         self.canvas.itemconfig(self.question_text, text=q_text)
+
+## Python Typing : Type Hints and Arrows --------------
+
+# age : int
+# name : str
+# height : float
+# is_human : bool
+# This will 
+
+# def police_check(age:int): # This will actually lock the data type and will be useful as it outlines that it doesn't match the data time down below, but in vs code it doesn't really matter
+#     if age > 18:
+#         can_drive = True
+#     else:
+#         can_drive = False
+#     return can_drive
+
+# print(police_check(12))
+
+# if police_check(19):
+#     print("You may pass")
+# else:
+#     print("Pay a fine.")
+
+# ## Type Hints
+# def greeting(name: str) -> str:
+#     return 'hello' + name
+
+## Check the Answer
+# Making the code to check if the answer is right or wrong
+# <ui.py>
+# from tkinter import *
+# from quiz_brain import QuizBrain
+
+
+# THEME_COLOR = "#375362"
+
+# class QuizInterface:
+#     def __init__(self, quiz_brain: QuizBrain):
+#         self.quiz = quiz_brain
+#         self.window = Tk()
+#         self.window.title("Quizzler")
+#         self.window.config(padx=20, pady=20, bg=THEME_COLOR)
+
+#         self.score_label = Label(text="Score : 0", fg="white", bg=THEME_COLOR)
+#         self.score_label.grid(row=0, column=1)
+
+#         self.canvas = Canvas(width=300, height=250, bg="white")
+#         self.question_text = self.canvas.create_text(
+#             150, 
+#             125, 
+#             width=280,
+#             text="Some Question Text", 
+#             fill=THEME_COLOR,
+#             font=("Arial", 20, "italic")
+#         )
+#         self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
+
+#         true_image = PhotoImage(file="images/true.png")
+#         self.true_button = Button(image=true_image, highlightthickness=0, command=self.true_pressed)
+#         self.true_button.grid(row=2, column=0)
+
+#         false_image = PhotoImage(file="images/false.png")
+#         self.false_button = Button(image=false_image, highlightthickness=0, command=self.false_pressed)
+#         self.false_button.grid(row=2, column=1)
+
+#         self.get_next_question()
+
+#         self.window.mainloop()
+    
+#     def get_next_question(self):
+#         q_text = self.quiz.next_question()
+#         self.canvas.itemconfig(self.question_text, text=q_text)
+
+#     def true_pressed(self):
+#         self.quiz.check_answer("True")
+    
+#     def false_pressed(self):
+#         self.quiz.check_answer("False")
+
+## Give Feedback to the Player, Keep Score and Fix the Bugs ------------------
+
+# If the answer is correct, flash green / if it's wrong, flash red
+
+## <quiz_brain.py>
+# import html
+
+# class QuizBrain:
+
+#     def __init__(self, q_list):
+#         self.question_number = 0
+#         self.score = 0
+#         self.question_list = q_list
+#         self.current_question = None
+
+#     def still_has_questions(self):
+#         return self.question_number < len(self.question_list)
+
+#     def next_question(self):
+#         self.current_question = self.question_list[self.question_number]
+#         self.question_number += 1
+#         q_text = html.unescape(self.current_question.text)
+#         return f"Q.{self.question_number}: {q_text}"
+#         # user_answer = input(f"Q.{self.question_number}: {q_text} (True/False): ")
+#         # self.check_answer(user_answer)
+
+
+#     def check_answer(self, user_answer):
+#         correct_answer = self.current_question.answer
+#         if user_answer.lower() == correct_answer.lower():
+#             self.score += 1
+#             return True
+#         else:
+#             return False
+
+
+## <ui.py>
+# from tkinter import *
+# from quiz_brain import QuizBrain
+
+
+# THEME_COLOR = "#375362"
+
+# class QuizInterface:
+#     def __init__(self, quiz_brain: QuizBrain):
+#         self.quiz = quiz_brain
+#         self.window = Tk()
+#         self.window.title("Quizzler")
+#         self.window.config(padx=20, pady=20, bg=THEME_COLOR)
+
+#         self.score_label = Label(text="Score : 0", fg="white", bg=THEME_COLOR)
+#         self.score_label.grid(row=0, column=1)
+
+#         self.canvas = Canvas(width=300, height=250, bg="white")
+#         self.question_text = self.canvas.create_text(
+#             150, 
+#             125, 
+#             width=280,
+#             text="Some Question Text", 
+#             fill=THEME_COLOR,
+#             font=("Arial", 20, "italic")
+#         )
+#         self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
+
+#         true_image = PhotoImage(file="images/true.png")
+#         self.true_button = Button(image=true_image, highlightthickness=0, command=self.true_pressed)
+#         self.true_button.grid(row=2, column=0)
+
+#         false_image = PhotoImage(file="images/false.png")
+#         self.false_button = Button(image=false_image, highlightthickness=0, command=self.false_pressed)
+#         self.false_button.grid(row=2, column=1)
+
+#         self.get_next_question()
+
+#         self.window.mainloop()
+    
+#     def get_next_question(self):
+#         self.canvas.config(bg="white")
+#         if self.quiz.still_has_questions():
+#             self.score_label.config(text=f"Score: {self.quiz.score}")
+#             q_text = self.quiz.next_question()
+#             self.canvas.itemconfig(self.question_text, text=q_text)
+#         else:
+#             self.canvas.itemconfig(self.question_text, text="You've reached the end of the quiz.")
+#             self.true_button.config(state="disabled")
+#             self.false_button.config(state="disabled")
+
+#     def true_pressed(self):
+#         is_right = self.quiz.check_answer("True")
+#         self.give_feedback(self.quiz.check_answer("True"))
+    
+#     def false_pressed(self):
+#         is_right = self.quiz.check_answer("False")
+#         self.give_feedback(is_right)
+
+#     def give_feedback(self, is_right):
+#         if is_right:
+#             self.canvas.config(bg="green")
+#         else:
+#             self.canvas.config(bg="red")
+#         self.window.after(1000, self.get_next_question)
+
+
+## End of Day 34 Project ------------------------------------------
+## Day 35 - Intermediate+ Keys, Authentication & Environment Variables: Send SMS ----------------
