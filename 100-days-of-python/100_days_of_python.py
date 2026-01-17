@@ -10975,3 +10975,60 @@ from tkinter import messagebox
 
 ## End of Day 34 Project ------------------------------------------
 ## Day 35 - Intermediate+ Keys, Authentication & Environment Variables: Send SMS ----------------
+
+## API Authentication
+## API key is a way for the API provider to prevent the users from using the API, controlling the access
+
+## Using API Keys to Authenticate and Get the Weather from OpenWeatherMap
+
+# OpenWeather API key
+
+# https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=00000000000000000000000000000000
+
+# 3 Hour Intervals
+# https://api.openweathermap.org/data/2.5/forecast?q=Seoul&appid=00000000000000000000000000000000
+
+# api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
+
+# import requests
+
+# OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
+# api_key = "00000000000000000000000000000000"
+
+# weather_params = {
+#     "lat": 37.566536,
+#     "lon": 126.977966,
+#     "appid": api_key
+# }
+
+
+# response = requests.get(OWM_Endpoint, params=weather_params)
+# print(response.json())
+
+## Checking if it rains for the next 12 hours
+# import requests
+
+# OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
+# api_key = "00000000000000000000000000000000"
+
+# weather_params = {
+#     "lat": 37.566536,
+#     "lon": 126.977966,
+#     "appid": api_key,
+#     "cnt" : 4,
+# }
+
+# response = requests.get(OWM_Endpoint, params=weather_params)
+# response.raise_for_status()
+# weather_data =response.json()
+# # print(weather_data["list"][0]["weather"][0]["id"])
+
+# will_rain = False
+# for hour_data in weather_data["list"]:
+#     condition_code = hour_data["weather"][0]["id"]
+#     if int(condition_code) < 700:
+#         will_rain = True
+# if will_rain:
+#     print("Bring an umbrella.")
+
+
