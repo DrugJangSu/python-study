@@ -11033,31 +11033,103 @@ from tkinter import messagebox
 
 
 ## Sending SMS via the Twilio API----------------------------------
-from twilio.rest import Client
+# from twilio.rest import Client
 
-import requests
+# import requests
 
-OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
-api_key = "00000000000000000000000000000000"
-account_sid = "00000000000000000000000000000000"
-auth_token = "00000000000000000000000000000000"
+# OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
+# api_key = "00000000000000000000000000000000"
+# account_sid = "00000000000000000000000000000000"
+# auth_token = "00000000000000000000000000000000"
 
-weather_params = {
-    "lat": 37.566536,
-    "lon": 126.977966,
-    "appid": api_key,
-    "cnt" : 4,
-}
+# weather_params = {
+#     "lat": 37.566536,
+#     "lon": 126.977966,
+#     "appid": api_key,
+#     "cnt" : 4,
+# }
 
-response = requests.get(OWM_Endpoint, params=weather_params)
-response.raise_for_status()
-weather_data =response.json()
-# print(weather_data["list"][0]["weather"][0]["id"])
+# response = requests.get(OWM_Endpoint, params=weather_params)
+# response.raise_for_status()
+# weather_data =response.json()
+# # print(weather_data["list"][0]["weather"][0]["id"])
 
-will_rain = False
-for hour_data in weather_data["list"]:
-    condition_code = hour_data["weather"][0]["id"]
-    if int(condition_code) < 700:
-        will_rain = True
-if will_rain:
-    print("Bring an umbrella.")
+# will_rain = False
+# for hour_data in weather_data["list"]:
+#     condition_code = hour_data["weather"][0]["id"]
+#     if int(condition_code) < 700:
+#         will_rain = True
+# if will_rain:
+#     client = Client(account_sid, auth_token)
+#     message = client.messages \
+#         .create(
+#             body = "It's going to rain today. Remember to bring an ☔️",
+#             from = "+441000000000",
+#             to = "+821000000000(Your verified number)"
+#         )
+#     print(message.status)
+
+## Use PythonAnywhere to Automate the Python Script---------------------
+
+# import os
+# from twilio.rest import Client
+# from twilio.http.http_client import TwilioHttpClient
+# import requests
+
+
+# OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
+# api_key = "00000000000000000000000000000000"
+# account_sid = "00000000000000000000000000000000"
+# auth_token = "00000000000000000000000000000000"
+
+# weather_params = {
+#     "lat": 37.566536,
+#     "lon": 126.977966,
+#     "appid": api_key,
+#     "cnt" : 4,
+# }
+
+# response = requests.get(OWM_Endpoint, params=weather_params)
+# response.raise_for_status()
+# weather_data =response.json()
+# # print(weather_data["list"][0]["weather"][0]["id"])
+
+# will_rain = False
+# for hour_data in weather_data["list"]:
+#     condition_code = hour_data["weather"][0]["id"]
+#     if int(condition_code) < 700:
+#         will_rain = True
+# if will_rain:
+#     proxy_client = TwilioHttpClient()
+#     proxy_client.session.proxies = {'https': os.environ['https_proxy']}
+#     client = Client(account_sid, auth_token, http_client=proxy_client)
+#     message = client.messages \
+#         .create(
+#             body = "It's going to rain today. Remember to bring an ☔️",
+#             from = "+441000000000",
+#             to = "+821000000000(Your verified number)"
+#         )
+#     print(message.status)
+
+
+## Understanding Environment Variables and Hiding API Keys----------------
+
+# env : Environment Variables
+# It's for convenience and security. 
+# Simply type export and the variable on the terminal.
+
+# export OWM_API_KEY="your_openweather_key"
+# export TWILIO_ACCOUNT_SID="your_sid"
+# export TWILIO_AUTH_TOKEN="your_token"
+
+
+# OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
+# api_key = os.environ.get("OWM_API_KEY")
+# account_sid = os.environ.get("TWILIO_ACCOUNT_SID")
+# auth_token = os.environ.get("AUTH_TOKEN")
+
+
+## End of Day 35 --------------------------------------------------------------------------
+
+## Day 36 - Intermediate+ Stock Trading News Alert Project --------------------------------
+
