@@ -11032,3 +11032,32 @@ from tkinter import messagebox
 #     print("Bring an umbrella.")
 
 
+## Sending SMS via the Twilio API----------------------------------
+from twilio.rest import Client
+
+import requests
+
+OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
+api_key = "00000000000000000000000000000000"
+account_sid = "00000000000000000000000000000000"
+auth_token = "00000000000000000000000000000000"
+
+weather_params = {
+    "lat": 37.566536,
+    "lon": 126.977966,
+    "appid": api_key,
+    "cnt" : 4,
+}
+
+response = requests.get(OWM_Endpoint, params=weather_params)
+response.raise_for_status()
+weather_data =response.json()
+# print(weather_data["list"][0]["weather"][0]["id"])
+
+will_rain = False
+for hour_data in weather_data["list"]:
+    condition_code = hour_data["weather"][0]["id"]
+    if int(condition_code) < 700:
+        will_rain = True
+if will_rain:
+    print("Bring an umbrella.")
