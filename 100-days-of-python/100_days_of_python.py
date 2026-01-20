@@ -11315,7 +11315,269 @@ from tkinter import messagebox
 #         to="+8200000000000"
 #     )
 
-## End of Day 36 ----------------------------------------------------------------------------------------------------------
+## End of Day 36 ------------------------------------------------------------------------------------------------------------------------------------
 
-## Day 37 - Intermediate+ Stock Trading News Alert Project ----------------------------------------------------------------
+
+## Day 37 - Intermediate+ Habit Tracking Project : API Post Requests & Headers ----------------------------------------------------------------
+
+## HTTP Post Requests
+
+# Get request : requests.get() -> Used as to request specific data from the external system.
+# Post request : requests.post() -> Used to post the external system with local data, and in this case we don't care about the response.
+# Put request : requests.put() -> Used to updating a piece of data in the external system.
+# Delete request : requests.delete() -> Used to delete a piece of data in the external system.
+
+
+# <Using Pixela to track graph>
+# import requests
+
+# pixela_endpoint = "https://pixe.la/v1/users"
+
+# user_params = {
+#     "token": "00000000",
+#     "username": "000000000",
+#     "agreeTermsOfService": "yes",
+#     "notMinor" : "yes"
+# }
+
+# response =requests.post(url=pixela_endpoint, json=user_params)
+# print(response.text)
+
+
+## Advanced Authentication using an HTTP Header
+# import requests
+# USERNAME = "0000000"
+# TOKEN = "00000000"
+
+
+# pixela_endpoint = "https://pixe.la/v1/users"
+
+# user_params = {
+#     "token": TOKEN,
+#     "username": USERNAME,
+#     "agreeTermsOfService": "yes",
+#     "notMinor" : "yes"
+# }
+
+# graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
+
+# graph_config ={
+#     "id": "graph1",
+#     "name": "Cycling Graph",
+#     "unit": "Km",
+#     "type": "float",
+#     "color": "ajisai"
+# }
+
+# headers = {
+#     "X-USER-TOKEN" : TOKEN
+# }
+
+# response = requests.post(url=graph_endpoint, json=graph_config, headers=headers)
+# print(response.text)
+
+## Headers : It's the part that contains relevant places of information
+
+## Challenge : Add a Pixel to the Habit Tracker using a Post Request
+
+# import requests
+# USERNAME = "00000000"
+# TOKEN = "00000000"
+# GRAPH_ID = "00000000"
+
+# pixela_endpoint = "https://pixe.la/v1/users"
+
+# user_params = {
+#     "token": TOKEN,
+#     "username": USERNAME,
+#     "agreeTermsOfService": "yes",
+#     "notMinor" : "yes"
+# }
+
+# graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
+
+# graph_config ={
+#     "id": GRAPH_ID,
+#     "name": "Cycling Graph",
+#     "unit": "Km",
+#     "type": "float",
+#     "color": "ajisai"
+# }
+
+# headers = {
+#     "X-USER-TOKEN" : TOKEN
+# }
+
+# pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
+
+
+# pixel_data = {
+#     "date": "20260120",
+#     "quantity": "9.74",
+# }
+
+# response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
+# print(response.text)
+
+## Autofilling today's date using strftime
+
+
+# import requests
+# from datetime import datetime
+
+# # USERNAME = "00000000"
+# # TOKEN = "00000000"
+# # GRAPH_ID = "00000000"
+
+# pixela_endpoint = "https://pixe.la/v1/users"
+
+# user_params = {
+#     "token": TOKEN,
+#     "username": USERNAME,
+#     "agreeTermsOfService": "yes",
+#     "notMinor" : "yes"
+# }
+
+# graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
+
+# graph_config ={
+#     "id": GRAPH_ID,
+#     "name": "Cycling Graph",
+#     "unit": "Km",
+#     "type": "float",
+#     "color": "ajisai"
+# }
+
+# headers = {
+#     "X-USER-TOKEN" : TOKEN
+# }
+
+# pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
+
+# # today = datetime.now()
+# # print(today)
+# # today = datetime.now()
+# # print(today.strftime("%Y%m%d"))
+
+# today = datetime(year=2025, month=8, day=23)
+
+# pixel_data = {
+#     "date": today.strftime("%Y%m%d"),
+#     "quantity": "15",
+# }
+# response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
+# print(response.text)
+
+
+## How to use HTTP Put and Delete Requests
+
+# import requests
+# import os
+# from datetime import datetime
+
+# USERNAME = os.environ.get("PIXELA_USERNAME")
+# TOKEN = os.environ.get("PIXELA_TOKEN")
+# GRAPH_ID = os.environ.get("PIXELA_GRAPH_ID")
+
+# pixela_endpoint = "https://pixe.la/v1/users"
+
+# user_params = {
+#     "token": TOKEN,
+#     "username": USERNAME,
+#     "agreeTermsOfService": "yes",
+#     "notMinor" : "yes"
+# }
+
+# graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
+
+# graph_config ={
+#     "id": GRAPH_ID,
+#     "name": "Cycling Graph",
+#     "unit": "Km",
+#     "type": "float",
+#     "color": "ajisai"
+# }
+
+# headers = {
+#     "X-USER-TOKEN" : TOKEN
+# }
+
+# pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
+
+# # today = datetime.now()
+# # print(today)
+# # today = datetime.now()
+# # print(today.strftime("%Y%m%d"))
+
+# today = datetime(year=2025, month=8, day=23)
+
+# pixel_data = {
+#     "date": today.strftime("%Y%m%d"),
+#     "quantity": "15",
+# }
+# # response = requests.post(url=pixel_creation_endpoint, json=pixel_data, headers=headers)
+# # print(response.text)
+
+# update_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
+
+# new_pixel_data = {
+#     "quantity": "4.5"
+# }
+
+# # response = requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
+# # print(response.text)
+
+# delete_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
+
+# response = requests.delete(url=delete_endpoint, headers=headers)
+# print(response.text)
+
+## End of Day 37 -----------------------------------------------------------------------------------------------------------------------------------
+
+## Day 38 - Intermediate+ Workout Tracking Using Google Sheets ------------------------------------------------------------------------------------
+
+## Step 1 - Setup API Credentials and Google Spreadsheet
+
+
+
+
+
+
+
+
+
+
+## Step 2 - Get Exercise Stats with Natural Language Queries
+
+
+
+## Step 3 - Setup Your Google Sheet with Sheety
+
+
+
+## Step 4 - Saving Data into Google Sheets
+
+
+
+## Step 5 - Authenticate Your Sheety API
+
+
+
+## Step 6 - Environment Variables
+
+
+
+## End of Day 38 ------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Day 39 - Intermediate+ Capstone Part 1 : Flight Deal Finder ----------------------------------------------------------------------------------------
+
+
+
+
+
+
+## End of Day 39 --------------------------------------------------------------------------------------------------------------------------------------
+
+## Day 40 - Intermediate+ Capstone Part 2 : Flight Club --------------------------------------------------------------------------------------------
 
