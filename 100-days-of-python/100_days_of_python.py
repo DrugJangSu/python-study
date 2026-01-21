@@ -11595,11 +11595,241 @@ from tkinter import messagebox
 
 #     print(sheet_response.text)
 
-
 ## End of Day 38 ------------------------------------------------------------------------------------------------------------------------------------
+# <review on previous coding exercises>
+# name = input("What is your name?")
+# print(name)
+
+# name = "Jack"
+# print(name)
+
+# name = "Hyun"
+# print(name)
+
+# name = len(input("What is your name?"))
+# print(name)
+
+# name = input("What is your name?")
+# print(len(name))
+
+# print(len(input("What is your name?")))
+
+# username = input("What is your name?")
+# length = len(username)
+# print(length)
+
+# print("Welcome to the Band Name Generator.")
+# city = input("What's the name of the city you grew up in?\n")
+# print(city)
+# pet = input("What's your pet's name?\n")
+# print(pet)
+# print(f"Your band name could be {city} {pet}")
+
+
+# print("Hello"[0])
+# print("Hello"[4])
+# print("Hello"[-1])
+# #String
+# print("123" + "345")
+# #Integer
+# print(123 + 345)
+# #Large Integers
+# print(123_456_789)
+# #Float = Floating point number
+# print(3.45267)
+# #Boolean
+# print(True)
+# print(False)
+
+# print("My age: " + str(27))
+
+# print(123 + 456)
+# print(7 - 3)
+# print(3 * 2)
+# print(3 ** 2)
+# print(6 / 3)
+# print(6 // 3)
+# print(6 % 3)
+
+# print(3*3+3/3-3)
+
+# score = 0
+# score += 1
+# print("Your score is " + str(score))
+
+# score = 0
+# height = 1.8
+# is_winning = True
+
+# print(f"Your score is = {score}, your height is {height}. You are winning is {is_winning}")
+# <my solution>
+# print("Welcome to the tip calculator.")
+# total_bill = float(input("What was the total bill?\n"))
+# tip = total_bill * (float(input("How much tip would you like to give? 10, 12, or 15?\n")) / 100)
+# people = int(input("How many people to split the bill?\n"))
+# payment_per_person = (total_bill + tip) / people
+# print(f"Each person should pay: ${payment_per_person: .2f}")
+
+# <Angela's solution>
+# print("Welcome to the tip calculator!")
+# bill = float(input("What was the total bill? $"))
+# tip = int(input("What percentage tip would you like to give? 10 12 15"))
+# people = int(input("How many people to split the bill?"))
+# tip_as_percent = tip / 100
+# total_tip_amount = bill * tip_as_percent
+# total_bill = bill + total_tip_amount
+# bill_per_person = total_bill / people
+# final_amount = round(bill_per_person, 2)
+# print(f"Each person should pay : ${final_amount}")
+
+
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm?\n"))
+
+# if height > 120:
+#     print("You can ride the rollercoaster.")
+# elif height == 120:
+#     print("You can ride the rollercoaster, you just hit the bare minimum.")
+# else:
+#     print("Sorry you have to grow taller before you can ride.")
+
+# number_to_check = int(input("What is the number you want to check?\n"))
+# if number_to_check % 2 == 0:
+#     print("Even")
+# else:
+#     print("Odd")
+
+# <my solution>
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm?\n"))
+
+# if height >= 120:
+#     print("You can ride the rollercoaster.")
+#     age = int(input("What is your age?\n"))
+#     if age <= 12:
+#         print("Please pay $5.")
+#     elif age > 12 and age <= 18:
+#         print("Please pay $7.")
+#     else:
+#         print("Please pay $12.")
+# else:
+#     print("Sorry you have to grow taller before you can ride.")
+
+# <Angela's solution>
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm?\n"))
+
+# if height >= 120:
+#     print("You can ride the rollercoaster.")
+#     age = int(input("What is your age?\n"))
+#     if age <= 12:
+#         print("Please pay $5.")
+#     elif age <= 18:
+#         print("Please pay $7.")
+#     else:
+#         print("Please pay $12.")
+# else:
+#     print("Sorry you have to grow taller before you can ride.")
+
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm?\n"))
+# bill = 0
+
+# if height >= 120:
+#     print("You can ride the rollercoaster.")
+#     age = int(input("What is your age?\n"))
+#     if age <= 12:
+#         bill += 5
+#         print("Child tickets are $5.")
+#     elif age <= 18:
+#         bill += 7
+#         print("Youth tickets are $7.")
+#     else:
+#         bill += 12
+#         print("Adult tickets are $12.")
+
+#     wants_photo = input("Do you want to have a photo take? Type Y for Yes and N for No.")
+#     if wants_photo == "y":
+#         bill += 3
+#     print(f"Your final bill is ${bill}")
+
+# else:
+#     print("Sorry you have to grow taller before you can ride.")
+
+# print("Welcome to Python Pizza Deliveries!")
+# size = input("What size of pizza do you want? S, M or L?\n").lower()
+# pepperoni = input("Do you want pepperoni on your pizza? Y or N:\n").lower()
+# extra_cheese = input("Do you want extra cheese? Y or N:\n").lower()
+# bill = 0
+
+# <my solution>
+# if size == "s":
+#     bill += 15
+#     if pepperoni == "y":
+#         bill += 3
+#     if extra_cheese == "y":
+#         bill += 1
+#     print("Size S, acknowledged")
+# elif size == "m":
+#     bill += 20
+#     if pepperoni == "y":
+#         bill += 3
+#     if extra_cheese == "y":
+#         bill += 1
+#     print("Size M, roger that")
+# elif size == "l":
+#     bill += 25
+#     if pepperoni == "y":
+#         bill += 2
+#     if extra_cheese == "y":
+#         bill += 1
+#     print("Size L, confirmed")
+# print(f"The total bill is ${bill}.") 
+
+# <angela's solution>
+# print("Welcome to Python Pizza Deliveries!")
+# size = input("What size of pizza do you want? S, M or L?\n").lower()
+# pepperoni = input("Do you want pepperoni on your pizza? Y or N:\n").lower()
+# extra_cheese = input("Do you want extra cheese? Y or N:\n").lower()
+# bill = 0
+# if size == "S":
+#     bill += 15
+# elif size == "M":
+#     bill += 20
+# elif size =="L":
+#     bill += 25
+# else:
+#     print("You typed the wrong inputs.")
+
+# if pepperoni == "Y":
+#     if size == "S":
+#         bill += 2
+#     else:
+#         bill += 3
+
+# if extra_cheese == "Y":
+#     bill += 1
+
+# print(f"Your final bill is: ${bill}")
+
+
+
+
+
+
+
+
 
 
 ## Day 39 - Intermediate+ Capstone Part 1 : Flight Deal Finder ----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
