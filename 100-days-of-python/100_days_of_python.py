@@ -11811,32 +11811,285 @@ from tkinter import messagebox
 #     bill += 1
 
 # print(f"Your final bill is: ${bill}")
+# print('''
+# *******************************************************************************
+#           |                   |                  |                     |
+#  _________|________________.=""_;=.______________|_____________________|_______
+# |                   |  ,-"_,=""     `"=.|                  |
+# |___________________|__"=._o`"-._        `"=.______________|___________________
+#           |                `"=._o`"=._      _`"=._                     |
+#  _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+# |                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+# |___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+#           |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+#  _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+# |                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+# |___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+# ____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+# /______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+# ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+# /______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+# ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+# /______/______/______/______/______/______/______/______/______/______/[TomekK]
+# *******************************************************************************
+# ''')
+# print("Welcome to Treasure Island. \nYour mission is to find the treasure.")
+# first_question = input("You're at a cross road. Where do you want to go? Type 'left' or 'right.\n").lower()
+
+# if first_question == "left":
+#     second_question = input("You've come to a lake. There is an island in the middle of the lake. Type 'wait' to wait for a boat. Type 'swim' to swim across.\n").lower()
+#     if second_question == "wait":
+#         third_question = input("You've come across three doors. Which door do you want to open? Type 'red', 'blue', or 'yellow.'\n").lower()
+#         if third_question == "yellow":
+#             print("You Win! Enjoy the gold and the goodies.")
+#         elif third_question == "red":
+#             print("You get burned by fire HOTTY HOT. Game Over.")
+#         elif third_question == "blue":
+#             print("You get mowed by wolves. Game Over.")
+#         else:
+#             print("You stumbled and fell over. Game Over.")
+#     else:
+#         print("You get eaten by the Piranhas and swim with the fishies. Game Over")
+# else:
+#     print("You fell into a hole you newb. Game Over")
+
+# import random
+
+# # random_integer = random.randint(1, 10)
+# # print(random_integer)
+
+# # random_float = random.uniform(1, 10)
+# # print(random_float)
+
+# print("Heads or Tails?")
+
+# random_heads_or_tails = random.randint(0, 1)
+# if random_heads_or_tails == 0:
+#     print("Heads")
+# else:
+#     print("Tails")
+
+# <my solution>
+# import random
+# friends = ["Alice", "Bob", "Charlie", "David", "Emanuel"]
+# random_friend = random.randint(0, 4)
+# if random_friend == 0:
+#     print("Alice")
+# elif random_friend == 1:
+#     print("Bob")
+# elif random_friend == 2:
+#     print("Charlie")
+# elif random_friend == 3:
+#     print("David")
+# elif random_friend == 4:
+#     print("Emanuel")
+
+# <angela's solution>
+# solution 1
+# import random
+# friends = ["Alice", "Bob", "Charlie", "David", "Emanuel"]
+# print(random.choice(friends))
+
+# solution 2
+# import random
+# friends = ["Alice", "Bob", "Charlie", "David", "Emanuel"]
+# random_index = random.randint(0, 4)
+# print(friends[random_index])
+
+# states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut", "Massachusetts", "Maryland", "South Carolina", "New Hampshire", "Virginia", "New York", "North Carolina", "Rhode Island", "Vermont", "Kentucky", "Tennessee", "Ohio", "Louisiana", "Indiana", "Mississippi", "Illinois", "Alabama", "Maine", "Missouri", "Arkansas", "Michigan", "Florida", "Texas", "Iowa", "Wisconsin", "California", "Minnesota", "Oregon", "Kansas", "West Virginia", "Nevada", "Nebraska", "Colorado", "North Dakota", "South Dakota", "Montana", "Washington", "Idaho", "Wyoming", "Utah", "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"]
+
+# # print(len(states_of_america))
+
+# num_of_states = len(states_of_america)
+
+# print(states_of_america[num_of_states - 1])
 
 
+# dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
+# fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+# vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+# dirty_dozen = [fruits, vegetables]
+# print(dirty_dozen)
+
+import random
+
+rock = """
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+
+paper ="""
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+scissors ="""
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+
+# <My solution>
+# print("Welcome to Rock, Paper, Scissors!")
+# player_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+# computer_choice = random.randint(0, 2)
+
+# if player_choice == 0:
+#     print(rock)
+#     if computer_choice == 0:
+#         print(rock)
+#         print("It's a draw!")
+#     elif computer_choice == 1:
+#         print(paper)
+#         print("Player lose!")
+#     elif computer_choice == 2:
+#         print(scissors)
+#         print("Player wins!")
+# elif player_choice == 1:
+#     if computer_choice == 0:
+#         print(rock)
+#         print("Player wins!")
+#     elif computer_choice == 1:
+#         print(paper)
+#         print("It's a draw!")
+#     elif computer_choice == 2:
+#         print(scissors)
+#         print("Player lose!")
+# elif player_choice == 2:
+#     if computer_choice == 0:
+#         print(rock)
+#         print("Player lose!")
+#     elif computer_choice == 1:
+#         print(paper)
+#         print("Player wins!")
+#     elif computer_choice == 2:
+#         print(scissors)
+#         print("It's a draw!")
+# else:
+#     print("You inputed the wrong number. Try again!")
 
 
+# <Angela's solution>
+# import random
+
+# rock = """
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# """
+
+# paper ="""
+#      _______
+# ---'    ____)____
+#            ______)
+#           _______)
+#          _______)
+# ---.__________)
+# """
+
+# scissors ="""
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# """
+
+# game_images = [rock, paper, scissors]
 
 
+# print("Welcome to Rock, Paper, Scissors!")
+# player_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+# if player_choice >=0 and player_choice <= 2:
+#     print(game_images[player_choice])  
+# computer_choice = random.randint(0, 2)
+# print("Computer chose: ")
+# print(game_images[computer_choice])
+
+# if player_choice >= 3 or player_choice < 0:
+#     print("You typed an invalid number. You lose!")
+# elif player_choice == 0 and computer_choice == 2:
+#     print("You win!")
+# elif computer_choice == 0 and player_choice == 2:
+#     print("You lose!")
+# elif computer_choice > player_choice:
+#     print("You lose!")
+# elif player_choice > computer_choice:
+#     print("You win!")
+# elif computer_choice == player_choice:
+#     print("It's a draw!")
+# elif player_choice >= 3 or player_choice < 0:
+#     print("You typed an invalid number. You lose!")
+
+# fruits = ["Apple", "Peach", "Pear"]
+# for fruit in fruits:
+#     print(fruit)
+#     print(fruit + " pie")
+#     print(fruits)
+# print(fruits)
 
 
+# student_scores = [150, 142, 185, 120, 171, 184, 149, 24, 59, 68, 199, 78, 65, 89, 86, 55, 91, 64, 89]
+
+# # sum = 0
+# # for score in student_scores:
+# #     sum += score
+# # print(sum)
+# # print(max(student_scores))
+
+# max_score = 0
+# for score in student_scores:
+#     if score > max_score:
+#         max_score = score
+
+# print(max_score)
+
+# for number in range(1, 11, 3):
+#     print(number)
+
+# total = 0
+# for number in range(1, 101):
+#     total += number
+# print(total)
+
+
+# <41>
+# import random
+# letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i', 'j', 'k', 'l', 'm', 'n','o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+# symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+
+# print("Welcome to the PyPassword Generator!")
+# nr_letters = int(input("How many letters would you like in your password?\n"))
+# nr_symbols = int(input(f"How many symbols would you like?\n"))
+# nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 
 ## Day 39 - Intermediate+ Capstone Part 1 : Flight Deal Finder ----------------------------------------------------------------------------------------
 
+# <Quite a lot of mismatch with the site and the project, gonna return later>
 
-
-
-
-
-
-
-
-
-
-
-
-
-## End of Day 39 --------------------------------------------------------------------------------------------------------------------------------------
 
 ## Day 40 - Intermediate+ Capstone Part 2 : Flight Club --------------------------------------------------------------------------------------------
 
+# <Quite a lot of mismatch with the site and the project, gonna return later>
+
+
+# --------------------------------------------------------------------------------------------
+## Day 41- Web Foundation - Introduction to HTML
