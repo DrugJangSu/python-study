@@ -12288,3 +12288,302 @@ from tkinter import messagebox
 ## End of Day 41 -----------------------------------------------------------------------------------------------------------------------------------
 
 ## Day 42 - Web Foundation - Intermediate HTML
+## The HTML Boilerplate
+# <!DOCTYPE html> <- This tag always goes on the very top.
+# This tells the browser which version of HTML the file is written in.
+
+# <html lang="en"> <- This is the opening tag
+# -> lang is the text language of the document.(en is for English)
+#</html> <- This is the closing tag.
+
+# <head> -> Head element, where important information about the website that is not displayed to the user. 
+# <meta charset="UTF-8"> -> make sure that the characters gets displayed correctly.
+# <title>MY WEBSITE</title> -> title, and what's displayed on the tab bar.
+# </head>
+#<body> -> body element. This includes all of the content of the website. Text, titles, the links etc
+# <h1>Hello World!</h1>
+# </body>
+# 
+
+# Again, to sum up as an example;--------------------
+# <!DOCTYPE html>
+# <html lang="en">
+#     <head>
+#      <meta charset = "UTF-8">
+#      <title>My Website</title>
+#     </head>
+#     <body>
+#      <h1>Hello World!</h1>
+#     </body>
+# </html>
+## This is the default of the boilerplate.-------------(Just think of it as a hamburger. lol)
+
+## In vscode, if you use the ! mark and hit enter on a html file, it'll automatically make a boilerplate for you.
+# <!doctype html>
+# <html lang="en">
+#   <head>
+#     <meta charset="UTF-8" />
+#     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+#     <title>Document</title>
+#   </head>
+#   <body></body>
+# </html>
+
+## The List Element
+
+# Unordered List
+# <ul>
+# <li>Milk</li> -> these list elements will make bullet points.
+# <li>Eggs</li>
+# <li>Flour</li> 
+# </ul> 
+
+# Ordered List
+# <ol>
+# <li>Milk</li> -> these list elements will make number points.
+# <li>Eggs</li>
+# <li>Flour</li>
+# <ol>
+
+# <my solution>
+# <h1>Angela's Recipe for the Best cinnamon Rolls</h1>
+# <h2>Ingredients</h2>
+# <h3>For the dough:</h3>
+# <ul>
+#   <li>¾ cup warm milk</li>
+#   <li>2¼teaspoons yeast</li>
+#   <li>¼ cup granulated sugar</li>
+#   <li>1 egg plus 1 egg yolk</li>
+#   <li>¼ cup butter</li>
+#   <li>3cups bread flour</li>
+# </ul>
+# <h3>For the filling:</h3>
+# <ul>
+#   <li>2/3 cup dark brown sugar</li>
+#   <li>1 ½ tablespoons ground cinnamon</li>
+#   <li>¼ cup butter</li>
+# </ul>
+# <h2>Instructions</h2>
+# <ol>
+#   <li>Mix the milk with the yeast, sugar, eggs.</li>
+#   <li>Melt the butter and add to the mixture.</li>
+#   <li>Add in the flour and mix until combined into a dough.</li>
+#   <li>Knead the dough for 10 minutes.</li>
+#   <li>
+#     Transfer the dough into a large bowl and cover with plastic wrap. Leave it
+#     somewhere to rise for 2 hours.
+#   </li>
+#   <li>
+#     After the dough has doubled in size, roll it out into a large rectangle.
+#   </li>
+#   <li>Melt the butter for the filling and mix in the sugar and cinnamon.</li>
+#   <li>
+#     Spread the filling onto the dough then roll the dough into a swiss roll.
+#   </li>
+#   <li>Cut the roll into 3cm sections and place flat into a baking tray.</li>
+#   <li>
+#     Pre-heat the oven to 350F or 180C, then bake the rolls for 20-25min until
+#     lightly brown.
+#   </li>
+# </ol>
+
+## Nesting and Indentation
+
+# You can list inside another list using indentation.
+
+# <ul>
+    # # <li></li>
+    # # <li></li>
+    # # <li></li>
+    # # <li>
+      #  <ul>
+    #     # <li></li>
+    #     # <li></li>
+    #     # <li></li>
+      #  </ul>
+    # # </li>
+
+# <my solution>
+# <ul>
+#   <li>A</li>
+#   <li>
+#     B
+#     <ol>
+#       <li>B1</li>
+#       <li>
+#         B2
+#         <ul>
+#           <li>
+#             B2a
+#             <ul>
+#               <li>B2aa</li>
+#               <li>B2ab</li>
+#             </ul>
+#           </li>
+#           <li>B2b</li>
+#           <li>B2c</li>
+#         </ul>
+#       </li>
+#       <li>
+#         B3
+#         <ol>
+#           <li>B31</li>
+#           <li>B32</li>
+#         </ol>
+#       </li>
+#     </ol>
+#   </li>
+
+#   <li>C</li>
+# </ul>
+
+
+## angela's solution is the same, however it's easier to make the first list then the next one, rather than going from top to bottom like I did.
+
+
+## The Anchor Element
+# HTML Attributes
+# <a href="http://www.google.com">This is a link</a> (a as attribute)
+# <tag attribute=value>Content</tag>
+# Tag : name of the element
+# Attribute : name of the attribute
+# Value : value of the attribute -> you can have as many attributes as you want
+# href = The URL that the hyperlink points to.(As the target)
+
+
+# <my solution>
+# <h1>My top 5 Favourite Websites</h1>
+# <ol>
+#   <li>
+#     <a href="https://www.producthunt.com">Product Hunt</a>
+#   </li>
+#   <li>
+#     <a href="https://smashthewalls.com">Smash the Walls</a>
+#   </li>
+#   <li>
+#     <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>
+#   </li>
+#   <li>
+#     <a href="https://hackertyper.com">Hacker Typer</a>
+#   </li>
+#   <li>
+#     <a href="https://stellarium-web.org">Stellarium</a>
+#   </li>
+# </ol>
+
+# <angela's solution>
+# <h1>My top 5 Favourite Websites</h1>
+# <!-- Write your code below -->
+# <ol>
+#   <li><a href="https://www.producthunt.com/">Product Hunt</a></li>
+#   <li><a href="https://smashthewalls.com/">Smash the Walls</a></li>
+#   <li><a href="https://www.nytimes.com/games/wordle">Wordle</a></li>
+#   <li><a href="https://hackertyper.com/">Hacker Typer</a></li>
+#   <li><a href="https://stellarium-web.org/">Stellarium</a></li>
+# </ol>
+
+# <h1>My top 5 Favourite Websites</h1>
+# <ol start="5">
+#   <li>
+#     <a href="https://www.producthunt.com">Product Hunt</a>
+#   </li>
+#   <li>
+#     <a href="https://smashthewalls.com">Smash the Walls</a>
+#   </li>
+#   <li>
+#     <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>
+#   </li>
+#   <li>
+#     <a href="https://hackertyper.com">Hacker Typer</a>
+#   </li>
+#   <li>
+#     <a href="https://stellarium-web.org">Stellarium</a>
+#   </li>
+# </ol>
+
+# <ol start="5">
+#   <li><a href="https://www.producthunt.com/">Product Hunt</a></li>
+#   <li><a href="https://smashthewalls.com/">Smash the Walls</a></li>
+#   <li><a href="https://www.nytimes.com/games/wordle">Wordle</a></li>
+#   <li><a href="https://hackertyper.com/">Hacker Typer</a></li>
+#   <li><a href="https://stellarium-web.org/">Stellarium</a></li>
+# </ol>
+
+## Image Elements
+
+# <img src="url" />
+# the image element doesn't have a closing tag, instead have a self closing tag known as a void element.
+
+# <img src="http://picsum.photos/200" alt="forest at sunset"/>
+# src = source of the image
+# url <- this will be the location of the image.
+# in this case 200 is the size; 200 pixels
+# alt attribute = Alternative Text Description
+# This is used as a screen reader, describing the image.
+
+# <my solution>
+# <!-- Kitten image URL -->
+# <h1>I am a Cat Person</h1>
+# <img
+#   src="https://raw.githubusercontent.com/appbrewery/webdev/main/kitten.jpeg"
+# />
+
+# <!-- Puppy image URL -->
+# <h1>I am a Dog Person</h1>
+# <img
+#   src="https://raw.githubusercontent.com/appbrewery/webdev/main/puppy.gif
+# "
+# />
+
+# <angela's solution>
+# <h1>I am a Dog Person</h1>
+# <img
+#   src="https://raw.githubusercontent.com/appbrewery/webdev/main/puppy.gif"
+#   alt="puppy digging through the sand"
+# />
+
+## Day 42 Project - Birthday Invite website
+# <my solution>
+# <h1>It's My Birthday!</h1>
+# <h2>On the 12th May</h2>
+# <img
+#   src="https://raw.githubusercontent.com/appbrewery/webdev/main/birthday-cake3.4.jpeg"
+# />
+# <h3>What to bring:</h3>
+# <ul>
+#   <li>Balloons(I love balloons)</li>
+#   <li>Cake(I'm really good at eating)</li>
+#   <li>An appetite(There will be lots of food)</li>
+# </ul>
+# <h3>This is where you need to go:</h3>
+
+# <p>
+#   <a
+#     href="https://www.google.com/maps/@35.7040744,139.5577317,3a,75y,289.6h,87.01t,0.72r/data=!3m6!1e1!3m4!1sgT28ssf0BB2LxZ63JNcL1w!2e0!7i13312!8i6656"
+#     >Google map link</a
+#   >
+# </p>
+
+#<angela's solution>
+# <!-- This is one possible solution -->
+# <h1>It's My Birthday!</h1>
+# <h2>On the 12th May</h2>
+
+# <img src="https://raw.githubusercontent.com/appbrewery/webdev/main/birthday-cake3.4.jpeg"
+#   alt="purple birthday cake with candles" />
+
+# <h3>What to bring:</h3>
+# <ul>
+#   <li>Baloons (I love baloons)</li>
+#   <li>Cake (I'm really good at eating)</li>
+#   <li>An appetite (There will be lots of food)</li>
+# </ul>
+
+# <h3>This is where you need to go:</h3>
+# <a
+#   href="https://www.google.com/maps/@35.7040744,139.5577317,3a,75y,289.6h,87.01t,0.72r/data=!3m6!1e1!3m4!1sgT28ssf0BB2LxZ63JNcL1w!2e0!7i13312!8i6656">Google
+#   map link</a>
+
+## End of Day 42 -----------------------------------------------------------------------------------------------------------------------------------
+
+## Day 43 - Web Foundation - Introduction to CSS
