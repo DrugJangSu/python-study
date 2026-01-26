@@ -12587,3 +12587,319 @@ from tkinter import messagebox
 ## End of Day 42 -----------------------------------------------------------------------------------------------------------------------------------
 
 ## Day 43 - Web Foundation - Introduction to CSS
+# CSS : Cascading Style Sheets
+# Cascade is simply a waterfall, and the way the style is applied is like a waterfall.
+
+## How to add CSS
+# Three ways to add CSS;
+# <tag style="css" /> : Inline
+# <style>css<style> : Internal
+# <link href="style.css"/> : External
+
+# Inline ----------------------------
+# (example)
+# <html style = "background: blue">
+# </html>
+# >in this case, style="background: blue" attribute is the CSS
+# background is the property, blue is the value that you want to change.
+# It's not normally recommended to use inline styles for the entire document, because it could get tedious.
+
+# Internal -------------------------------
+# (example)
+# <html>
+#   <head>
+#      <style>
+#         html{background: red;
+#              }
+#      </style>
+#   </head>
+# </html>
+
+ # Internal styles are really useful for applying only one HTML document.
+ # however if you have a multi page website it's not recommended.
+
+ # External ----------------------------
+ # (example)
+#  <html>
+#   <head>
+#     <link
+#        rel="stylesheet"
+#        href="styles.css"
+#     />
+#   </head>
+# </html>
+
+# rel is a relationship which refers to what is the role of this thing we're linking to.
+# href is referring to the location.
+
+# To sum up;
+# Inline is useful for targeting one element
+# Internal is useful for targeting one web page.
+# External is used for most cases and multi page websites, and needs to use a separate file of style.css
+
+# <my solution>
+# [index.html]
+# <!doctype html>
+# <html lang="en">
+#   <head>
+#     <meta charset="UTF-8" />
+#     <title>Adding CSS</title>
+#   </head>
+
+#   <body>
+#     <h1>Three Methods of Adding CSS</h1>
+#     <a
+#       href="./inline.html"
+#       >Inline</a
+#     >
+#     <a
+#       href="./internal.html"
+#       >Internal</a
+#     >
+#     <a
+#       href="./external.html"
+#       >External</a
+#     >
+#   </body>
+# </html>
+
+# [inline.html]
+# <!doctype html>
+# <html lang="en">
+#   <head>
+#     <meta charset="UTF-8" />
+#     <title>Inline</title>
+#   </head>
+
+#   <body>
+#     <h1><p style="color: blue">Style Me in Blue!</p></h1>
+#   </body>
+# </html>
+
+# [internal.html]
+# <!doctype html>
+# <html lang="en">
+#   <head>
+#     <meta charset="UTF-8" />
+#     <title>Internal</title>
+#     <style>
+#       html {
+#         color: red;
+#       }
+#     </style>
+#   </head>
+
+#   <body>
+#     <h1>Style Me in Red!</h1>
+#   </body>
+# </html>
+
+# [external.html]
+# <!doctype html>
+# <html lang="en">
+#   <head>
+#     <meta charset="UTF-8" />
+#     <title>External</title>
+#     <link rel="stylesheet" href="style.css" />
+#   </head>
+#   <body>
+#     <h1>Style Me in Green</h1>
+#   </body>
+# </html>
+
+# [style.css]
+# h1 {
+#   color: green;
+# }
+
+# angela's solution seem to be the same.
+
+
+## CSS Selectors---------------------
+
+# Element Selector
+# h1 {
+
+#     color: blue
+# }
+# This will apply to all the h1 elements in the document.
+
+# Class Selector
+# .red-heading {
+#     color: red;
+# }
+## As long as they've got the same class name, you can apply the same style to multiple elements.
+
+# Id Selector
+# #main {
+#     color:red
+# }
+## Id selector is used to target one unique element.
+
+# Attribute Selector
+# p[draggable]{
+#     color: red
+# }
+
+# Universal Selector
+#* {
+# color:red;
+# }
+# * means all elements in the document.
+
+# [index.html]
+# <!DOCTYPE html>
+# <html lang="en">
+
+# <head>
+#   <meta charset="UTF-8">
+#   <title>CSS Selectors</title>
+#   <link rel="stylesheet" href="./style.css" />
+# </head>
+
+# <body>
+#   <h1>CSS Selectors</h1>
+#   <h2>Applying CSS to Different Parts of HTML</h2>
+#   <!-- TODO 1: Set the CSS for all paragraph tags to "color: red" -->
+#   <p class="note">1. The element selector targets elements based on their HTML tag name.</p>
+
+#   <ol>
+#     <!-- TODO 2: Set the CSS for all elements with a class of "note" to "font-size: 20px" -->
+#     <li class="note" value="2">Class selectors target elements based on the value of the class attribute.</li>
+
+#     <!-- TODO 3: Set the CSS for the element with an id of "id-selector-demo" to "color: green" -->
+#     <li class="note" id="id-selector-demo" value="3">ID selectors target elements based on the value of the id
+#       attribute.</li>
+
+#     <!-- TODO 4: Set the CSS for the li elements that have the "value" attribute set to "4" to have "color: blue" -->
+#     <li class="note" value="4">Attribute selectors target elements based on their attributes and values.</li>
+
+#     <!-- TODO 5: Set all elements to have "text-align: center" -->
+#     <li class="note" value="5">The universal selector targets all elements.</li>
+#   </ol>
+# </body>
+
+# </html>
+
+# [style.css]
+# ol {
+#   margin-left: -40px;
+#   margin-top: -20px;
+#   list-style-position: inside;
+# }
+
+# /* Write your CSS below, don't change the rules above. */
+
+# /* TODO 1: Element Selector */
+# p {
+#   color: red;
+# }
+
+# /* TODO 2: Class Selector */
+# .note {
+#   font-size: 20px;
+# }
+
+# /* TODO 3: ID Selector */
+# #id-selector-demo {
+#   color: green;
+# }
+
+# /* TODO 4: Attribute Selector */
+# li[value="4"] {
+#   color: blue;
+# }
+
+# /* TODO 5: Universal Selector */
+
+# * {
+#   text-align: center;
+# }
+
+## Day 43 Project - Colour Vocab Website
+
+# <!DOCTYPE html>
+# <html lang="en">
+
+# <head>
+#   <meta charset="UTF-8">
+#   <title>Spanish Vocabulary</title>
+#   <link rel="stylesheet" href="./style.css" />
+# </head>
+
+# <body>
+#   <h1>Colors</h1>
+#   <h2>Learn the colors in Spanish!</h2>
+#   <h2 class="color-title" id="red">Rojo</h2>
+#   <img class="color" src="./assets/images/red.png" alt="red" />
+
+#   <h2 class="color-title" id="blue">Azul</h2>
+#   <img src="./assets/images/blue.png" alt="blue" />
+
+#   <h2 class="color-title" id="orange">Anaranjado</h2>
+#   <img src="./assets/images/orange.png" alt="orange" />
+
+#   <h2 class="color-title" id="green">Verde</h2>
+#   <img src="./assets/images/green.png" alt="green" />
+
+#   <h2 class="color-title" id="yellow">Amarillo</h2>
+#   <img src="./assets/images/yellow.png" alt="yellow" />
+# </body>
+
+# </html>
+
+# <!-- 
+# TODOs
+# IMPORTANT: You should not need to make ANY CHANGES to index.html
+# All code should be written in your CSS file.
+
+# 1. Create a CSS file and incorporate it as an external stylesheet.
+# 2. Use CSS to style each of the color titles to meaning. 
+# Hint: Use the id to help if you don't know the words in spanish.
+# 3. Use CSS to change all the color titles to have "font-weight: normal;"
+# 4. Use CSS (not HTML) to make all the images 200px heigh and 200px wide. 
+# Hint: 
+# https://developer.mozilla.org/en-US/docs/Web/CSS/height
+# https://developer.mozilla.org/en-US/docs/Web/CSS/width
+# -->
+
+# <My Solution>
+# # [style.css]
+# /* TODO-1 incorporated comfirmed*/
+
+# /* TODO-2 */
+# #red {
+#   color: red;
+# }
+
+# #blue {
+#   color: blue;
+# }
+
+# #orange {
+#   color: orange;
+# }
+
+# #green {
+#   color: green;
+# }
+
+# #yellow {
+#   color: yellow;
+# }
+
+# /* TODO-3 */
+# .color-title {
+#   font-weight: normal;
+# }
+
+# /* TODO-4 */
+# img {
+#   height: 200px;
+#   width: 200px;
+# }
+
+
+# ----End of day 43-----------------------------------------------------------------------------------------------------------------------------------
+
+# Day 44 - Web Foundation - Intermediate CSS

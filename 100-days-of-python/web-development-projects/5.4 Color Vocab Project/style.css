@@ -1,0 +1,33 @@
+/* TODO-1 incorporated comfirmed*/
+
+/* TODO-2 */
+#red {
+  color: red;
+}
+
+#blue {
+  color: blue;
+}
+
+#orange {
+  color: orange;
+}
+
+#green {
+  color: green;
+}
+
+#yellow {
+  color: yellow;
+}
+
+/* TODO-3 */
+.color-title {
+  font-weight: normal;
+}
+
+/* TODO-4 */
+img {
+  height: 200px;
+  width: 200px;
+}
