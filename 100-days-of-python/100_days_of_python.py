@@ -12903,3 +12903,454 @@ from tkinter import messagebox
 # ----End of day 43-----------------------------------------------------------------------------------------------------------------------------------
 
 # Day 44 - Web Foundation - Intermediate CSS
+## CSS Colours
+# Color Porperties
+# html {
+#     background-color: red;
+# }
+# h1 {
+#     color: blue;
+# }
+
+# Hex Codes
+# h1 {
+#     color : #FF5733;
+# }
+
+# <my solution>
+# <!doctype html>
+# <html lang="en">
+#   <head>
+#     <meta charset="UTF-8" />
+#     <title>Colors</title>
+#     <style>
+#       /* Write your CSS code here. */
+#       /* 1. Make the background of the webpage "antiquewhite"
+#     2. Make the h1 "whitesmoke"
+#     3. Make the background of the h1 "darkseagreen"
+#     4. Make the h2 #FAF8F1
+#     5. Make the background of the h2 "#C58940" */
+#       html {
+#         background-color: antiquewhite;
+#       }
+#       h1 {
+#         color: whitesmoke;
+#         background-color: darkseagreen;
+#       }
+#       h2 {
+#         color: #faf8f1;
+#         background-color: #c58940;
+#       }
+#     </style>
+#   </head>
+
+#   <body>
+#     <h1>Hello</h1>
+#     <h2>World</h2>
+#   </body>
+# </html>
+
+## Angela's solution
+    #   html {
+    #     background-color: antiquewhite;
+    #   }
+    #   h1 {
+    #     color: whitesmoke;
+    #     background-color: darkseagreen;
+    #   }
+    #   h2 {
+    #     color: #faf8f1;
+    #     background-color: #c58940;
+    #   }
+
+## Font Properties------------
+# h1 {
+#     color: blue;
+#     font-weight: bold;
+#     font-size: 20px;
+#     font-family: sans-serif;
+# }
+
+# Font Size
+# h1 {
+#     font-size: 20px;
+# }
+# 1px : px stands for pixels(1/96th of an inch)
+# 1pt : pt stands for points(1/72th of an inch)
+# 1em : 100% of the parent element's font size. (현재 요소 기준 글자 크기)
+# 1rem : 100% of the root element's font size. (html 기준 글자 크기)
+
+# Font Weight
+# h1 {
+#     font-weight: bold;
+# }
+# normal bold : Keywords
+# lighter bolder : Relative to Parent
+# number : 100 to 900
+
+# Font Family
+# h1 {
+#     font-family : Helvetica, sans-serif;
+# }
+# h2 {
+#     font-family : "Times New Roman", serif;
+# }
+# If the first font is not available, it'll go to the next one.
+# serif : with little lines at the end of characters.
+# sans-serif : without little lines at the end of characters.
+
+# Text Align
+# h11{
+#     text-align: center
+# }
+
+# <angela's solution>
+# <!doctype html>
+# <html lang="en">
+#   <head>
+#     <meta charset="UTF-8" />
+#     <title>CSS Properties</title>
+#     <style>
+#       body {
+#         background-color: cornflowerblue;
+#         color: white;
+#         font-size: 18px;
+#       }
+
+#       /* Don't change the CSS above, add Your CSS below */
+#       html {
+#         font-size: 30px;
+#       }
+#       #color {
+#         color: coral;
+#       }
+#       #size {
+#         font-size: 2rem;
+#       }
+
+#       #weight {
+#         font-weight: 900;
+#       }
+
+#       #family {
+#         font-family: "Caveat", cursive;
+#       }
+
+#       #align {
+#         text-align: right;
+#       }
+#     </style>
+#     <link rel="preconnect" href="https://fonts.googleapis.com" />
+#     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+#     <link
+#       href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+#       rel="stylesheet"
+#     />
+#   </head>
+
+#   <body>
+#     <h1>Important CSS Properties</h1>
+#     <p id="color">Color</p>
+#     <p id="size">Font Size</p>
+#     <p id="weight">Font Weight</p>
+#     <p id="family">Font Family</p>
+#     <p id="align">Text Align</p>
+
+#     <!-- TODOs
+#   1. Change the color of <p>Color</p> to "coral" color.
+#   2. Change the font size of <p>Font Size</p> to 2X the size of the root font size.
+#   3. Change the font weight of <p>Font Weight</p> to 900.
+#   4. Change the font family of <p>Font Family</p> to the Google font Caveat with regular (400) font weight.
+#   Link: https://fonts.google.com/specimen/Caveat
+#   5. Change the <p>Text Align</p> to right align.
+#   6. Change the the root (html element) font size to 30px -->
+#   </body>
+# </html>
+
+## Inspecting CSS
+# Right click on the webpage and click inspect to bring up the developer tools.
+# Or CMD + Option + I (Mac) / Ctrl + Shift + I (Windows)
+
+## The CSS Box Model - Margin, Padding and Border
+# Border : 10px solid black;
+#          thickness / style / color
+# border: 30px solid black;
+# border-top : 0px; <- this means that the top of the border is 0px(getting rid of the border)
+# border-width: 0px 10px 20px 30px; (clockwise from top; top right bottom left)
+# If you give only two values for the border-width, the first one is for top and bottom, the second one is for left and right.
+# If you give only one value, it'll be applied to all sides.
+
+# Padding
+# padding: 20px; <- space between the content and the border. which will push the border from all sides.
+
+# Margin
+# margin:: 10px; <- space outside of the border. which will push any other elements from all sides.
+
+# To sum up: margin -> border -> padding -> height/width -> content
+
+# Content Division Element
+# <div></div> 
+# This is a way to group elements together. These are invisible boxes that can contain other elements.
+
+# Pesticide Chrome Extension
+
+#     <!-- TODOs:
+# 1. Create 3 Boxes using the div element.
+# 2. Set their sizes to 200px heigh by 200px wide.
+# 3. Set different background colors for each of the boxes (I used cadetblue, gold and indianred).
+# 4. Add a paragraph <p> element into the first div and add the following words:
+#     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapien porttitor urna elementum lacinia. In
+#     id magna pulvinar, ultricies lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque magna. Phasellus
+#     dolor metus, laoreet ac convallis sit amet, efficitur sed dolor.
+# 5. Set the 1st div to have 20px padding all around with a black 10px border.
+# 6. Fix the style of the <p> element to remove all margins.
+# Hint: Use the CSS inspector in Chrome.
+# 7. Set the 2nd div to have a 20px border on top and bottom and 10px border left and right. (See goal image)
+# 8. Set the 3rd div to have a 10px border 
+# 9. Set the margins for the divs so that each box corner touches the other. (See the goal image)
+# -->
+# <my solution>
+# <!doctype html>
+# <html lang="en">
+#   <head>
+#     <meta charset="UTF-8" />
+#     <title>CSS Box Model</title>
+#     <style>
+#       div {
+#         width: 200px;
+#         height: 200px;
+#       }
+
+#       p {
+#         margin: 0;
+#       }
+
+#       #first {
+#         background-color: cadetblue;
+#         padding: 20px;
+#         border: 10px solid black;
+#       }
+
+#       #second {
+#         background-color: gold;
+#         border: solid black;
+#         border-width: 20px 10px;
+#         margin-left: 260px;
+#       }
+
+#       #third {
+#         background-color: indianred;
+#         border: 10px solid black;
+#         margin-left: 40px;
+#       }
+#     </style>
+#   </head>
+
+#   <body>
+#     <div id="first">
+#       <p>
+#         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
+#         sapien porttitor urna elementum lacinia. In id magna pulvinar, ultricies
+#         lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque
+#         magna. Phasellus dolor metus, laoreet ac convallis sit amet, efficitur
+#         sed dolor.
+#       </p>
+#     </div>
+#     <div id="second"></div>
+#     <div id="third"></div>
+
+#   </body>
+# </html>
+
+
+## Day 44 Project - Motivational Poster Website
+
+# <my solution>
+# <!-- 
+#   TODO: Create a motivational post website.
+# Style it how ever you like. 
+# Look at the goal image for inspiration.
+# But it must have the following features:
+# 1. The main h1 text should be using the Regular Libre Baskerville Font from Google Fonts:
+#   https://fonts.google.com/specimen/Libre+Baskerville
+# 2. The text should be white and background black.
+# 3. Add your own image into the images folder inside assets. It should have a 5px white border.
+# 4. The text should be center aligned.
+# 5. Create a div to contain the h1, p and img elements. Adjust the margins so that the image and text are centered on the page. 
+#   Hint: You horizontally center a div by giving it a width of 50% and a margin-left of 25%.
+#   Hint: Set the image to have a width of 100% so it fills the div. 
+# 6. Read about the text-transform property on MDN docs to make the h1 uppercase with CSS.
+#   https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform 
+# -->
+
+# <!doctype html>
+# <html lang="en">
+#   <head>
+#     <meta charset="UTF-8" />
+#     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+#     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+#     <link rel="preconnect" href="https://fonts.googleapis.com" />
+#     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+#     <link
+#       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+#       rel="stylesheet"
+#     />
+#     <link rel="stylesheet" href="styles.css" />
+#     <title>Motivational Poster</title>
+#     <style>
+#       h1 {
+#         text-transform: uppercase;
+#       }
+#       body {
+#         background-color: black;
+#         color: white;
+#         font-family: "Libre Baskerville", serif;
+#         text-align: center;
+#       }
+#       .container {
+#         width: 50%;
+#         margin-left: 25%;
+#       }
+#       img {
+#         border: 5px solid white;
+#         width: 100%;
+#       }
+#     </style>
+#   </head>
+#   <body>
+#     <div class="container">
+#       <img src="assets/images/daenerys.jpeg" />
+#       <h1>That Special Moment</h1>
+#       <p>When you find the perfect avocado at the supermarket</p>
+#     </div>
+#   </body>
+# </html>
+# ----End of day 44-----------------------------------------------------------------------------------------------------------------------------------
+## Day 45 - Web Foundation - Intermediate+ Web Scraping with Beautiful Soup
+
+# Some websites doesn't provide API to get data from them.
+# In this case, web scraping is used to extract data from these websites.
+# Web scraping is the process of automatically extracting data from websites.
+
+# Beautiful Soup is a Python library that makes it easy to scrape information from web pages.
+
+# from bs4 import BeautifulSoup
+# # import lxml
+
+# with open("website.html") as file:
+#     contents = file.read()
+
+# soup = BeautifulSoup(contents, "html.parser")
+
+# soup = BeautifulSoup(contents, "lxml")
+
+# print(soup.title)
+# print(soup.title.name)
+# print(soup.title.string)
+# print(soup)
+# print(soup.prettify())
+# print(soup.a)
+# print(soup.li)
+# print(soup.p)
+
+## Finding and Selecting Particular Elements with BeautifulSoup
+
+# all_anchor_tags = soup.find_all(name="a") 
+# print(all_anchor_tags)
+
+
+# All of the anchor tags
+
+# print(all_anchor_tags)
+
+#If I only want the texts of the anchor tag
+# for tag in all_anchor_tags:
+#     print(tag.getText())
+
+
+# #If I only want the links of the anchor tag
+# for tag in all_anchor_tags:
+#     print(tag.get("href"))
+
+
+# # Getting a heading(h1) and the ID(name) that matches
+# heading = soup.find(name="h1", id="name")
+# print(heading)
+
+# # Getting the class attribute(The reason for using the class_ is beca se class is a reserved word in Python)
+# section_heading = soup.find(name="h3", class_="heading")
+# print(section_heading)
+# print(section_heading.getText())
+# print(section_heading.name)
+# print(section_heading.get("class"))
+
+
+
+# # Getting company URL inside the paragraph tag
+# company_url = soup.select_one(selector="p a")
+# print(company_url)
+
+
+# # Using the class or the ID in the CSS selector
+# name = soup.select_one(selector="#name")
+# print(name)
+
+# # If I want to select all the heading elements
+# headings = soup.select(".heading")
+# print(headings)
+
+## Scraping a Live Website------------------
+# Easy mode
+# https://appbrewery.github.io/news.ycombinator.com/
+
+# from bs4 import BeautifulSoup
+# import requests
+
+# response =requests.get("https://appbrewery.github.io/news.ycombinator.com/")
+
+# print(response.text)
+
+# yc_web_page = response.text
+
+# soup = BeautifulSoup(yc_web_page, "html.parser")
+# print(soup.title)
+
+# article_tag = soup.find(name="a", class_="storylink")
+# articles = soup.find_all(name="a", class_="storylink")
+# article_texts =[]
+# article_links =[]
+# print(article_tag.getText())
+# for article_tag in articles:
+#     article_text = article_tag.getText()
+#     article_texts.append(article_text)
+#     article_link = article_tag.get("href")
+#     article_links.append(article_link)
+
+
+# article_text = article_tag.getText()
+# article_link = article_tag.get("href")
+# article_upvote = soup.find(name="span", class_="score")
+# article_upvotes = [score.getText() for score in soup.find_all(name="span", class_="score")]
+# article_upvotes = [int(score.getText().split()[0]) for score in soup.find_all(name="span", class_="score")]
+
+
+
+# print(article_text)
+# print(article_link)
+# print(article_upvote.getText())
+# print(article_texts)
+# print(article_links)
+# print(article_upvotes)
+# print(article_upvotes[0].split()[0])
+
+# largest_number = max(article_upvotes)
+# largest_index = article_upvotes.index(largest_number)
+# print(article_texts[largest_index])
+# print(article_links[largest_index])
+
+# print(article_texts)
+# print(article_links)
+# print(article_upvotes)
+
+
+
