@@ -13413,3 +13413,83 @@ from tkinter import messagebox
 
 ## Day 47 - Intermediate+ Create an Automated Amazon Price Tracker
 
+# Step 1 : Updated Use BeautifulSoup to scrape the product price
+# import requests
+# from bs4 import BeautifulSoup
+
+# URL = "https://appbrewery.github.io/instant_pot/"
+# response = requests.get(URL)
+# soup = BeautifulSoup(response.text, "html.parser")
+# # print(soup.prettify())
+
+# price = soup.find(class_="aok-offscreen").get_text()
+# # print(price)
+
+# price_without_sign = price.split("$")[1]
+# # print(price_without_sign)
+
+
+# float_price = float(price_without_sign)
+# print(float_price)
+
+# Step 2 : Send yourself an email when the price is below preset value
+
+# import requests
+# from bs4 import BeautifulSoup
+# import smtplib
+# import os
+# from dotenv import load_dotenv
+
+# load_dotenv()
+
+# URL = "https://appbrewery.github.io/instant_pot/"
+# response = requests.get(URL)
+# soup = BeautifulSoup(response.text, "html.parser")
+# price = soup.find(class_="aok-offscreen").get_text()
+# price_without_sign = price.split("$")[1]
+# float_price = float(price_without_sign)
+# title = soup.find(class_="a-size-large product-title-word-break").get_text()
+
+# BUY_PRICE = 100
+
+# if float_price < BUY_PRICE:
+#     message = f"{title} is now ${price}!"
+
+#     with smtplib.SMTP(os.environ["SMTP_ADDRESS"], port=587) as connection:
+#         connection.starttls()
+#         connection.login(user=os.environ["EMAIL_ADDRESS"], password=os.environ["EMAIL_PASSWORD"])
+#         connection.sendmail(
+#             from_addr=os.environ["EMAIL_ADDRESS"],
+#             to_addrs=os.environ["EMAIL_ADDRESS"],
+#             msg=f"Subject:Price Alert!\n\n{message}\n{URL}".encode("utf-8")
+#         )
+
+
+# Step 3 - Add headers to your request
+# Full headers would look something like this
+# header = {
+#     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+#     "Accept-Encoding": "gzip, deflate, br, zstd",
+#     "Accept-Language": "en-GB,de;q=0.8,fr;q=0.6,en;q=0.4,ja;q=0.2",
+#     "Dnt": "1",
+#     "Priority": "u=1",
+#     "Sec-Fetch-Dest": "document",
+#     "Sec-Fetch-Mode": "navigate",
+#     "Sec-Fetch-Site": "none",
+#     "Sec-Fetch-User": "?1",
+#     "Sec-Gpc": "1",
+#     "Upgrade-Insecure-Requests": "1",
+#     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:126.0) Gecko/20100101 Firefox/126.0",
+# }
+
+# # A minimal header would look like this:
+# # header = {
+# #     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36",
+# #     "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"
+# # }
+
+# # Adding headers to the request
+# response = requests.get(url, headers=header)
+
+
+## Don't understand headers, but I get it that it's mostly used to access for live websites without the website blocking the request thinking that it's a bot.
